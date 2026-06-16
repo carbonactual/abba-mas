@@ -15,7 +15,7 @@
     },
     {
       "parameters": {
-        "jsCode": "const body = $json.body || $json;\nconst required = ['source_provider', 'source_layer', 'event_type', 'summary', 'seal_level'];\nconst missing = required.filter((key) => !body[key]);\nif (missing.length) { return [{ json: { accepted: false, error: 'missing_required_fields', missing } }]; }\nconst forbidden = ['actual_value','true_value','liquidity_value','settlement_value','ownership_value','vault_value','private_key','api_key','secret'];\nconst forbiddenFound = Object.keys(body).filter((key) => forbidden.includes(key.toLowerCase()));\nif (forbiddenFound.length) { return [{ json: { accepted: false, error: 'forbidden_payload_keys', forbidden_keys: forbiddenFound } }]; }\nreturn [{ json: { ...body, value_visibility: 'masked', actual_route: body.actual_route || 'ACTUAL_VALUE_ENGINE' } }];"
+        "jsCode": "const body = $json.body || $json; const required = ['source_provider','source_layer','event_type','summary','seal_level']; const missing = required.filter((key) => !body[key]); if (missing.length) { return [{ json: { accepted: false, error: 'missing_required_fields', missing } }]; } const forbidden = ['actual_value','true_value','liquidity_value','settlement_value','ownership_value','vault_value','private_key','api_key','secret']; const forbiddenFound = Object.keys(body).filter((key) => forbidden.includes(key.toLowerCase())); if (forbiddenFound.length) { return [{ json: { accepted: false, error: 'forbidden_payload_keys', forbidden_keys: forbiddenFound } }]; } return [{ json: { ...body, value_visibility: 'masked', actual_route: body.actual_route || 'ACTUAL_VALUE_ENGINE' } }];"
       },
       "id": "validate-and-mask",
       "name": "Validate and Mask",
