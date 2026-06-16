@@ -1,0 +1,685 @@
+[
+  {
+    "provider_key": "memorae",
+    "display_name": "Memorae.ai",
+    "swarm_layer": "hapi_root",
+    "route_type": "saas_channel_partnership_api_pending",
+    "function": "HAPI human memory root and masked ecosystem index.",
+    "seal_level_default": "SEAL-4",
+    "risk_level": "high",
+    "credential_names": [
+      "MEMORAE_ACCOUNT_ID",
+      "MEMORAE_WORKSPACE_ID",
+      "MEMORAE_API_TOKEN_IF_ISSUED",
+      "MEMORAE_WEBHOOK_SECRET_IF_ISSUED"
+    ],
+    "setup_links": [
+      "https://memorae.ai/en/homepage/",
+      "https://memorae.ai/en/login/",
+      "https://memorae.ai/pricing/",
+      "https://memorae.ai/en/terms"
+    ],
+    "cost_note": "Paid SaaS path; verify current pricing before activation.",
+    "status": "candidate",
+    "allowed_data": [
+      "masked memory summaries",
+      "reminders",
+      "lists",
+      "calendar context",
+      "mint_id",
+      "token_ref",
+      "proof_ref"
+    ],
+    "forbidden_data": [
+      "raw secrets",
+      "private keys",
+      "banking credentials",
+      "unredacted identity files",
+      "actual_value",
+      "vault documents"
+    ],
+    "activation_path": "Founder-only non-sensitive memory pilot, then HAPI root pilot, then SEAL-approved summaries into Index."
+  },
+  {
+    "provider_key": "personal_ai",
+    "display_name": "Personal AI",
+    "swarm_layer": "hapi_root",
+    "route_type": "api_saas",
+    "function": "Personal identity-memory and HAPI personal AI candidate.",
+    "seal_level_default": "SEAL-4",
+    "risk_level": "high",
+    "credential_names": [
+      "PERSONAL_AI_API_KEY",
+      "PERSONAL_AI_PERSONA_ID"
+    ],
+    "setup_links": [
+      "https://www.personal.ai/"
+    ],
+    "cost_note": "SaaS/API path; verify developer access and pricing.",
+    "status": "candidate",
+    "allowed_data": [
+      "masked HAPI profile context",
+      "memory references",
+      "relationship summaries",
+      "mint_id",
+      "token_ref"
+    ],
+    "forbidden_data": [
+      "raw secrets",
+      "regulated documents",
+      "actual_value",
+      "vault records"
+    ],
+    "activation_path": "Use as optional HAPI identity-memory route after Memorae pilot."
+  },
+  {
+    "provider_key": "supermemory",
+    "display_name": "Supermemory",
+    "swarm_layer": "agent_memory",
+    "route_type": "api_sdk_connectors",
+    "function": "ABBA MAS memory API, RAG, profile memory, and connector memory cloud.",
+    "seal_level_default": "SEAL-4",
+    "risk_level": "medium_high",
+    "credential_names": [
+      "SUPERMEMORY_API_KEY",
+      "SUPERMEMORY_PROJECT_ID"
+    ],
+    "setup_links": [
+      "https://supermemory.ai/"
+    ],
+    "cost_note": "Developer/SaaS pricing; verify current free tier.",
+    "status": "candidate",
+    "allowed_data": [
+      "agent memory summaries",
+      "document references",
+      "retrieval snippets",
+      "mint_id",
+      "token_ref"
+    ],
+    "forbidden_data": [
+      "raw secrets",
+      "private credentials",
+      "actual_value"
+    ],
+    "activation_path": "Connect to ABBA memory after static registry and ingest route are live."
+  },
+  {
+    "provider_key": "zep",
+    "display_name": "Zep",
+    "swarm_layer": "temporal_index",
+    "route_type": "api_sdk",
+    "function": "Enterprise temporal memory and business context graph for agents.",
+    "seal_level_default": "SEAL-4",
+    "risk_level": "medium_high",
+    "credential_names": [
+      "ZEP_API_KEY"
+    ],
+    "setup_links": [
+      "https://help.getzep.com/"
+    ],
+    "cost_note": "Cloud/API path; verify current pricing.",
+    "status": "candidate",
+    "allowed_data": [
+      "temporal context",
+      "relationship changes",
+      "summaries",
+      "source pointers"
+    ],
+    "forbidden_data": [
+      "raw secrets",
+      "actual_value",
+      "vault files"
+    ],
+    "activation_path": "Use for temporal Index once ABBA ingest schema is accepted."
+  },
+  {
+    "provider_key": "graphiti",
+    "display_name": "Graphiti",
+    "swarm_layer": "temporal_index",
+    "route_type": "open_source_self_hosted",
+    "function": "Temporal knowledge graph for facts, provenance, and relationship changes.",
+    "seal_level_default": "SEAL-4",
+    "risk_level": "medium",
+    "credential_names": [
+      "GRAPHITI_GRAPH_URL",
+      "GRAPHITI_DB_URL"
+    ],
+    "setup_links": [
+      "https://github.com/getzep/graphiti"
+    ],
+    "cost_note": "Open-source/self-hosted route; hosting costs apply.",
+    "status": "candidate",
+    "allowed_data": [
+      "temporal facts",
+      "masked relationships",
+      "source pointers",
+      "proof_ref"
+    ],
+    "forbidden_data": [
+      "raw secrets",
+      "actual_value",
+      "unredacted regulated data"
+    ],
+    "activation_path": "Self-host a pilot temporal graph for HAPI and ABBA events."
+  },
+  {
+    "provider_key": "mem0",
+    "display_name": "Mem0",
+    "swarm_layer": "agent_memory",
+    "route_type": "api_sdk_open_source",
+    "function": "Universal memory layer for LLM apps and agents.",
+    "seal_level_default": "SEAL-3",
+    "risk_level": "medium",
+    "credential_names": [
+      "MEM0_API_KEY"
+    ],
+    "setup_links": [
+      "https://docs.mem0.ai/"
+    ],
+    "cost_note": "Cloud and open-source paths; verify current free tier.",
+    "status": "candidate",
+    "allowed_data": [
+      "agent memories",
+      "preferences",
+      "masked summaries",
+      "mint_id"
+    ],
+    "forbidden_data": [
+      "raw secrets",
+      "actual_value",
+      "vault data"
+    ],
+    "activation_path": "Use as alternate ABBA memory backend or fallback route."
+  },
+  {
+    "provider_key": "letta",
+    "display_name": "Letta",
+    "swarm_layer": "agent_memory",
+    "route_type": "api_open_source_mcp",
+    "function": "Stateful memory-first agents with tools, archival memory, and human-in-the-loop flows.",
+    "seal_level_default": "SEAL-3",
+    "risk_level": "medium",
+    "credential_names": [
+      "LETTA_API_KEY"
+    ],
+    "setup_links": [
+      "https://docs.letta.com/"
+    ],
+    "cost_note": "Cloud and open-source routes; verify current pricing.",
+    "status": "candidate",
+    "allowed_data": [
+      "agent state",
+      "archival summaries",
+      "tool memories",
+      "token_ref"
+    ],
+    "forbidden_data": [
+      "raw secrets",
+      "actual_value",
+      "vault records"
+    ],
+    "activation_path": "Use for long-running ABBA agents after basic swarm API is live."
+  },
+  {
+    "provider_key": "tana",
+    "display_name": "Tana",
+    "swarm_layer": "curation_capture",
+    "route_type": "saas_integrations_mcp",
+    "function": "Curation workspace for meetings, docs, tasks, decisions, contacts, and AI workflows.",
+    "seal_level_default": "SEAL-4",
+    "risk_level": "medium_high",
+    "credential_names": [
+      "TANA_API_KEY_IF_ISSUED"
+    ],
+    "setup_links": [
+      "https://tana.inc/"
+    ],
+    "cost_note": "SaaS pricing; verify API/MCP availability for account.",
+    "status": "candidate",
+    "allowed_data": [
+      "task summaries",
+      "meeting notes with consent",
+      "decision records",
+      "source pointers"
+    ],
+    "forbidden_data": [
+      "unauthorized recordings",
+      "raw secrets",
+      "actual_value"
+    ],
+    "activation_path": "Use as curation workspace, not final truth engine."
+  },
+  {
+    "provider_key": "fabric",
+    "display_name": "Fabric",
+    "swarm_layer": "curation_capture",
+    "route_type": "saas_api_mcp_publish",
+    "function": "Living workspace for files, meetings, ideas, memory, projects, and publishable knowledge.",
+    "seal_level_default": "SEAL-3",
+    "risk_level": "medium",
+    "credential_names": [
+      "FABRIC_API_KEY_IF_ISSUED"
+    ],
+    "setup_links": [
+      "https://fabric.so/"
+    ],
+    "cost_note": "SaaS pricing; verify API/MCP access.",
+    "status": "candidate",
+    "allowed_data": [
+      "curated notes",
+      "project references",
+      "publish candidates",
+      "source pointers"
+    ],
+    "forbidden_data": [
+      "raw secrets",
+      "actual_value",
+      "vault records"
+    ],
+    "activation_path": "Use for curation and optional ATLAS publishing after SEAL."
+  },
+  {
+    "provider_key": "readwise",
+    "display_name": "Readwise Reader",
+    "swarm_layer": "curation_capture",
+    "route_type": "api_export",
+    "function": "Reading/highlight intake from articles, PDFs, RSS, newsletters, and transcripts.",
+    "seal_level_default": "SEAL-3",
+    "risk_level": "low_medium",
+    "credential_names": [
+      "READWISE_TOKEN"
+    ],
+    "setup_links": [
+      "https://readwise.io/read",
+      "https://readwise.io/api_deets"
+    ],
+    "cost_note": "SaaS subscription; API token route available.",
+    "status": "candidate",
+    "allowed_data": [
+      "highlights",
+      "article summaries",
+      "source links",
+      "curation tags"
+    ],
+    "forbidden_data": [
+      "raw secrets",
+      "actual_value",
+      "private regulated documents"
+    ],
+    "activation_path": "Feed curated public/research material into Index."
+  },
+  {
+    "provider_key": "heptabase",
+    "display_name": "Heptabase",
+    "swarm_layer": "curation_capture",
+    "route_type": "saas_export",
+    "function": "Visual whiteboard knowledge base for research and doctrine mapping.",
+    "seal_level_default": "SEAL-3",
+    "risk_level": "medium",
+    "credential_names": [
+      "HEPTABASE_TOKEN_IF_ISSUED"
+    ],
+    "setup_links": [
+      "https://heptabase.com/"
+    ],
+    "cost_note": "SaaS pricing; verify export/API options.",
+    "status": "candidate",
+    "allowed_data": [
+      "research boards",
+      "doctrine maps",
+      "curation summaries"
+    ],
+    "forbidden_data": [
+      "raw secrets",
+      "actual_value"
+    ],
+    "activation_path": "Use for InstituteGPT and Carbon doctrine mapping."
+  },
+  {
+    "provider_key": "mymind",
+    "display_name": "mymind",
+    "swarm_layer": "curation_capture",
+    "route_type": "saas_manual_export",
+    "function": "Private visual curation layer for notes, bookmarks, images, and references.",
+    "seal_level_default": "SEAL-3",
+    "risk_level": "medium",
+    "credential_names": [
+      "MYMIND_EXPORT_TOKEN_IF_ISSUED"
+    ],
+    "setup_links": [
+      "https://mymind.com/"
+    ],
+    "cost_note": "SaaS pricing; manual/export path likely first.",
+    "status": "candidate",
+    "allowed_data": [
+      "bookmarks",
+      "non-sensitive notes",
+      "image references",
+      "curation summaries"
+    ],
+    "forbidden_data": [
+      "raw secrets",
+      "actual_value",
+      "regulated files"
+    ],
+    "activation_path": "Use as founder personal curation feed only."
+  },
+  {
+    "provider_key": "obsidian",
+    "display_name": "Obsidian",
+    "swarm_layer": "curation_capture",
+    "route_type": "local_first_files_publish",
+    "function": "Local-first markdown Root/Index notebook and optional public digital garden.",
+    "seal_level_default": "SEAL-3",
+    "risk_level": "low_medium",
+    "credential_names": [
+      "OBSIDIAN_VAULT_PATH_IF_LOCAL",
+      "OBSIDIAN_PUBLISH_TOKEN_IF_ISSUED"
+    ],
+    "setup_links": [
+      "https://obsidian.md/"
+    ],
+    "cost_note": "Core app has free path; sync/publish may be paid.",
+    "status": "candidate",
+    "allowed_data": [
+      "markdown doctrine",
+      "non-sensitive notes",
+      "ATLAS drafts"
+    ],
+    "forbidden_data": [
+      "raw secrets unless encrypted locally",
+      "actual_value"
+    ],
+    "activation_path": "Use for doctrine and ATLAS drafts, not external secret storage."
+  },
+  {
+    "provider_key": "capacities",
+    "display_name": "Capacities",
+    "swarm_layer": "curation_capture",
+    "route_type": "saas_object_knowledge",
+    "function": "Object-based knowledge system aligned to entities, events, products, and routes.",
+    "seal_level_default": "SEAL-3",
+    "risk_level": "medium",
+    "credential_names": [
+      "CAPACITIES_API_KEY_IF_ISSUED"
+    ],
+    "setup_links": [
+      "https://capacities.io/"
+    ],
+    "cost_note": "SaaS pricing; verify API/export options.",
+    "status": "candidate",
+    "allowed_data": [
+      "object notes",
+      "entity summaries",
+      "relationship references"
+    ],
+    "forbidden_data": [
+      "raw secrets",
+      "actual_value"
+    ],
+    "activation_path": "Use as entity/object curation layer for Carbon concepts."
+  },
+  {
+    "provider_key": "raindrop",
+    "display_name": "Raindrop.io",
+    "swarm_layer": "curation_capture",
+    "route_type": "api_bookmark",
+    "function": "Bookmark and web-archive curation with collections, tags, and search.",
+    "seal_level_default": "SEAL-2",
+    "risk_level": "low_medium",
+    "credential_names": [
+      "RAINDROP_API_TOKEN"
+    ],
+    "setup_links": [
+      "https://raindrop.io/",
+      "https://developer.raindrop.io/"
+    ],
+    "cost_note": "Free and paid paths; API available.",
+    "status": "candidate",
+    "allowed_data": [
+      "bookmarks",
+      "tags",
+      "collections",
+      "public source links"
+    ],
+    "forbidden_data": [
+      "raw secrets",
+      "actual_value",
+      "private sensitive links"
+    ],
+    "activation_path": "Use for public research and integration opportunity bookmarks."
+  },
+  {
+    "provider_key": "recall_ai",
+    "display_name": "Recall.ai",
+    "swarm_layer": "curation_capture",
+    "route_type": "api_meeting_capture",
+    "function": "Meeting bot/API capture for transcripts, recordings, metadata, and calendar meeting context.",
+    "seal_level_default": "SEAL-4",
+    "risk_level": "high",
+    "credential_names": [
+      "RECALL_API_KEY"
+    ],
+    "setup_links": [
+      "https://www.recall.ai/"
+    ],
+    "cost_note": "API pricing; verify current plan.",
+    "status": "candidate",
+    "allowed_data": [
+      "consented meeting metadata",
+      "consented transcript summaries",
+      "source pointers"
+    ],
+    "forbidden_data": [
+      "unauthorized recording",
+      "raw sensitive speech",
+      "actual_value"
+    ],
+    "activation_path": "Use only where meeting consent and retention rules are configured."
+  },
+  {
+    "provider_key": "fireflies",
+    "display_name": "Fireflies.ai",
+    "swarm_layer": "curation_capture",
+    "route_type": "saas_api_meeting_capture",
+    "function": "Meeting transcription, summaries, search, action items, and conversation intelligence.",
+    "seal_level_default": "SEAL-4",
+    "risk_level": "high",
+    "credential_names": [
+      "FIREFLIES_API_KEY"
+    ],
+    "setup_links": [
+      "https://fireflies.ai/"
+    ],
+    "cost_note": "Free/paid SaaS tiers may exist; verify current pricing.",
+    "status": "candidate",
+    "allowed_data": [
+      "consented meeting summaries",
+      "tasks",
+      "action items",
+      "source pointers"
+    ],
+    "forbidden_data": [
+      "unauthorized recording",
+      "raw secrets",
+      "actual_value"
+    ],
+    "activation_path": "Use only after consent and retention review."
+  },
+  {
+    "provider_key": "plaud",
+    "display_name": "Plaud",
+    "swarm_layer": "curation_capture",
+    "route_type": "hardware_app_export",
+    "function": "Hardware/app route for voice notes, transcripts, summaries, and action items.",
+    "seal_level_default": "SEAL-5",
+    "risk_level": "high",
+    "credential_names": [
+      "PLAUD_EXPORT_TOKEN_IF_ISSUED"
+    ],
+    "setup_links": [
+      "https://www.plaud.ai/"
+    ],
+    "cost_note": "Hardware plus app/subscription route; verify current pricing.",
+    "status": "candidate",
+    "allowed_data": [
+      "consented voice note summaries",
+      "manual exports",
+      "action item summaries"
+    ],
+    "forbidden_data": [
+      "unauthorized recording",
+      "raw sensitive speech",
+      "actual_value"
+    ],
+    "activation_path": "SEAL-5 only. Use manual export after consent review."
+  },
+  {
+    "provider_key": "eas",
+    "display_name": "Ethereum Attestation Service",
+    "swarm_layer": "actual_proof_identity",
+    "route_type": "sdk_onchain_offchain_attestation",
+    "function": "Proof schemas, attestations, off-chain attestations, and proof references for Actual.",
+    "seal_level_default": "SEAL-5",
+    "risk_level": "high",
+    "credential_names": [
+      "EAS_RPC_URL",
+      "EAS_SCHEMA_UID",
+      "EAS_PRIVATE_KEY_IF_SIGNING"
+    ],
+    "setup_links": [
+      "https://attest.org/",
+      "https://github.com/ethereum-attestation-service/eas-sdk"
+    ],
+    "cost_note": "Open protocol; network gas and infrastructure costs apply.",
+    "status": "candidate",
+    "allowed_data": [
+      "proof references",
+      "schema IDs",
+      "hashed/off-chain proofs",
+      "public attestations after SEAL"
+    ],
+    "forbidden_data": [
+      "private personal data on public chains",
+      "raw secrets",
+      "actual_value without Actual approval"
+    ],
+    "activation_path": "Start with testnet schema and off-chain proof references."
+  },
+  {
+    "provider_key": "ceramic",
+    "display_name": "Ceramic",
+    "swarm_layer": "actual_proof_identity",
+    "route_type": "decentralized_data_streams",
+    "function": "Interoperable verifiable data/event streams and portable data references.",
+    "seal_level_default": "SEAL-5",
+    "risk_level": "high",
+    "credential_names": [
+      "CERAMIC_NODE_URL",
+      "CERAMIC_DID_PRIVATE_KEY_IF_ISSUED"
+    ],
+    "setup_links": [
+      "https://ceramic.network/"
+    ],
+    "cost_note": "Open/decentralized infrastructure; hosting costs may apply.",
+    "status": "candidate",
+    "allowed_data": [
+      "portable proof references",
+      "DID-linked public/permissioned records",
+      "source pointers"
+    ],
+    "forbidden_data": [
+      "raw private data",
+      "raw secrets",
+      "actual_value without approval"
+    ],
+    "activation_path": "Use after SEAL and identity architecture are ready."
+  },
+  {
+    "provider_key": "origintrail",
+    "display_name": "OriginTrail DKG",
+    "swarm_layer": "atlas",
+    "route_type": "decentralized_knowledge_graph",
+    "function": "Public/decentralized knowledge graph for trusted AI, source provenance, and ATLAS proof graph.",
+    "seal_level_default": "SEAL-5",
+    "risk_level": "high",
+    "credential_names": [
+      "ORIGINTRAIL_NODE_URL",
+      "ORIGINTRAIL_WALLET_KEY_IF_SIGNING"
+    ],
+    "setup_links": [
+      "https://origintrail.io/"
+    ],
+    "cost_note": "Network/infrastructure costs may apply.",
+    "status": "candidate",
+    "allowed_data": [
+      "public ATLAS facts after SEAL",
+      "source provenance",
+      "proof graph pointers"
+    ],
+    "forbidden_data": [
+      "private personal data",
+      "raw secrets",
+      "unapproved value"
+    ],
+    "activation_path": "Use for public ATLAS proof only after Actual and SEAL."
+  },
+  {
+    "provider_key": "veramo",
+    "display_name": "Veramo",
+    "swarm_layer": "actual_proof_identity",
+    "route_type": "open_source_did_vc",
+    "function": "DID, verifiable credential, key management, and verifiable data APIs.",
+    "seal_level_default": "SEAL-5",
+    "risk_level": "high",
+    "credential_names": [
+      "VERAMO_DB_URL",
+      "VERAMO_SECRET_KEY"
+    ],
+    "setup_links": [
+      "https://veramo.io/",
+      "https://github.com/decentralized-identity/veramo"
+    ],
+    "cost_note": "Open-source route; hosting and key custody costs apply.",
+    "status": "candidate",
+    "allowed_data": [
+      "DID references",
+      "VC proof references",
+      "issuer/verifier metadata"
+    ],
+    "forbidden_data": [
+      "raw private keys in logs",
+      "raw regulated identity files",
+      "actual_value"
+    ],
+    "activation_path": "Use for identity and credential proof after Vault/SEAL custody design."
+  },
+  {
+    "provider_key": "spruceid",
+    "display_name": "SpruceID",
+    "swarm_layer": "actual_proof_identity",
+    "route_type": "identity_credentials_api",
+    "function": "Identity, credential, verification, selective disclosure, and trust infrastructure.",
+    "seal_level_default": "SEAL-5",
+    "risk_level": "high",
+    "credential_names": [
+      "SPRUCEID_API_KEY"
+    ],
+    "setup_links": [
+      "https://www.spruceid.com/"
+    ],
+    "cost_note": "Vendor/API route; verify current access and pricing.",
+    "status": "candidate",
+    "allowed_data": [
+      "credential references",
+      "verification metadata",
+      "selective disclosure proofs"
+    ],
+    "forbidden_data": [
+      "raw identity documents without custody approval",
+      "raw secrets",
+      "actual_value"
+    ],
+    "activation_path": "Use for institutional/HAPI identity verification routes after SEAL review."
+  }
+]
