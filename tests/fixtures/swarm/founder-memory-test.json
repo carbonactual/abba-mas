@@ -1,0 +1,20 @@
+{
+  "source_provider": "memorae",
+  "source_layer": "hapi_root",
+  "event_type": "founder_memory_test",
+  "summary": "Founder approved test memory. This is a masked summary with no true value.",
+  "source_pointer": "manual_founder_test",
+  "mint_id": "mint_test_001",
+  "token_ref": "token_test_001",
+  "proof_ref": null,
+  "value_visibility": "masked",
+  "actual_call_required": false,
+  "actual_route": "ACTUAL_VALUE_ENGINE",
+  "seal_level": "SEAL-3",
+  "risk_level": "low",
+  "metadata": {
+    "pilot": true,
+    "contains_true_value": false,
+    "contains_raw_secret": false
+  }
+}
