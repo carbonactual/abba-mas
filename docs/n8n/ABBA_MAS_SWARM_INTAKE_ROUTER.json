@@ -1,0 +1,150 @@
+{
+  "name": "ABBA MAS Swarm Intake Router",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "abba-mas-swarm-intake",
+        "responseMode": "responseNode"
+      },
+      "id": "swarm-webhook-trigger",
+      "name": "Swarm Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [0, 0]
+    },
+    {
+      "parameters": {
+        "jsCode": "const body = $json.body || $json;\nconst required = ['source_provider', 'source_layer', 'event_type', 'summary', 'seal_level'];\nconst missing = required.filter((key) => !body[key]);\nif (missing.length) { return [{ json: { accepted: false, error: 'missing_required_fields', missing } }]; }\nconst forbidden = ['actual_value','true_value','liquidity_value','settlement_value','ownership_value','vault_value','private_key','api_key','secret'];\nconst forbiddenFound = Object.keys(body).filter((key) => forbidden.includes(key.toLowerCase()));\nif (forbiddenFound.length) { return [{ json: { accepted: false, error: 'forbidden_payload_keys', forbidden_keys: forbiddenFound } }]; }\nreturn [{ json: { ...body, value_visibility: 'masked', actual_route: body.actual_route || 'ACTUAL_VALUE_ENGINE' } }];"
+      },
+      "id": "validate-and-mask",
+      "name": "Validate and Mask",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [260, 0]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{$json.accepted === false}}",
+              "operation": "isTrue"
+            }
+          ]
+        }
+      },
+      "id": "is-invalid",
+      "name": "Invalid Payload?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [520, 0]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{$env.ABBA_SWARM_INGEST_URL}}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-abba-swarm-secret",
+              "value": "={{$env.N8N_WEBHOOK_SECRET}}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{$json}}"
+      },
+      "id": "forward-to-swarm-ingest",
+      "name": "Forward to Swarm Ingest",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [780, -120]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{$json.actual_call_required === true && $json.seal_status === 'approved'}}",
+              "operation": "isTrue"
+            }
+          ]
+        }
+      },
+      "id": "needs-actual-call",
+      "name": "Needs Actual Call?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [1040, -120]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{$env.ABBA_SWARM_ACTUAL_CALL_URL}}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-abba-swarm-secret",
+              "value": "={{$env.N8N_WEBHOOK_SECRET}}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{$json}}"
+      },
+      "id": "forward-to-actual-call",
+      "name": "Forward to Actual Call",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [1300, -220]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{$json}}"
+      },
+      "id": "respond",
+      "name": "Respond",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [1560, 20]
+    }
+  ],
+  "connections": {
+    "Swarm Webhook Trigger": {
+      "main": [[{"node": "Validate and Mask", "type": "main", "index": 0}]]
+    },
+    "Validate and Mask": {
+      "main": [[{"node": "Invalid Payload?", "type": "main", "index": 0}]]
+    },
+    "Invalid Payload?": {
+      "main": [
+        [{"node": "Respond", "type": "main", "index": 0}],
+        [{"node": "Forward to Swarm Ingest", "type": "main", "index": 0}]
+      ]
+    },
+    "Forward to Swarm Ingest": {
+      "main": [[{"node": "Needs Actual Call?", "type": "main", "index": 0}]]
+    },
+    "Needs Actual Call?": {
+      "main": [
+        [{"node": "Forward to Actual Call", "type": "main", "index": 0}],
+        [{"node": "Respond", "type": "main", "index": 0}]
+      ]
+    },
+    "Forward to Actual Call": {
+      "main": [[{"node": "Respond", "type": "main", "index": 0}]]
+    }
+  },
+  "settings": {
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true
+  },
+  "staticData": null,
+  "tags": ["abba-mas", "swarm", "continuum", "actual"]
+}
