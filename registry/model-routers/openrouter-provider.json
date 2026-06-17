@@ -1,0 +1,67 @@
+{
+  "id": "openrouter",
+  "name": "OpenRouter",
+  "category": "model router",
+  "route_type": ["model gateway", "API", "OpenAI-compatible endpoint", "fallback routing", "auto routing"],
+  "function_classification": [
+    "ABBA model routing",
+    "multi-model access",
+    "provider fallback",
+    "cost-quality routing",
+    "agent model gateway",
+    "free model exploration"
+  ],
+  "access_method": "API key via OpenRouter dashboard; OpenAI-compatible base URL; official SDK; Agent SDK",
+  "cost_notes": "Usage-based by selected model. OpenRouter Auto Router has no extra routing fee beyond the selected model price according to current docs. Free-model routes may exist but must be rate-limit checked before production.",
+  "risk_level": "high",
+  "seal_level": 4,
+  "secret_names": [
+    "OPENROUTER_API_KEY",
+    "OPENROUTER_SITE_URL",
+    "OPENROUTER_APP_TITLE",
+    "OPENROUTER_DEFAULT_MODEL",
+    "OPENROUTER_ALLOWED_MODELS",
+    "OPENROUTER_WEBHOOK_SECRET_IF_USED"
+  ],
+  "setup_links": [
+    "https://openrouter.ai/docs/quickstart",
+    "https://openrouter.ai/docs/guides/routing/routers/auto-router",
+    "https://openrouter.ai/docs/guides/routing/model-fallbacks",
+    "https://openrouter.ai/docs/guides/routing/routers/free-models-router",
+    "https://openrouter.ai/models"
+  ],
+  "default_models": {
+    "auto": "openrouter/auto",
+    "fresh_openai_alias": "~openai/gpt-latest",
+    "fresh_anthropic_alias": "~anthropic/claude-sonnet-latest"
+  },
+  "abba_policy": {
+    "default_mode": "router_not_decider",
+    "rule": "OpenRouter may route model calls, but ABBA remains resolver and SEAL remains approval authority.",
+    "allowed_data": [
+      "public prompts",
+      "masked task context",
+      "agent routing metadata",
+      "non-sensitive summaries",
+      "sandbox test prompts"
+    ],
+    "forbidden_data": [
+      "raw secrets",
+      "private keys",
+      "banking credentials",
+      "unredacted identity files",
+      "vault documents",
+      "Actual value",
+      "irreversible execution instructions without SEAL"
+    ]
+  },
+  "activation_path": [
+    "Add OPENROUTER_API_KEY to Vercel and GitHub secrets only, never repo files.",
+    "Expose a health-safe provider card in /api/swarm/providers.",
+    "Use openrouter/auto only for sandbox and non-sensitive ABBA tasks first.",
+    "Add allowed model patterns for OpenAI, Anthropic, Google, DeepSeek, Meta, Mistral, Qwen and free-model candidates after testing.",
+    "Log selected model metadata, cost estimate, latency and error status only; do not log raw private prompts by default.",
+    "Add SEAL-4 review before customer-facing, identity, finance, legal, or HAPI memory tasks."
+  ],
+  "status": "candidate_model_router_production_blocked"
+}
