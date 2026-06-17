@@ -1,5 +1,12 @@
 const layers = [
   {
+    name: "ABBA Operating Core",
+    providers: "Status, registry, prepare, check, HAPI assignment",
+    status: "enabled mock-first",
+    seal: "SEAL-3 to SEAL-5",
+    rule: "ABBA prepares, classifies, routes, and returns signal. Review gates remain active."
+  },
+  {
     name: "Continuum Capture",
     providers: "Tana, Fabric, Readwise, Heptabase, mymind, Obsidian, Capacities, Raindrop, Recall.ai, Fireflies, Plaud",
     status: "candidate",
@@ -66,7 +73,10 @@ const layers = [
 
 const links = [
   ["Health", "/api/health"],
-  ["Swarm Providers", "/api/swarm/providers"]
+  ["ABBA Status", "/api/abba/status"],
+  ["ABBA Registry", "/api/abba/registry"],
+  ["Swarm Providers", "/api/swarm/providers"],
+  ["OpenRouter", "/api/swarm/openrouter"]
 ];
 
 export default function Home() {
@@ -75,10 +85,10 @@ export default function Home() {
       <section style={{ maxWidth: "1100px", margin: "0 auto" }}>
         <p style={{ letterSpacing: "0.24em", textTransform: "uppercase", color: "#67e8f9", fontSize: "12px" }}>ABBA MAS Swarm</p>
         <h1 style={{ fontSize: "clamp(36px, 7vw, 84px)", lineHeight: 0.95, margin: "16px 0" }}>
-          Memory remembers. Actual reveals value.
+          ABBA resolves. SEAL permits. Actual reveals.
         </h1>
         <p style={{ maxWidth: "780px", color: "#cbd5e1", fontSize: "18px", lineHeight: 1.7 }}>
-          ABBA MAS now has the first swarm scaffold for Continuum, HAPI Root, Index, Curation, ATLAS, Actual, OpenAlternative free/open-source discovery, an expanded app swarm, and OpenRouter model routing. Providers store masked references only. True value is gated by ABBA resolution, SEAL approval, and the Actual value engine.
+          ABBA MAS now has the operating core, HAPI assignment path, OpenRouter model routing, OpenAlternative discovery, expanded app swarm, and Actual value guardrails. Providers store masked references only.
         </p>
 
         <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", marginTop: "28px" }}>
@@ -104,7 +114,7 @@ export default function Home() {
         <section style={{ marginTop: "44px", padding: "24px", borderRadius: "24px", border: "1px solid rgba(103, 232, 249, 0.28)", background: "linear-gradient(135deg, rgba(8, 145, 178, 0.18), rgba(88, 28, 135, 0.18))" }}>
           <h2>Activation sequence</h2>
           <p style={{ color: "#cbd5e1", lineHeight: 1.7 }}>
-            Static registry → providers API → OpenRouter model router → Supabase tables → ingest route → Actual-call route → dashboard cards → n8n router → Memorae/Supermemory/Zep/Graphiti pilot → OpenAlternative free OSS sandbox → expanded app swarm sandbox → EAS testnet references → ATLAS public proof after SEAL.
+            Doctrine → operating core → records → HAPI assignment → review check → OpenRouter model router → providers API → Supabase tables → n8n router → PULSE/PROOF → Actual-ready queue.
           </p>
         </section>
       </section>
