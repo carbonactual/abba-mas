@@ -1,0 +1,37 @@
+{
+  "schema_id": "becoming_value_v1",
+  "description": "Curated value item presented in the Becoming Feed after ABBA reviews raw signal.",
+  "required_fields": [
+    "value_id",
+    "source_type",
+    "source_label",
+    "value",
+    "why_now",
+    "route",
+    "risk",
+    "proof_needed",
+    "next_action",
+    "expected_pulse",
+    "state"
+  ],
+  "routes": [
+    "HAPI",
+    "Product",
+    "InstituteGPT",
+    "I/O",
+    "ATLAS",
+    "Vault",
+    "Archive",
+    "Review"
+  ],
+  "risk_levels": ["low", "medium", "high", "unknown"],
+  "states": [
+    "candidate",
+    "presented",
+    "action_started",
+    "waiting_for_pulse",
+    "pulse_returned",
+    "archived"
+  ],
+  "default_state": "candidate"
+}
