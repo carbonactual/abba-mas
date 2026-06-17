@@ -7,6 +7,27 @@ const layers = [
     rule: "ABBA prepares, classifies, routes, and returns signal. Review gates remain active."
   },
   {
+    name: "Becoming Value Feed",
+    providers: "Signal intake, value-only feed, route, risk, proof need, next action, expected PULSE",
+    status: "core added",
+    seal: "SEAL-2 to SEAL-5",
+    rule: "Raw signal is not feed. Only curated value enters the Becoming Feed."
+  },
+  {
+    name: "I/O Pulse Value Loop",
+    providers: "Pulse-in, value-out, return signal, value state",
+    status: "core added",
+    seal: "SEAL-2 to SEAL-5",
+    rule: "PULSE received. VALUE sent. Value acted upon returns PULSE."
+  },
+  {
+    name: "ABBA Interpretation Engine",
+    providers: "Screenshots, DMs, documents, links, people, products, designs, ideas, courses, repos",
+    status: "doctrine added",
+    seal: "SEAL-2 to SEAL-5",
+    rule: "ABBA interprets input, extracts value, assigns route, and returns the next action."
+  },
+  {
     name: "Continuum Capture",
     providers: "Tana, Fabric, Readwise, Heptabase, mymind, Obsidian, Capacities, Raindrop, Recall.ai, Fireflies, Plaud",
     status: "candidate",
@@ -18,7 +39,7 @@ const layers = [
     providers: "Memorae.ai, Personal AI",
     status: "candidate",
     seal: "SEAL-4",
-    rule: "Store masked memory, mint IDs, token refs, proof refs, and continuity context."
+    rule: "Store masked memory, record IDs, token refs, proof refs, and continuity context."
   },
   {
     name: "ABBA Memory API",
@@ -75,6 +96,8 @@ const links = [
   ["Health", "/api/health"],
   ["ABBA Status", "/api/abba/status"],
   ["ABBA Registry", "/api/abba/registry"],
+  ["Becoming Feed", "/api/becoming/feed"],
+  ["I/O Status", "/api/io/status"],
   ["Swarm Providers", "/api/swarm/providers"],
   ["OpenRouter", "/api/swarm/openrouter"]
 ];
@@ -85,10 +108,10 @@ export default function Home() {
       <section style={{ maxWidth: "1100px", margin: "0 auto" }}>
         <p style={{ letterSpacing: "0.24em", textTransform: "uppercase", color: "#67e8f9", fontSize: "12px" }}>ABBA MAS Swarm</p>
         <h1 style={{ fontSize: "clamp(36px, 7vw, 84px)", lineHeight: 0.95, margin: "16px 0" }}>
-          ABBA resolves. SEAL permits. Actual reveals.
+          PULSE received. VALUE sent. Actual reveals.
         </h1>
         <p style={{ maxWidth: "780px", color: "#cbd5e1", fontSize: "18px", lineHeight: 1.7 }}>
-          ABBA MAS now has the operating core, HAPI assignment path, OpenRouter model routing, OpenAlternative discovery, expanded app swarm, and Actual value guardrails. Providers store masked references only.
+          ABBA MAS now has the operating core, Becoming Value Feed, I/O Pulse Value Loop, HAPI assignment path, OpenRouter model routing, OpenAlternative discovery, expanded app swarm, and Actual value guardrails. Raw signals are curated before value appears.
         </p>
 
         <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", marginTop: "28px" }}>
@@ -114,7 +137,7 @@ export default function Home() {
         <section style={{ marginTop: "44px", padding: "24px", borderRadius: "24px", border: "1px solid rgba(103, 232, 249, 0.28)", background: "linear-gradient(135deg, rgba(8, 145, 178, 0.18), rgba(88, 28, 135, 0.18))" }}>
           <h2>Activation sequence</h2>
           <p style={{ color: "#cbd5e1", lineHeight: 1.7 }}>
-            Doctrine → operating core → records → HAPI assignment → review check → OpenRouter model router → providers API → Supabase tables → n8n router → PULSE/PROOF → Actual-ready queue.
+            Signal → ABBA interpretation → value curation → Becoming Feed → action → PULSE return → I/O state update → proof route → Actual-ready queue.
           </p>
         </section>
       </section>
