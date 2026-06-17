@@ -28,6 +28,13 @@ const layers = [
     rule: "Track what happened, when it changed, and what proof points exist."
   },
   {
+    name: "OpenAlternative Scout",
+    providers: "n8n, Dify, Langflow, Open WebUI, Firecrawl, Baserow, Novu, Hoppscotch, Uptime Kuma, Hanko, Postiz, Dub, OpenPanel, Tolgee, Cap, Excalidraw, Browser Use, RustDesk, Parlant, Openlane",
+    status: "free OSS candidates added",
+    seal: "SEAL-1 to SEAL-4",
+    rule: "Discover and sandbox free/open-source alternatives. Production stays blocked until SEAL review."
+  },
+  {
     name: "ATLAS Public Knowledge",
     providers: "OriginTrail DKG, Fabric Publish, Obsidian Publish",
     status: "blocked until SEAL",
@@ -57,7 +64,7 @@ export default function Home() {
           Memory remembers. Actual reveals value.
         </h1>
         <p style={{ maxWidth: "780px", color: "#cbd5e1", fontSize: "18px", lineHeight: 1.7 }}>
-          ABBA MAS now has the first swarm scaffold for Continuum, HAPI Root, Index, Curation, ATLAS, and Actual. Providers store masked references only. True value is gated by ABBA resolution, SEAL approval, and the Actual value engine.
+          ABBA MAS now has the first swarm scaffold for Continuum, HAPI Root, Index, Curation, ATLAS, Actual, and OpenAlternative free/open-source discovery. Providers store masked references only. True value is gated by ABBA resolution, SEAL approval, and the Actual value engine.
         </p>
 
         <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", marginTop: "28px" }}>
@@ -83,7 +90,7 @@ export default function Home() {
         <section style={{ marginTop: "44px", padding: "24px", borderRadius: "24px", border: "1px solid rgba(103, 232, 249, 0.28)", background: "linear-gradient(135deg, rgba(8, 145, 178, 0.18), rgba(88, 28, 135, 0.18))" }}>
           <h2>Activation sequence</h2>
           <p style={{ color: "#cbd5e1", lineHeight: 1.7 }}>
-            Static registry → providers API → Supabase tables → ingest route → Actual-call route → dashboard cards → n8n router → Memorae/Supermemory/Zep/Graphiti pilot → EAS testnet references → ATLAS public proof after SEAL.
+            Static registry → providers API → Supabase tables → ingest route → Actual-call route → dashboard cards → n8n router → Memorae/Supermemory/Zep/Graphiti pilot → OpenAlternative free OSS sandbox → EAS testnet references → ATLAS public proof after SEAL.
           </p>
         </section>
       </section>
