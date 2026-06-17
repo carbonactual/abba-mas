@@ -1,0 +1,30 @@
+{
+  "schema_id": "io_pulse_value_v1",
+  "description": "I/O record for movement from pulse received to value sent and return pulse.",
+  "required_fields": [
+    "io_id",
+    "pulse_in",
+    "abba_read",
+    "value_out",
+    "action",
+    "expected_return",
+    "return_pulse",
+    "value_state"
+  ],
+  "value_state_options": [
+    "pulse_received",
+    "value_prepared",
+    "value_sent",
+    "action_pending",
+    "return_received",
+    "resolved",
+    "archived"
+  ],
+  "default_value_state": "pulse_received",
+  "control": {
+    "raw_secrets_allowed": false,
+    "private_material_default": "masked_reference",
+    "external_action_default": "review_required",
+    "actual_reveal_default": false
+  }
+}
