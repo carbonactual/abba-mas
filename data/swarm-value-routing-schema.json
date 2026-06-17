@@ -1,0 +1,49 @@
+{
+  "schema_id": "swarm_value_routing_v1",
+  "description": "Routes PULSE and VALUE through swarms instead of isolated products or companies.",
+  "core_law": "PULSE in. Swarm read. Actual value out. Swarm activation. Return PULSE.",
+  "swarm_types": [
+    "product_swarm",
+    "tool_swarm",
+    "hapi_swarm",
+    "ai_swarm",
+    "value_swarm",
+    "proof_swarm",
+    "market_swarm",
+    "education_swarm",
+    "integration_swarm"
+  ],
+  "routing_fields": [
+    "swarm_id",
+    "swarm_type",
+    "incoming_pulse",
+    "actual_value_available",
+    "similar_products",
+    "complementary_products",
+    "proof_strength",
+    "utility_score",
+    "liquidity_score",
+    "protection_score",
+    "time_advantage_score",
+    "trust_score",
+    "future_upside_score",
+    "eight_year_positioning",
+    "recommended_value_out",
+    "expected_return_pulse",
+    "value_state"
+  ],
+  "ethiopian_value_benchmark": {
+    "formation_gap_years": 8,
+    "meaning": "Use the 2018 to 2026 gap as a formation advantage and timing benchmark.",
+    "value_components": [
+      "proof_strength",
+      "utility",
+      "liquidity",
+      "protection",
+      "time_advantage",
+      "trust",
+      "future_upside"
+    ]
+  },
+  "default_state": "swarm_review"
+}
