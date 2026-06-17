@@ -1,0 +1,61 @@
+{
+  "provider_key": "lovable",
+  "display_name": "Lovable",
+  "swarm_layer": "product_builder",
+  "route_type": "ai_app_builder_github_deploy",
+  "function": "AI product builder for rapid Carbon Actual, ABBA MAS, InstituteGPT, HAPI, and Web9 interface prototyping with GitHub-backed code handoff.",
+  "seal_level_default": "SEAL-3",
+  "risk_level": "medium_high",
+  "credential_names": [
+    "LOVABLE_WORKSPACE_ID_IF_ISSUED",
+    "LOVABLE_PROJECT_ID_IF_ISSUED",
+    "LOVABLE_GITHUB_REPO",
+    "LOVABLE_WEBHOOK_SECRET_IF_USED"
+  ],
+  "setup_links": [
+    "https://lovable.dev/",
+    "https://github.com/carbonactual/abba-mas",
+    "https://github.com/carbonactual/Carbon-Actual-"
+  ],
+  "cost_note": "SaaS builder route. Verify current plan, GitHub sync behavior, publishing limits, and production export rules before depending on it for core infrastructure.",
+  "status": "candidate_integrated",
+  "allowed_data": [
+    "public product briefs",
+    "masked interface specs",
+    "non-secret component requirements",
+    "landing page copy",
+    "dashboard UX plans",
+    "prototype routes",
+    "mint_id",
+    "proof_ref",
+    "token_ref"
+  ],
+  "forbidden_data": [
+    "raw secrets",
+    "private keys",
+    "banking credentials",
+    "production API tokens",
+    "unredacted identity documents",
+    "vault documents",
+    "actual_value without Actual approval"
+  ],
+  "activation_path": "Use Lovable for fast interface creation and UX iteration. GitHub remains the source of truth. Production merges must pass ABBA review, SEAL approval, environment-variable separation, and Vercel build checks.",
+  "carbon_actual_position": {
+    "role": "Builder surface for external-facing apps and internal dashboards.",
+    "best_use": [
+      "Carbon Actual public website iterations",
+      "ABBA MAS dashboard cards",
+      "InstituteGPT portals",
+      "HAPI onboarding screens",
+      "Web9 proof-of-concept pages",
+      "investor/demo interfaces"
+    ],
+    "not_for": [
+      "custody logic",
+      "banking settlement logic",
+      "SEAL final authority",
+      "Actual value computation",
+      "secret storage"
+    ]
+  }
+}
