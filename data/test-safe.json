@@ -1,1 +1,15 @@
-{"status":"ok"}
+{
+  "registry_id": "abba_registry_seed_v1",
+  "status": "mock_first",
+  "items": [
+    {
+      "id": "abba_core_000001",
+      "name": "ABBA Core",
+      "kind": "core",
+      "layer": "ABBA",
+      "route": "openrouter/auto",
+      "seal": 4,
+      "state": "active_mock_first"
+    }
+  ]
+}
