@@ -21,6 +21,13 @@ const layers = [
     rule: "Support ABBA agent recall without exposing true value."
   },
   {
+    name: "ABBA Model Router",
+    providers: "OpenRouter, openrouter/auto, model fallbacks, free-model router candidates, OpenAI-compatible routing, provider selection",
+    status: "router added",
+    seal: "SEAL-4",
+    rule: "OpenRouter routes model calls. ABBA remains resolver. SEAL remains approval authority."
+  },
+  {
     name: "Temporal Index",
     providers: "Zep, Graphiti",
     status: "candidate",
@@ -29,10 +36,17 @@ const layers = [
   },
   {
     name: "OpenAlternative Scout",
-    providers: "n8n, Dify, Langflow, Open WebUI, Firecrawl, Baserow, Novu, Hoppscotch, Uptime Kuma, Hanko, Postiz, Dub, OpenPanel, Tolgee, Cap, Excalidraw, Browser Use, RustDesk, Parlant, Openlane",
+    providers: "OpenAlternative source index plus first free OSS set: n8n, Dify, Langflow, Open WebUI, Firecrawl, Baserow, Novu, Hoppscotch, Uptime Kuma, Hanko, Postiz, Dub, OpenPanel, Tolgee, Cap, Excalidraw, Browser Use, RustDesk, Parlant, Openlane",
     status: "free OSS candidates added",
     seal: "SEAL-1 to SEAL-4",
     rule: "Discover and sandbox free/open-source alternatives. Production stays blocked until SEAL review."
+  },
+  {
+    name: "Expanded App Swarm",
+    providers: "Flowise, AnythingLLM, LibreChat, LobeChat, Ollama, LocalAI, LiteLLM, Langfuse, Phoenix, Opik, PostHog, Matomo, Plausible, listmonk, Mautic, Twenty, Cal.com, Plane, AppFlowy, Outline, Directus, Strapi, Payload, Medusa, ERPNext, Moodle, Open edX, Formbricks, Documenso, Paperless, Nextcloud, Coolify, Grafana, Infisical, Keycloak, Qdrant, Crawl4AI, SearXNG, ToolJet, Appsmith, Windmill, Temporal, PocketBase and more",
+    status: "expanded swarm pack added",
+    seal: "SEAL-2 to SEAL-4",
+    rule: "All apps are registry candidates first. Sandbox before deployment. No secrets or Actual value by default."
   },
   {
     name: "ATLAS Public Knowledge",
@@ -64,7 +78,7 @@ export default function Home() {
           Memory remembers. Actual reveals value.
         </h1>
         <p style={{ maxWidth: "780px", color: "#cbd5e1", fontSize: "18px", lineHeight: 1.7 }}>
-          ABBA MAS now has the first swarm scaffold for Continuum, HAPI Root, Index, Curation, ATLAS, Actual, and OpenAlternative free/open-source discovery. Providers store masked references only. True value is gated by ABBA resolution, SEAL approval, and the Actual value engine.
+          ABBA MAS now has the first swarm scaffold for Continuum, HAPI Root, Index, Curation, ATLAS, Actual, OpenAlternative free/open-source discovery, an expanded app swarm, and OpenRouter model routing. Providers store masked references only. True value is gated by ABBA resolution, SEAL approval, and the Actual value engine.
         </p>
 
         <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", marginTop: "28px" }}>
@@ -90,7 +104,7 @@ export default function Home() {
         <section style={{ marginTop: "44px", padding: "24px", borderRadius: "24px", border: "1px solid rgba(103, 232, 249, 0.28)", background: "linear-gradient(135deg, rgba(8, 145, 178, 0.18), rgba(88, 28, 135, 0.18))" }}>
           <h2>Activation sequence</h2>
           <p style={{ color: "#cbd5e1", lineHeight: 1.7 }}>
-            Static registry → providers API → Supabase tables → ingest route → Actual-call route → dashboard cards → n8n router → Memorae/Supermemory/Zep/Graphiti pilot → OpenAlternative free OSS sandbox → EAS testnet references → ATLAS public proof after SEAL.
+            Static registry → providers API → OpenRouter model router → Supabase tables → ingest route → Actual-call route → dashboard cards → n8n router → Memorae/Supermemory/Zep/Graphiti pilot → OpenAlternative free OSS sandbox → expanded app swarm sandbox → EAS testnet references → ATLAS public proof after SEAL.
           </p>
         </section>
       </section>
