@@ -1,142 +1,159 @@
 # Law of Commitment
 
-The Law of Commitment is a major human formation and relationship doctrine.
+The Law of Commitment is a major Becoming and Curation doctrine.
 
-It applies before union, during union, after union, and even where union never fully forms.
+Commitment is not mainly romance.
+Romance, marriage, friendship, family, and union are only some cases of commitment.
 
-Commitment is not only marriage.
-Commitment begins when intention, willingness, promise, duty, affection, responsibility, trust, defense, sacrifice, care, or future expectation appears between people.
+Commitment is the value a HAPI, entity, group, company, or AI dedicates toward Becoming.
 
-## Why it matters
+Commitment is how things get done in the ecosystem.
 
-Before husband and wife, there may be friendship.
-Before marriage, there may be boyfriend and girlfriend.
-Before a family is formed, there may be intention, courtship, promise, preparation, support, risk, sacrifice, or defense.
-Before formal union, there may already be value.
+## Core meaning
 
-The ecosystem must not wait until marriage, birth, contract, or legal registration before recognizing relational value.
+Commitment means a person or entity gives value before receiving value.
 
-## Commitment before formation
+The value may be time, movement, presence, service, money, pledge, skill, attention, reputation, network, labor, care, risk, access, or social participation.
 
-Commitment can exist before formal formation.
+A commitment releases PULSE.
+The PULSE carries the value of what was given.
+The return PULSE may unlock opportunity, relationship, network growth, proof, service access, reputation, or formation.
 
-A person may defend another before marriage.
-A person may sacrifice for another before engagement.
-A person may introduce another to family before formal union.
-A person may support education, work, health, safety, rent, transport, business, or emotional stability before any legal bond exists.
+## Becoming and curation
 
-These signals have value, but they must be handled carefully.
+Commitment belongs to Becoming.
 
-## Commitment is not ownership
+Commitment is part of curation because it moves intention into action.
 
-Commitment does not mean ownership of another human being.
+A person may commit to themselves by dedicating time, discipline, learning, money, network, or service toward their own Becoming.
 
-Commitment does not remove consent.
-Commitment does not force marriage.
-Commitment does not force friendship.
-Commitment does not force union.
-Commitment does not cancel dignity.
+A person may commit to others by showing up, serving, pledging, supporting, buying, introducing, connecting, or physically attending a place where value is created.
 
-Commitment creates a relational field that can be curated, protected, measured, and resolved under SEAL, proof, and Earth Law.
+## Social value and social distance
 
-## Defense value
+Commitment can reduce social distance.
 
-Defense is a major commitment signal.
+When a person shows up physically, attends an event, joins service, fulfills a pledge, buys from someone, supports a wedding, serves food, drives people, dances, introduces people, or helps organize, the person's social network may grow.
 
-If someone protects, stands for, speaks for, supports, shields, or carries another person through pressure, that action may release PULSE and value.
+The social distance between people, families, groups, vendors, friends, classmates, workmates, and communities can reduce through commitment.
 
-Defense value may show loyalty, care, courage, responsibility, sacrifice, risk, or future family potential.
+That reduced distance is value.
 
-But defense must be checked.
+## Physical presence commitment
 
-Defense can be healthy.
-Defense can also become control, obsession, coercion, manipulation, or unsafe attachment.
+Some value is created only by being there.
 
-Field and SEAL must distinguish protection from possession.
+A wedding, naming ceremony, burial, meeting, launch, market day, religious event, community work, or family ceremony may require physical presence.
 
-## Commitment value signals
+The person's body at the location becomes part of the value formation.
 
-Commitment may be measured through:
+The person gives time, movement, transport cost, attention, energy, appearance, and social proof.
 
-- willingness
-- consistency
-- sacrifice
-- defense
-- care
-- time invested
-- support given
-- promises made
-- promises kept
-- family introduction
-- shared plans
-- financial contribution
-- emotional labor
-- risk carried
-- reputation risk
-- public acknowledgment
-- private loyalty
-- repair after conflict
-- respect for boundaries
-- consent and dignity
+That presence releases PULSE.
 
-## Relationship states
+## Service commitment
 
-The ecosystem may recognize states such as:
+A commitment may be service.
 
-- stranger signal
-- friend signal
-- close friend signal
-- interest signal
-- courtship signal
-- boyfriend or girlfriend signal
-- fiancé or fiancée signal
-- family-approved signal
-- union candidate
-- spouse
-- separated
-- divorced
-- widow or widower
-- former relationship
-- unresolved bond
+Examples:
 
-These states should not be forced. They require consent, proof, and context.
+- serve food
+- drive people
+- cook
+- dance
+- carry items
+- arrange chairs
+- coordinate guests
+- provide security
+- clean
+- record media
+- introduce people
+- handle logistics
+- make calls
+- run errands
+- manage vendors
+- help the family
 
-## Union relationship
+Service commitment creates value because the event or task moves because someone served.
 
-Union doctrine says formation begins at union or potential family field, not only at birth.
+## Pledge commitment
 
-The Law of Commitment comes before and around that union.
+A pledge is a declared commitment.
 
-Commitment is the pre-union and relationship-value layer.
-Union is the formal or deeper family-formation field.
-Continuum carries the result forward through life, legacy, and after-death continuity.
+A person may pledge money, clothing, transport, food, time, attendance, service, media, gifts, vendor patronage, or responsibility.
 
-## Curation role
+If the pledge comes true, it releases proof and increases value.
 
-Curation must guide commitment without forcing human choice.
+If the pledge fails, it still releases PULSE as warning, liability, learning, reputation change, or pending value.
 
-Curation asks:
+## Market and vendor commitment
 
-- Is this commitment healthy?
-- Is it mutual?
-- Is it proven?
-- Is it safe?
-- Is it dignified?
-- Is there imbalance?
-- Is one person exploiting the other?
-- Is there real value?
-- Is there future formation potential?
-- Should the relationship continue, pause, resolve, protect, or end?
+Commitment can activate economic routes.
+
+Example:
+
+A person commits to wear a fifty-thousand-naira brocade for an introduction.
+They buy it from a specific seller.
+That seller receives value.
+The person receives appearance value, social value, event value, and proof of participation.
+
+A person buys perfume from a specific seller.
+The seller earns.
+The buyer carries scent, presentation, identity, and event readiness.
+The event receives social and aesthetic value.
+
+These commitments connect HAPI, vendor, product, event, family, and network.
+
+## Event commitment
+
+Marriages, weddings, naming ceremonies, burials, birthdays, graduations, launches, community events, school events, work events, religious events, and ceremonies are commitment fields.
+
+People must be moved into those fields physically, socially, economically, and emotionally.
+
+The ecosystem should help people commit, attend, serve, buy, pledge, coordinate, and return value.
+
+## Opportunity lock-in
+
+Commitment can lock a person into opportunity.
+
+A person may go somewhere, serve, meet someone, join a network, or fulfill a pledge.
+
+From that commitment, a startup, friendship, job, marriage, partnership, vendor chain, group, or new AI formation may emerge.
+
+The opportunity appears because the person committed value first.
+
+## Commitment cycle
+
+Commitment made.
+Value given.
+PULSE released.
+Field records context.
+Service or presence happens.
+Return PULSE comes back.
+Value is read.
+Network grows or changes.
+Formation updates.
+Becoming moves.
+
+## Safety and dignity
+
+Commitment must not become coercion.
+
+A person should not be forced into unsafe debt, shame, exploitation, or social pressure that destroys dignity.
+
+Field and SEAL must distinguish healthy commitment from manipulation.
 
 ## Final law
 
-Commitment creates relational value before formal union.
-
-Commitment must be measured, but not weaponized.
-Commitment must be honored, but not forced.
-Commitment must be protected, but not turned into ownership.
+Commitment is dedicated value toward Becoming.
+Commitment moves curation into action.
 Commitment releases PULSE.
-PULSE carries relationship value.
-Field checks safety and balance.
-SEAL preserves consent.
-Curation protects the best lawful and dignified outcome.
+PULSE returns value.
+Presence is value.
+Service is value.
+Pledge is value.
+Vendor patronage is value.
+Social distance reduction is value.
+Event participation is value.
+Opportunity emerges from committed value.
+The ecosystem gets things done through commitment.
