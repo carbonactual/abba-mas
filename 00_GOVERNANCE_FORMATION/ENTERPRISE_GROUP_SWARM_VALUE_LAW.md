@@ -1,76 +1,106 @@
-# Enterprise, Institution, Company, Club, and Group Swarm Value Law
+# Enterprise, Company, Institution, Staff, and Group Swarm Value Law
 
-Enterprises, companies, institutions, clubs, organizations, groups, and collective bodies are not minted generically.
+This law separates individual HAPI value, enterprise/company value, staff network value, and group/community value.
 
-They are tailored, measured, and minted based on their services rendered, value emitted, capabilities, capacities, proof, field position, and pulse history.
+They are related, but they are not the same layer.
 
-## Core law
+## Individual HAPI law
 
-An entity enters through its swarm.
-ABBA reads its service and value field.
-PULSE forms from activity, service, delivery, proof, contribution, and return.
-PULSE scales the entity.
-Value is minted according to measured contribution.
+The individual is HAPI.
 
-## Entity value basis
+A HAPI scales through PULSE.
 
-A company or institution is weighed by:
+The HAPI receives an AI based on formation, capability, capacity, education, skills, knowledge, access, proof, field position, SEAL level, and return PULSE.
 
-- services rendered
-- value delivered
-- operational capacity
-- capability depth
-- proof of delivery
-- trust record
-- people inside the entity
-- AI capability inside the entity
-- products controlled or used
+The HAPI AI grows as the person learns, delivers, proves, accesses, serves, and returns PULSE.
+
+## Enterprise and company law
+
+An enterprise, company, or institution receives its own AI.
+
+That AI is not generated only by the individuals inside the company.
+
+It is tailored to the company's products, services rendered, value delivered, sector, swarm position, operating capacity, proof of delivery, trust record, revenue route, impact route, and ecosystem value.
+
+The company AI is fitted with selected products, functions, tools, and services from relevant swarms.
+
+A bank does not receive the same AI configuration as a school.
+A logistics company does not receive the same AI configuration as a hospital.
+A law firm does not receive the same AI configuration as a market association.
+
+ABBA reads the company value and selects the swarm products that fit the products and services rendered.
+
+## Staff law
+
+A company can have its own AI.
+Each staff member can have their own HAPI AI.
+A staff group can have its own group AI.
+Subgroups inside the company can also have their own AI and value layer.
+
+Examples:
+
+- company AI
+- department AI
+- branch AI
+- management AI
+- operations AI
+- audit AI
+- HR AI
+- sales AI
+- staff group AI
+- individual staff HAPI AI
+
+Each level is measured and scaled through PULSE.
+
+## Group, community, club, and association law
+
+Groups, communities, clubs, associations, societies, unions, teams, and informal collectives receive AI based on collective value.
+
+The group AI is generated from the combined value of the individuals in the group.
+
+It is shaped by:
+
+- member HAPI value
+- member AI capability
+- collective proof
+- shared purpose
+- shared service
+- coordination strength
+- trust inside the group
+- delivery history
 - access level
-- sector or swarm position
-- revenue or impact route
-- return PULSE quality
+- field position
+- return PULSE
 
-## Individual and group network
+## Individual scaling and collective scaling
 
-Every member may have an individual AI.
-Every individual AI has its own capability and capacity.
-Those individual AIs form a network.
-The network creates total group value.
+Individuals scale through their own PULSE.
 
-The group can scale in two ways:
+Companies scale through products, services, delivery, proof, and company PULSE.
 
-1. individual scaling
-2. group-ball scaling
+Staff networks scale through staff contribution, team delivery, proof, internal coordination, and return PULSE.
 
-## Individual scaling
+Groups scale through collective PULSE.
 
-A person, unit, department, branch, officer, student, member, staff, or contributor can grow through their own PULSE.
+A subgroup can scale separately while still contributing to the larger group value.
 
-Their AI improves as they learn, deliver, prove, access, and return value.
+## Group-ball value
 
-## Group-ball scaling
+A group-ball value is created when individual HAPI value, individual AIs, subgroup value, group proof, shared service, and collective PULSE form a higher combined value.
 
-A group can also scale as one body.
-
-When the combined members, AIs, functions, proofs, services, and pulses create a higher total value, the group forms a group-ball value.
-
-The group-ball value is not only the sum of individuals.
-It includes coordination, trust, teamwork, shared proof, shared delivery, shared access, and shared return PULSE.
-
-## Swarm relationship
-
-Different entities may come from different swarms.
-
-A school swarm is not weighed the same as a bank swarm.
-A club swarm is not weighed the same as a government swarm.
-A company swarm is not weighed the same as a family, community, or product swarm.
-
-ABBA tailors value logic to the swarm.
+The group-ball is not only the sum of members.
+It includes coordination, shared trust, common purpose, internal capacity, alliances, and collective return PULSE.
 
 ## Final law
 
-Entities are minted by value.
-Groups scale by PULSE.
-Individual AIs form network value.
-Network value can scale each person or the whole group.
-The group-ball rises when collective pulse, proof, service, trust, and value strengthen together.
+Individual = HAPI.
+HAPI scales through PULSE.
+
+Company = entity AI tailored by products, services, value, proof, and relevant swarms.
+
+Staff = individual HAPI AIs plus staff-group and subgroup AI layers.
+
+Group = collective AI generated from the value of members and their collective PULSE.
+
+Every layer can scale separately.
+Every layer can also contribute to a larger network value.
