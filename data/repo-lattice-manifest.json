@@ -1,98 +1,118 @@
 {
-  "manifest_id": "carbon_actual_repo_lattice_v1",
+  "manifest_id": "carbon_actual_repo_lattice_v2",
   "owner": "carbonactual",
-  "principle": "Federated repo lattice. GitHub stores the map; the ecosystem stores the territory.",
+  "principle": "Start consolidated. Split only when a module needs independent operational life.",
   "default_visibility": "public",
   "governance": {
-    "repo_creation_rule": "Create a repo only when doctrine, product, engine, SDK, adapter, registry, or deployment needs independent operational life.",
+    "repo_creation_rule": "Do not create a new repo for every doctrine. Keep related doctrines inside one operational repo until separation is justified by deployment, contributors, permissions, release cycle, or governance.",
     "lightweight_rule": "No raw HAPI data, secrets, private memory, database dumps, large binaries, live logs, or confidential value records in GitHub.",
-    "integration_rule": "Every repo must expose doctrine, architecture, schema, security, SEAL policy, registry, tests, and integration surfaces where applicable."
+    "integration_rule": "ABBA MAS is the integration, swarm, open-source, white-label, AI, AI agent, API, SDK, low-hassle and free-product command center.",
+    "pulse_value_rule": "PULSE and VALUE remain together because their relationship is the measurable economic engine. Pulse is tokenized; token is classified; value is created after classification."
   },
   "core_repositories": [
     {
-      "name": "ecosystem-architecture",
-      "description": "Master map for Carbon Actual organizations, repos, doctrines, products, AI, HAPI, pulse, value, governance, and integration lattice.",
-      "type": "governance"
-    },
-    {
       "name": "abba-mas",
-      "description": "ABBA master AI swarm resolver, operating core, registry, model routing, HAPI assignment, and integration command center.",
-      "type": "ai-core"
+      "description": "ABBA master AI swarm resolver and integration command center for open-source, white-label, AI agents, APIs, SDKs, low-hassle tools, free tools, swarms, registries, and ecosystem integration paths.",
+      "type": "master-integration-swarm",
+      "contains": [
+        "integration-scout",
+        "swarm-registry",
+        "open-source-registry",
+        "white-label-registry",
+        "api-sdk-registry",
+        "ai-agent-registry",
+        "model-router",
+        "n8n-router",
+        "provider-governance",
+        "integration-gap-analysis",
+        "product-swarm-formation",
+        "tool-swarm-formation"
+      ]
     },
     {
       "name": "actual-value-engine",
-      "description": "Universal value accounting, token classification, asset-liability inversion, loss recovery, replenishment, and value creation gate.",
-      "type": "economic-engine"
+      "description": "Combined PULSE and VALUE engine for universal value accounting, token classification, asset-liability inversion, loss recovery, value creation, replenishment, and the measurable relationship between PULSE and VALUE.",
+      "type": "pulse-value-economic-engine",
+      "contains": [
+        "pulse-capture",
+        "pulse-tokenization",
+        "token-classification",
+        "asset-liability-inversion",
+        "value-accounting",
+        "loss-recovery",
+        "replenishment",
+        "io-state",
+        "actual-value-out",
+        "value-creation-gate"
+      ]
     },
     {
       "name": "hapi-protocol",
-      "description": "Human API protocol for HAPI identity, entry, consent, route, SEAL, training, and personal AI assignment.",
-      "type": "human-protocol"
+      "description": "Human API protocol for # formation, HAPI identity, entry, consent, SEAL, AI assignment, personal AI core, and function capsules.",
+      "type": "hapi-ai-formation",
+      "contains": [
+        "hash-formation",
+        "hapi-entry",
+        "seal-consent",
+        "personal-ai-core",
+        "function-capsules",
+        "human-routing",
+        "entity-onboarding"
+      ]
     },
     {
-      "name": "pulse-token-protocol",
-      "description": "Pulse capture, tokenization, classification, proof routing, return signal, and pulse-to-value lifecycle.",
-      "type": "token-protocol"
-    },
-    {
-      "name": "io-layer",
-      "description": "I/O movement layer for PULSE received, VALUE sent, return PULSE, settlement, escrow, value state, and swarm movement.",
-      "type": "movement-layer"
-    },
-    {
-      "name": "becoming-feed",
-      "description": "Curated value feed where raw signals are filtered into actionable Becoming values with route, proof need, risk, and expected PULSE.",
-      "type": "feed-engine"
-    },
-    {
-      "name": "actual-reveal-engine",
-      "description": "Actual layer for qualified value reveal, public/private boundary, proof approval, and final activation.",
-      "type": "reveal-engine"
-    },
-    {
-      "name": "seal-governance",
-      "description": "SEAL policy, consent, permission, approval, internal/external gates, review rules, and human authority model.",
-      "type": "governance"
-    },
-    {
-      "name": "atlas-public",
-      "description": "Public visibility, public proof, biography, map, opportunity, and approved world-facing knowledge layer.",
-      "type": "public-layer"
-    },
-    {
-      "name": "vault-protocol",
-      "description": "Sensitive proof custody, private records, contract references, treasury references, and protected value records.",
-      "type": "private-layer"
-    },
-    {
-      "name": "swarm-registry",
-      "description": "Registry for product swarms, AI swarms, HAPI swarms, value swarms, tool swarms, proof swarms, and integration swarms.",
-      "type": "registry"
-    },
-    {
-      "name": "integration-scout",
-      "description": "Research, test, and gap-finding engine for APIs, SDKs, webhooks, no-code routes, open-source adapters, and partner integration paths.",
-      "type": "integration-engine"
-    },
-    {
-      "name": "ai-minting-engine",
-      "description": "AI minting, AI assignment, website/function capsules, personal AI core, permissions, memory references, and SEAL-scoped activation.",
-      "type": "ai-engine"
-    },
-    {
-      "name": "entity-graph",
-      "description": "Graph layer for HAPI, products, companies, apps, groups, organizations, tools, roots, values, pulses, and swarms.",
-      "type": "graph-layer"
+      "name": "ecosystem-governance",
+      "description": "Master governance, repo lattice, SEAL policy, public/private boundary, ATLAS, Vault, documentation, and ecosystem architecture.",
+      "type": "governance-docs-architecture",
+      "contains": [
+        "ecosystem-architecture",
+        "seal-governance",
+        "atlas-public",
+        "vault-protocol",
+        "carbonactual-docs",
+        "repo-lattice-policy",
+        "security-policy"
+      ]
     },
     {
       "name": "carbonactual-sdk",
-      "description": "Developer SDKs, API clients, integration helpers, event helpers, and app adapters for Carbon Actual ecosystem integration.",
-      "type": "sdk"
+      "description": "Developer SDKs, API clients, adapters, event helpers, integration helpers, and app-facing tools for ecosystem integration.",
+      "type": "sdk-adapters",
+      "contains": [
+        "api-clients",
+        "webhooks",
+        "adapters",
+        "event-helpers",
+        "integration-templates",
+        "starter-kits"
+      ]
     },
     {
-      "name": "carbonactual-docs",
-      "description": "Public and internal documentation hub for all Carbon Actual protocols, SDKs, build guides, doctrines, and integration manuals.",
-      "type": "documentation"
+      "name": "entity-graph",
+      "description": "Graph layer for HAPI, products, companies, apps, groups, organizations, tools, roots, values, pulses, swarms, and integration relationships.",
+      "type": "graph-layer",
+      "contains": [
+        "hapi-graph",
+        "product-graph",
+        "entity-graph",
+        "swarm-relationships",
+        "value-routes",
+        "proof-routes"
+      ]
     }
-  ]
+  ],
+  "deferred_repositories": [
+    "becoming-feed",
+    "io-layer",
+    "pulse-token-protocol",
+    "integration-scout",
+    "swarm-registry",
+    "ai-minting-engine",
+    "actual-reveal-engine",
+    "seal-governance",
+    "atlas-public",
+    "vault-protocol",
+    "carbonactual-docs"
+  ],
+  "deferred_rule": "Deferred repos remain modules inside the consolidated core until scale, permissions, independent deployment, or governance requires separation."
 }
