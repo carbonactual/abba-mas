@@ -7,6 +7,13 @@ const layers = [
     rule: "ABBA prepares, classifies, routes, and returns signal. Review gates remain active."
   },
   {
+    name: "Universal Value Accounting",
+    providers: "Measure action, loss, residue, resource use, wear, delay, failed downloads, failed page loads, and missed opportunity",
+    status: "core added",
+    seal: "SEAL-2 to SEAL-5",
+    rule: "Nothing is zero by default. Every measurable residue can become record, recovery, prevention, or replenishment."
+  },
+  {
     name: "Becoming Value Feed",
     providers: "Signal intake, value-only feed, route, risk, proof need, next action, expected PULSE",
     status: "core added",
@@ -98,6 +105,9 @@ const links = [
   ["ABBA Registry", "/api/abba/registry"],
   ["Becoming Feed", "/api/becoming/feed"],
   ["I/O Status", "/api/io/status"],
+  ["Value Measure", "/api/value/measure"],
+  ["Value Reclaim", "/api/value/reclaim"],
+  ["Value Examples", "/api/value/examples"],
   ["Swarm Providers", "/api/swarm/providers"],
   ["OpenRouter", "/api/swarm/openrouter"]
 ];
@@ -108,10 +118,10 @@ export default function Home() {
       <section style={{ maxWidth: "1100px", margin: "0 auto" }}>
         <p style={{ letterSpacing: "0.24em", textTransform: "uppercase", color: "#67e8f9", fontSize: "12px" }}>ABBA MAS Swarm</p>
         <h1 style={{ fontSize: "clamp(36px, 7vw, 84px)", lineHeight: 0.95, margin: "16px 0" }}>
-          PULSE received. VALUE sent. Actual reveals.
+          Nothing is lost. Value is measured. Actual reveals.
         </h1>
         <p style={{ maxWidth: "780px", color: "#cbd5e1", fontSize: "18px", lineHeight: 1.7 }}>
-          ABBA MAS now has the operating core, Becoming Value Feed, I/O Pulse Value Loop, HAPI assignment path, OpenRouter model routing, OpenAlternative discovery, expanded app swarm, and Actual value guardrails. Raw signals are curated before value appears.
+          ABBA MAS now has the operating core, Universal Value Accounting, Becoming Value Feed, I/O Pulse Value Loop, HAPI assignment path, OpenRouter model routing, OpenAlternative discovery, expanded app swarm, and Actual value guardrails. Raw signals are curated before value appears. Loss, delay, wear, residue, and failed actions can become measurable records.
         </p>
 
         <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", marginTop: "28px" }}>
@@ -137,7 +147,7 @@ export default function Home() {
         <section style={{ marginTop: "44px", padding: "24px", borderRadius: "24px", border: "1px solid rgba(103, 232, 249, 0.28)", background: "linear-gradient(135deg, rgba(8, 145, 178, 0.18), rgba(88, 28, 135, 0.18))" }}>
           <h2>Activation sequence</h2>
           <p style={{ color: "#cbd5e1", lineHeight: 1.7 }}>
-            Signal → ABBA interpretation → value curation → Becoming Feed → action → PULSE return → I/O state update → proof route → Actual-ready queue.
+            Signal → ABBA interpretation → value measurement → residue classification → Becoming Feed → action → PULSE return → I/O state update → reclamation/replenishment → proof route → Actual-ready queue.
           </p>
         </section>
       </section>
