@@ -1,5 +1,5 @@
 {
-  "manifest_id": "carbon_actual_repo_lattice_v2",
+  "manifest_id": "carbon_actual_repo_lattice_v3",
   "owner": "carbonactual",
   "principle": "Start consolidated. Split only when a module needs independent operational life.",
   "default_visibility": "public",
@@ -7,7 +7,7 @@
     "repo_creation_rule": "Do not create a new repo for every doctrine. Keep related doctrines inside one operational repo until separation is justified by deployment, contributors, permissions, release cycle, or governance.",
     "lightweight_rule": "No raw HAPI data, secrets, private memory, database dumps, large binaries, live logs, or confidential value records in GitHub.",
     "integration_rule": "ABBA MAS is the integration, swarm, open-source, white-label, AI, AI agent, API, SDK, low-hassle and free-product command center.",
-    "pulse_value_rule": "PULSE and VALUE remain together because their relationship is the measurable economic engine. Pulse is tokenized; token is classified; value is created after classification."
+    "pulse_value_rule": "PULSE, VALUE, MINTING, LEDGER, BLOCKCHAIN, TOKENIZATION, PROOF, and I/O remain together because their relationship is the measurable economic engine. Pulse is tokenized; token is classified; value is created after classification; selected proofs are anchored to ledger or chain after SEAL."
   },
   "core_repositories": [
     {
@@ -31,8 +31,8 @@
     },
     {
       "name": "actual-value-engine",
-      "description": "Combined PULSE and VALUE engine for universal value accounting, token classification, asset-liability inversion, loss recovery, value creation, replenishment, and the measurable relationship between PULSE and VALUE.",
-      "type": "pulse-value-economic-engine",
+      "description": "Combined PULSE, VALUE, MINTING, LEDGER, BLOCKCHAIN, TOKENIZATION, PROOF, and I/O engine for universal value accounting, token classification, asset-liability inversion, proof anchoring, value creation, replenishment, and recovery.",
+      "type": "pulse-value-ledger-engine",
       "contains": [
         "pulse-capture",
         "pulse-tokenization",
@@ -43,7 +43,15 @@
         "replenishment",
         "io-state",
         "actual-value-out",
-        "value-creation-gate"
+        "value-creation-gate",
+        "minting-gate",
+        "ledger-records",
+        "blockchain-anchoring",
+        "proof-references",
+        "token-registry",
+        "off-chain-state",
+        "on-chain-proof",
+        "settlement-routes"
       ]
     },
     {
@@ -97,7 +105,9 @@
         "entity-graph",
         "swarm-relationships",
         "value-routes",
-        "proof-routes"
+        "proof-routes",
+        "ledger-relationships",
+        "token-relationships"
       ]
     }
   ],
@@ -112,7 +122,8 @@
     "seal-governance",
     "atlas-public",
     "vault-protocol",
-    "carbonactual-docs"
+    "carbonactual-docs",
+    "blockchain-ledger-protocol"
   ],
   "deferred_rule": "Deferred repos remain modules inside the consolidated core until scale, permissions, independent deployment, or governance requires separation."
 }
