@@ -1,0 +1,44 @@
+{
+  "schema_id": "token_classification_v1",
+  "description": "Classifies every tokenized PULSE before any value is minted.",
+  "core_law": "PULSE is tokenized. Token is classified. VALUE is minted only after classification.",
+  "token_classes": [
+    "asset",
+    "liability",
+    "mixed",
+    "neutral",
+    "residue",
+    "risk",
+    "proof",
+    "pending"
+  ],
+  "classification_axes": [
+    "source_reliability",
+    "proof_strength",
+    "time_cost",
+    "energy_cost",
+    "attention_cost",
+    "data_cost",
+    "money_cost",
+    "wear_cost",
+    "opportunity_cost",
+    "risk_exposure",
+    "recoverability",
+    "ecosystem_usefulness",
+    "swarm_relevance",
+    "actual_readiness",
+    "seal_level"
+  ],
+  "inversion_rules": {
+    "real_life_asset_can_be_ecosystem_liability": true,
+    "real_life_liability_can_be_ecosystem_asset": true,
+    "reason": "Classification depends on returned PULSE, proof, usefulness, risk, recoverability, and future value, not ordinary label."
+  },
+  "value_minting_gate": {
+    "requires_classification": true,
+    "requires_route": true,
+    "requires_expected_return_pulse": true,
+    "requires_seal_for_external_action": true
+  },
+  "default_state": "pending_classification"
+}
