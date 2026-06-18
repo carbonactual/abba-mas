@@ -1,0 +1,98 @@
+{
+  "manifest_id": "carbon_actual_repo_lattice_v1",
+  "owner": "carbonactual",
+  "principle": "Federated repo lattice. GitHub stores the map; the ecosystem stores the territory.",
+  "default_visibility": "public",
+  "governance": {
+    "repo_creation_rule": "Create a repo only when doctrine, product, engine, SDK, adapter, registry, or deployment needs independent operational life.",
+    "lightweight_rule": "No raw HAPI data, secrets, private memory, database dumps, large binaries, live logs, or confidential value records in GitHub.",
+    "integration_rule": "Every repo must expose doctrine, architecture, schema, security, SEAL policy, registry, tests, and integration surfaces where applicable."
+  },
+  "core_repositories": [
+    {
+      "name": "ecosystem-architecture",
+      "description": "Master map for Carbon Actual organizations, repos, doctrines, products, AI, HAPI, pulse, value, governance, and integration lattice.",
+      "type": "governance"
+    },
+    {
+      "name": "abba-mas",
+      "description": "ABBA master AI swarm resolver, operating core, registry, model routing, HAPI assignment, and integration command center.",
+      "type": "ai-core"
+    },
+    {
+      "name": "actual-value-engine",
+      "description": "Universal value accounting, token classification, asset-liability inversion, loss recovery, replenishment, and value creation gate.",
+      "type": "economic-engine"
+    },
+    {
+      "name": "hapi-protocol",
+      "description": "Human API protocol for HAPI identity, entry, consent, route, SEAL, training, and personal AI assignment.",
+      "type": "human-protocol"
+    },
+    {
+      "name": "pulse-token-protocol",
+      "description": "Pulse capture, tokenization, classification, proof routing, return signal, and pulse-to-value lifecycle.",
+      "type": "token-protocol"
+    },
+    {
+      "name": "io-layer",
+      "description": "I/O movement layer for PULSE received, VALUE sent, return PULSE, settlement, escrow, value state, and swarm movement.",
+      "type": "movement-layer"
+    },
+    {
+      "name": "becoming-feed",
+      "description": "Curated value feed where raw signals are filtered into actionable Becoming values with route, proof need, risk, and expected PULSE.",
+      "type": "feed-engine"
+    },
+    {
+      "name": "actual-reveal-engine",
+      "description": "Actual layer for qualified value reveal, public/private boundary, proof approval, and final activation.",
+      "type": "reveal-engine"
+    },
+    {
+      "name": "seal-governance",
+      "description": "SEAL policy, consent, permission, approval, internal/external gates, review rules, and human authority model.",
+      "type": "governance"
+    },
+    {
+      "name": "atlas-public",
+      "description": "Public visibility, public proof, biography, map, opportunity, and approved world-facing knowledge layer.",
+      "type": "public-layer"
+    },
+    {
+      "name": "vault-protocol",
+      "description": "Sensitive proof custody, private records, contract references, treasury references, and protected value records.",
+      "type": "private-layer"
+    },
+    {
+      "name": "swarm-registry",
+      "description": "Registry for product swarms, AI swarms, HAPI swarms, value swarms, tool swarms, proof swarms, and integration swarms.",
+      "type": "registry"
+    },
+    {
+      "name": "integration-scout",
+      "description": "Research, test, and gap-finding engine for APIs, SDKs, webhooks, no-code routes, open-source adapters, and partner integration paths.",
+      "type": "integration-engine"
+    },
+    {
+      "name": "ai-minting-engine",
+      "description": "AI minting, AI assignment, website/function capsules, personal AI core, permissions, memory references, and SEAL-scoped activation.",
+      "type": "ai-engine"
+    },
+    {
+      "name": "entity-graph",
+      "description": "Graph layer for HAPI, products, companies, apps, groups, organizations, tools, roots, values, pulses, and swarms.",
+      "type": "graph-layer"
+    },
+    {
+      "name": "carbonactual-sdk",
+      "description": "Developer SDKs, API clients, integration helpers, event helpers, and app adapters for Carbon Actual ecosystem integration.",
+      "type": "sdk"
+    },
+    {
+      "name": "carbonactual-docs",
+      "description": "Public and internal documentation hub for all Carbon Actual protocols, SDKs, build guides, doctrines, and integration manuals.",
+      "type": "documentation"
+    }
+  ]
+}
