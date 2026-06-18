@@ -77,19 +77,31 @@ ABBA MAS should keep the following controlled folders:
 - tests/
 - docs/
 
-## Formation sequence
+## Corrected formation sequence
 
 Signal enters.
 ABBA reads.
 PULSE is formed.
+PULSE is minted.
 PULSE is tokenized.
-Token is classified.
-Value is weighed.
-Swarm is matched.
-SEAL level is checked.
+Token is valued.
+Value is read.
+Field is checked.
 Action route is created.
-Return PULSE is expected.
-Actual reveal remains gated.
+PULSE is released.
+PULSE is taken.
+PULSE is shot.
+PULSE is moved.
+PULSE has gone.
+Value is revealed.
+
+## Meaning of release
+
+The action route is the release point.
+
+Before the action route, PULSE is still inside formation.
+After the action route, PULSE has gone into movement.
+Once PULSE has gone, value can be revealed according to SEAL, proof, field state, and Actual readiness.
 
 ## Integration sequence
 
@@ -102,7 +114,7 @@ For every product, company, app, tool, repo, issue, API, SDK, model, agent, open
 - identify cost
 - identify risk
 - identify value
-- identify swarm
+- identify field
 - classify token
 - create registry entry
 - test with mock route first
@@ -118,6 +130,8 @@ Split only by necessity.
 Control before scale.
 Formation before activation.
 PULSE before value.
-Classification before minting.
-SEAL before external action.
-Actual before reveal.
+Pulse minting before pulse release.
+Token valuation before value reveal.
+Field check before action route.
+Action route releases PULSE.
+Value reveals after PULSE has gone.
