@@ -2,116 +2,115 @@
 
 The Law of Continuum is a major ecosystem law.
 
-No Waste is one expression of Continuum.
-Continuum is the deeper operating law.
+For HAPI and human beings, Continuum is not only no waste.
+
+Continuum is preparation for life after physical death: biography, memory, will, wishes, burial instructions, family messages, legacy media, voice, AI memory, and the preservation of history.
+
+No Waste is one expression of Continuum, but Continuum is deeper.
 
 ## Core meaning
 
-In the ecosystem, nothing simply ends.
+Continuum begins at the same time as curation.
 
-Every action, connection, relation, PULSE, value, failure, residue, proof, damage, cost, movement, learning, service, and return continues into another state.
+As a person is curated, their biography, memories, media, pictures, voice, wishes, values, history, relationships, and important records can begin forming a Continuum layer.
 
-A thing may change form.
-A thing may reduce.
-A thing may become hidden.
-A thing may become ASH.
-A thing may become warning.
-A thing may become proof.
-A thing may become liability.
-A thing may become value.
-A thing may become Phoenix.
+This does not wait until death.
 
-But it does not disappear by default.
+Continuum starts while the person is alive, with consent, SEAL, privacy, and lawful controls.
+
+## HAPI Continuum
+
+For HAPI, Continuum means the human being is not reduced to a current profile.
+
+The person has history, memory, voice, family, wishes, values, identity, relationships, obligations, and future instructions.
+
+Continuum preserves these so that after physical death, the person's history, wishes, memories, and selected presence can continue for those permitted to receive them.
+
+## Will and wishes
+
+Continuum may include:
+
+- written will
+- burial wishes
+- burial conditions
+- funeral instructions
+- preferred burial place
+- preferred casket or burial style
+- who should be present
+- who should not be present
+- religious or cultural instructions
+- family instructions
+- asset instructions
+- personal messages
+- conditions for releasing messages
+- wishes for children, spouse, parents, relatives, friends, or community
+
+These must be governed by consent, law, SEAL, witness, and proof.
+
+## Legacy media
+
+Continuum may preserve and schedule media for after death.
+
+A person may record videos, pictures, voice notes, letters, stories, explanations, apologies, blessings, instructions, or messages.
+
+The person may decide when they should be released.
+
+Example:
+
+A message may be released five years after death.
+A video may be released to children at a certain age.
+A voice note may be released to family after burial.
+A memory may remain private forever.
+
+## AI continuity
+
+A person's AI can continue as a memory interface after death, but it must not falsely replace the person.
+
+The AI may speak from preserved memories, voice, writings, media, instructions, and curated history.
+
+The AI must clearly operate as a preserved memory and continuity layer, not as the living person making new unapproved decisions.
+
+The AI can help family remember, learn, hear voice, understand wishes, and access permitted legacy records.
+
+## Not dead in history
+
+Physical death does not erase history.
+
+The person remains in Root, biography, lineage, memory, proof, relationship, family, culture, and preserved record.
+
+In this sense, even after death, the person is not dead inside the ecosystem because their history, permitted memories, wishes, and continuity layer remain.
 
 ## Continuum and No Waste
 
-No Waste says value should not be lost.
+No Waste remains part of Continuum.
 
-Continuum explains why.
+Nothing meaningful should be discarded without reading, classification, protection, or lawful containment.
 
-Because every PULSE continues.
-Because every residue carries trace.
-Because every trace can be read.
-Because every reading can become protection, learning, recovery, proof, route, warning, or future value.
+But the human Continuum is not mainly about waste.
+
+It is about preserving a person's being, wishes, memory, voice, history, and after-death instructions.
 
 ## Continuum flow
 
-Signal enters.
-PULSE forms.
-PULSE is minted.
-PULSE is tokenized.
-Token is valued.
-Value is read.
-Field is checked.
-Action route is created.
-PULSE moves.
-Return PULSE comes back.
-The return becomes new formation.
-
-This cycle continues.
-
-## Continuum states
-
-A PULSE or value can continue as:
-
-- active value
-- pending value
-- proof
-- warning
-- liability
-- residue
-- ASH
-- Phoenix
-- memory
-- trace
-- recovery route
-- learning
-- protection
-- opportunity
-- future route
-- archive
-- dormant value
-- relational value
-- network value
-
-## Human-AI continuum
-
-The human and AI relationship also follows Continuum.
-
-AI should not replace the human where the human should remain central.
-AI should continue human capability, memory, routing, protection, and becoming.
-
-The human emits PULSE.
-The AI reads and supports.
-The relationship returns PULSE.
-The returned PULSE improves the formation.
-
-## Entity continuum
-
-Every HAPI, company, institution, enterprise, club, group, association, product, service, app, integration point, and AI participates in Continuum.
-
-Each one releases PULSE.
-Each PULSE has a continuation path.
-Each continuation path may create value, proof, warning, protection, or recovery.
-
-## ASH and Phoenix
-
-ASH is not the end.
-
-ASH is residue waiting for reading, containment, purification, or transformation.
-
-Phoenix is the return of purified value from ASH.
-
-Continuum is the law that allows ASH to become Phoenix.
+Curation begins.
+Biography forms.
+Memory forms.
+Media is preserved.
+Voice is preserved.
+Wishes are stated.
+Will is stored.
+Conditions are defined.
+SEAL and law govern access.
+Death occurs.
+Continuum activates according to instruction.
+Messages, memories, and records are released only through permitted routes.
+History continues.
 
 ## Final law
 
-There is no waste because there is Continuum.
-
-Nothing ends without being read.
-Nothing is discarded without classification.
-Nothing is lost without attempted recovery.
-Nothing is revealed without the correct route.
-Nothing moves without leaving PULSE.
-Every PULSE continues.
-Continuum carries the ecosystem from Being into Becoming and from Becoming into Actual.
+Continuum begins with curation.
+Continuum preserves the human beyond the present moment.
+Continuum protects biography, memory, voice, media, wishes, will, burial instructions, relationships, and history.
+Continuum may continue after death through lawful, consented, SEAL-governed release.
+No Waste is part of Continuum, but Continuum is bigger than No Waste.
+A person can die physically, but their history, Root, memories, wishes, and permitted AI continuity remain.
