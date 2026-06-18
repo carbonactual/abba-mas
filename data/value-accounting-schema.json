@@ -1,0 +1,36 @@
+{
+  "schema_id": "value_accounting_v1",
+  "description": "Measures cost, residue, loss, recovery path, and return signal across ecosystem activity.",
+  "core_law": "PULSE received. VALUE measured. LOSS recorded. RESIDUE classified. VALUE replenished.",
+  "dimensions": [
+    "time",
+    "data",
+    "battery",
+    "distance",
+    "energy",
+    "attention",
+    "wear",
+    "opportunity",
+    "trust",
+    "proof",
+    "residue"
+  ],
+  "events": [
+    "download_interrupted",
+    "page_not_loaded",
+    "task_interrupted",
+    "service_delay",
+    "resource_used",
+    "opportunity_missed",
+    "general_action"
+  ],
+  "states": [
+    "pulse_received",
+    "measured",
+    "loss_recorded",
+    "residue_classified",
+    "recovery_routed",
+    "replenished",
+    "closed"
+  ]
+}
