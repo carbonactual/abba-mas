@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "membershipModel": "many-to-many",
+  "memberships": [
+    {"providerId":"github","primarySwarm":"build","swarms":["build","automation","governance","proof","security","data"],"fractions":["code-hosting","issues","pull-requests","actions","audit-history","release-routing"]},
+    {"providerId":"vercel","primarySwarm":"build","swarms":["build","actual","automation","pulse","proof"],"fractions":["preview-deploy","production-deploy","hosting","build-logs","deployment-status"]},
+    {"providerId":"supabase","primarySwarm":"data","swarms":["data","identity","vault","actual","automation","pulse"],"fractions":["database","auth","storage","realtime","edge-functions","audit-records"]},
+    {"providerId":"n8n","primarySwarm":"automation","swarms":["automation","abba","actual","communication","data","pulse"],"fractions":["workflow-routing","webhooks","scheduled-jobs","provider-bridges","event-return"]},
+    {"providerId":"opentimestamps","primarySwarm":"proof","swarms":["proof","root","governance"],"fractions":["timestamp","hash-proof","verification"]},
+    {"providerId":"openrouter","primarySwarm":"abba","swarms":["abba","automation","research","education","actual"],"fractions":["model-routing","fallback-model","cost-routing","capability-selection"]},
+    {"providerId":"memorae","primarySwarm":"continuum","swarms":["continuum","root","index","actual"],"fractions":["memory-ingest","memory-recall","context-return","masked-reference"]},
+    {"providerId":"supermemory","primarySwarm":"continuum","swarms":["continuum","index","root","research"],"fractions":["long-term-memory","semantic-retrieval","document-memory"]},
+    {"providerId":"zep-graphiti","primarySwarm":"continuum","swarms":["continuum","index","root","pulse"],"fractions":["temporal-graph","entity-memory","relationship-history","context-updates"]},
+    {"providerId":"livekit","primarySwarm":"communication","swarms":["communication","hapi","actual","automation","pulse"],"fractions":["voice-room","video-room","realtime-agent","session-events"]},
+    {"providerId":"call-e","primarySwarm":"communication","swarms":["communication","hapi","actual","automation"],"fractions":["outbound-call","call-status","human-handoff"]},
+    {"providerId":"gmail","primarySwarm":"communication","swarms":["communication","operations","commerce","proof","actual"],"fractions":["read-mail","draft-mail","send-mail","thread-context","delivery-record"]},
+    {"providerId":"google-drive","primarySwarm":"data","swarms":["data","vault","root","index","education","operations"],"fractions":["file-storage","document-read","document-write","search","shared-workspace"]},
+    {"providerId":"clickup","primarySwarm":"operations","swarms":["operations","automation","governance","pulse","actual"],"fractions":["tasks","projects","docs","status-tracking","work-reporting"]},
+    {"providerId":"lovable","primarySwarm":"build","swarms":["build","media","actual","automation"],"fractions":["app-generation","ui-generation","prototype-build","github-handoff"]},
+    {"providerId":"figma","primarySwarm":"media","swarms":["media","build","atlas","actual"],"fractions":["interface-design","prototype","design-system","developer-handoff"]},
+    {"providerId":"canva","primarySwarm":"media","swarms":["media","communication","education","commerce","atlas"],"fractions":["design","presentation","social-content","brand-assets"]},
+    {"providerId":"airtable","primarySwarm":"data","swarms":["data","operations","commerce","automation","index"],"fractions":["records","views","forms","workflow-data","lightweight-crm"]},
+    {"providerId":"token-terminal","primarySwarm":"research","swarms":["research","finance","io","index"],"fractions":["blockchain-metrics","financial-analysis","protocol-comparison"]}
+  ]
+}
