@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://carbonactual.com/schemas/abba-command.schema.json",
+  "title": "ABBA MAS Command",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["commandId", "source", "requestedBy", "intent", "product", "repository", "riskLevel", "sealLevel", "status", "createdAt"],
+  "properties": {
+    "commandId": {"type": "string", "pattern": "^CMD-[0-9]{8}-[0-9]{4}$"},
+    "source": {"enum": ["chatgpt", "github", "actual", "api", "human"]},
+    "requestedBy": {"type": "string", "minLength": 1},
+    "intent": {"type": "string", "minLength": 1},
+    "product": {"type": "string", "minLength": 1},
+    "repository": {"type": "string", "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"},
+    "provider": {"type": ["string", "null"]},
+    "environment": {"enum": ["none", "development", "preview", "staging", "production"]},
+    "riskLevel": {"enum": ["low", "medium", "high", "critical"]},
+    "sealLevel": {"type": "integer", "minimum": 0, "maximum": 4},
+    "status": {"enum": ["inbox", "awaiting-seal", "approved", "running", "completed", "failed", "rejected"]},
+    "requiredSecrets": {"type": "array", "items": {"type": "string", "pattern": "^[A-Z][A-Z0-9_]+$"}, "uniqueItems": true},
+    "parameters": {"type": "object"},
+    "proofRequired": {"type": "boolean"},
+    "createdAt": {"type": "string", "format": "date-time"},
+    "expiresAt": {"type": ["string", "null"], "format": "date-time"}
+  }
+}
