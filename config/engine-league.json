@@ -1,0 +1,70 @@
+{
+  "version": "1.0.0",
+  "name": "ABBA Engine League",
+  "purpose": "Form temporary or persistent teams from app fractions and swarm capabilities, run them against the same product objective, compare outcomes, and promote the strongest engine room configuration.",
+  "teamModel": "A team is a composition of app fractions, swarm capabilities, human roles, AI roles, delivery routes, fallback routes, and proof routes.",
+  "competitionTypes": [
+    {"id":"prototype-match","goal":"build the strongest working prototype"},
+    {"id":"delivery-match","goal":"deliver the same user outcome with the best speed, quality and reliability"},
+    {"id":"cost-match","goal":"achieve the target outcome at the lowest safe total cost"},
+    {"id":"resilience-match","goal":"maintain service through provider or workflow failure"},
+    {"id":"growth-match","goal":"produce the strongest adoption, retention and ecosystem expansion pathway"},
+    {"id":"proof-match","goal":"produce the strongest verification, traceability and audit evidence"},
+    {"id":"human-impact-match","goal":"produce the best useful and dignified human outcome"},
+    {"id":"full-product-match","goal":"build and operate the strongest end-to-end product engine"}
+  ],
+  "teamRoles": [
+    "captain-orchestrator",
+    "builder",
+    "data-state",
+    "identity-access",
+    "automation-routing",
+    "interface-delivery",
+    "memory-context",
+    "security-seal",
+    "proof-audit",
+    "observability",
+    "human-service",
+    "fallback-reserve"
+  ],
+  "matchRules": [
+    "All teams receive the same product brief, constraints, test data, budget ceiling and completion window.",
+    "Teams may use different app fractions from the same or different swarms.",
+    "The same app may play for multiple teams when capacity, cost and isolation rules allow.",
+    "A team must declare every dependency, provider fraction, human role, AI role and fallback route before the match.",
+    "No team may win by hiding failures, costs, human effort, unsafe data access or missing proof.",
+    "The winner is selected by weighted outcome score, not by brand popularity or number of apps used.",
+    "A winning team enters champion status only after repeat performance and live health evidence.",
+    "Losing teams are not discarded; strong fractions may be transferred, merged or retained as reserves."
+  ],
+  "scoreWeights": {
+    "outcomeQuality": 20,
+    "taskSuccessRate": 15,
+    "deliverySpeed": 10,
+    "reliability": 10,
+    "costEfficiency": 10,
+    "securityAndSeal": 10,
+    "proofQuality": 8,
+    "humanImpact": 7,
+    "ecosystemReuse": 5,
+    "growthPathway": 5
+  },
+  "penalties": {
+    "unsafeDataExposure": -50,
+    "hiddenManualWork": -15,
+    "unreportedFailure": -20,
+    "missingProof": -15,
+    "budgetOverrun": -10,
+    "vendorLockInWithoutFallback": -8,
+    "latencyBreach": -5
+  },
+  "leagueLevels": [
+    {"id":"academy","meaning":"newly formed or untested teams"},
+    {"id":"challenger","meaning":"teams with successful sandbox evidence"},
+    {"id":"premier","meaning":"teams with repeated strong performance"},
+    {"id":"champion","meaning":"best current engine configuration for a product pathway"},
+    {"id":"reserve","meaning":"qualified fallback or specialist team"}
+  ],
+  "promotionRule": "A team is promoted by repeated evidence across matches, not a single result.",
+  "productEngineRule": "The champion team becomes the current engine room of the product, while runner-up and specialist teams remain available for fallback, comparison, regional delivery, cost optimization or future rematches."
+}
