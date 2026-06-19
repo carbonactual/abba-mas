@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ABBA MAS Result",
+  "type": "object",
+  "required": ["commandId", "status", "provider", "startedAt", "completedAt", "resultReference", "proofHash"],
+  "properties": {
+    "commandId": {"type": "string"},
+    "status": {"enum": ["completed", "failed", "rejected"]},
+    "provider": {"type": "string"},
+    "startedAt": {"type": "string"},
+    "completedAt": {"type": "string"},
+    "resultReference": {"type": "string"},
+    "commitSha": {"type": ["string", "null"]},
+    "proofHash": {"type": "string"},
+    "summary": {"type": "string"},
+    "errors": {"type": "array", "items": {"type": "string"}}
+  }
+}
