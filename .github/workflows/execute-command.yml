@@ -1,0 +1,64 @@
+name: ABBA Execute Command
+
+on:
+  push:
+    paths:
+      - 'commands/inbox/*.json'
+      - 'scripts/execute_command.py'
+      - '.github/workflows/execute-command.yml'
+  workflow_dispatch:
+    inputs:
+      command_path:
+        description: 'Path to a command JSON file'
+        required: true
+        default: 'commands/inbox/CMD-20260619-0001.json'
+
+permissions:
+  contents: read
+
+env:
+  DEFAULT_COMMAND_PATH: commands/inbox/CMD-20260619-0001.json
+
+jobs:
+  execute-safe-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Resolve command path
+        id: command
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "path=${{ inputs.command_path }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "path=$DEFAULT_COMMAND_PATH" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Execute allowlisted command
+        run: python scripts/execute_command.py "${{ steps.command.outputs.path }}"
+
+      - name: Upload result and proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: abba-command-result-${{ github.run_id }}
+          path: |
+            results/pending-return/*.json
+            proofs/receipts/*.sha256
+          if-no-files-found: warn
+
+      - name: Publish summary
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo '## ABBA Execution Result'
+            echo ''
+            echo '- Command: `${{ steps.command.outputs.path }}`'
+            echo '- Source event: `${{ github.event_name }}`'
+            echo '- Run ID: `${{ github.run_id }}`'
+            echo '- Result: `${{ job.status }}`'
+            echo '- Mode: allowlist-only'
+          } >> "$GITHUB_STEP_SUMMARY"
