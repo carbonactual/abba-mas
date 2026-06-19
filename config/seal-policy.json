@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0",
+  "levels": {
+    "0": {"name": "public-read", "approval": "automatic", "examples": ["documentation", "public-health-check"]},
+    "1": {"name": "low-risk-system", "approval": "automatic-with-log", "examples": ["tests", "lint", "timestamp-public-hash"]},
+    "2": {"name": "user-authorized", "approval": "session-or-standing-consent", "examples": ["create-issue", "draft-change", "save-preference"]},
+    "3": {"name": "sensitive-operational", "approval": "explicit-seal", "examples": ["production-deploy", "external-provider-call", "voice-session"]},
+    "4": {"name": "irreversible-or-regulated", "approval": "explicit-seal-plus-human-review", "examples": ["payment", "identity-proof", "database-destruction", "legal-signing"]}
+  },
+  "rules": [
+    "No raw secret value may be committed or written into command files.",
+    "Every command must declare a product, repository, risk level, and SEAL level.",
+    "SEAL 3 and SEAL 4 commands must not execute from untrusted pull requests.",
+    "Financial, identity, legal, physical, and destructive actions default to SEAL 4.",
+    "Execution results must produce a durable status and proof reference."
+  ]
+}
