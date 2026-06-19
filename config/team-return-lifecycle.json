@@ -1,0 +1,47 @@
+{
+  "version": "1.0.0",
+  "name": "ABBA Team Release and Swarm Return Lifecycle",
+  "principle": "Apps and capability fractions are temporarily assigned to product teams but remain owned by their home swarms. When the work or match closes, each fraction is released back to its home swarm with its results, learning, ranking, proof and updated readiness.",
+  "lifecycle": [
+    "available-in-home-swarm",
+    "selected-for-team",
+    "reserved",
+    "active-in-product-engine",
+    "match-or-work-completed",
+    "results-verified",
+    "learning-returned",
+    "released-to-home-swarm",
+    "re-ranked-and-available"
+  ],
+  "assignmentRules": [
+    "A team borrows only the declared capability fraction, not unrestricted access to the whole app.",
+    "The provider keeps all existing swarm memberships during team assignment.",
+    "A fraction may serve multiple teams only when capacity, isolation, cost, security and rate-limit rules permit.",
+    "Exclusive reservation may be used for scarce, stateful or conflict-sensitive fractions.",
+    "Team assignment ends automatically when the declared work, match, lease or product stage closes.",
+    "Persistent champion teams may retain a renewable assignment while the underlying fractions remain registered in their home swarms."
+  ],
+  "returnPackage": [
+    "task-and-match-results",
+    "kpi-updates",
+    "success-and-failure-receipts",
+    "cost-and-latency-records",
+    "security-and-seal-events",
+    "proof-references",
+    "human-and-ai-feedback",
+    "new-capability-discoveries",
+    "dependency-and-fallback-findings",
+    "recommended-ranking-change"
+  ],
+  "postReturnActions": [
+    "update fraction score and readiness",
+    "update provider and swarm KPI history",
+    "promote, retain, retrain, restrict, pause or retire the fraction",
+    "make reusable learning available to other eligible teams",
+    "preserve product-specific private data inside its authorized boundary",
+    "refresh league selection and future team formation"
+  ],
+  "stateRule": "Product state, user data and protected records do not travel back with the app fraction unless the governing data policy explicitly permits it. Only authorized learning, metadata, proofs and performance signals return.",
+  "ownershipRule": "Teams are temporary execution formations. Swarms are the enduring capability homes and development environments of apps and fractions.",
+  "engineRoomRule": "A product engine is assembled from swarm resources, performs its mission, returns learning to the ecosystem, and releases resources when no longer required."
+}
