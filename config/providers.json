@@ -1,0 +1,65 @@
+{
+  "version": "1.0.0",
+  "providers": [
+    {
+      "id": "github",
+      "name": "GitHub",
+      "routeType": "native-app",
+      "functionClass": ["command-center", "code", "issues", "pull-requests", "actions", "proof-ledger"],
+      "accessMethod": "ChatGPT GitHub App",
+      "costTier": "free-or-plan-dependent",
+      "riskLevel": "medium",
+      "sealLevel": 2,
+      "requiredSecrets": [],
+      "status": "active"
+    },
+    {
+      "id": "vercel",
+      "name": "Vercel",
+      "routeType": "git-integration-or-api",
+      "functionClass": ["deployment", "hosting", "preview"],
+      "accessMethod": "GitHub App / API",
+      "costTier": "free-tier-available",
+      "riskLevel": "medium",
+      "sealLevel": 3,
+      "requiredSecrets": ["VERCEL_TOKEN", "VERCEL_ORG_ID", "VERCEL_PROJECT_ID"],
+      "status": "registered"
+    },
+    {
+      "id": "supabase",
+      "name": "Supabase",
+      "routeType": "cli-api-webhook",
+      "functionClass": ["database", "auth", "storage", "realtime", "edge-functions"],
+      "accessMethod": "GitHub Actions / API",
+      "costTier": "free-tier-available",
+      "riskLevel": "high",
+      "sealLevel": 4,
+      "requiredSecrets": ["SUPABASE_ACCESS_TOKEN", "SUPABASE_PROJECT_REF", "SUPABASE_DB_PASSWORD"],
+      "status": "registered"
+    },
+    {
+      "id": "n8n",
+      "name": "n8n",
+      "routeType": "webhook-api",
+      "functionClass": ["automation", "workflow", "provider-routing"],
+      "accessMethod": "Webhook / API",
+      "costTier": "self-hostable",
+      "riskLevel": "medium",
+      "sealLevel": 3,
+      "requiredSecrets": ["N8N_WEBHOOK_URL", "N8N_API_KEY"],
+      "status": "registered"
+    },
+    {
+      "id": "opentimestamps",
+      "name": "OpenTimestamps",
+      "routeType": "cli-api",
+      "functionClass": ["timestamp", "proof"],
+      "accessMethod": "GitHub Action",
+      "costTier": "free",
+      "riskLevel": "low",
+      "sealLevel": 1,
+      "requiredSecrets": [],
+      "status": "pilot"
+    }
+  ]
+}
