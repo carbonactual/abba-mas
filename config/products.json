@@ -1,0 +1,45 @@
+{
+  "version": "1.0.0",
+  "products": [
+    {
+      "id": "abba-mas",
+      "name": "ABBA MAS",
+      "repository": "carbonactual/abba-mas",
+      "role": "master-command-and-routing-layer",
+      "defaultSealLevel": 2,
+      "status": "active"
+    },
+    {
+      "id": "carbon-actual",
+      "name": "Carbon Actual",
+      "repository": "B3C0M1NG/carbon_actual",
+      "role": "ecosystem-and-public-actual-layer",
+      "defaultSealLevel": 2,
+      "status": "active"
+    },
+    {
+      "id": "shadow",
+      "name": "Shadow",
+      "repository": "carbonactual/Shadow",
+      "role": "minted-user-agent",
+      "defaultSealLevel": 3,
+      "status": "development"
+    },
+    {
+      "id": "direct-bank-app",
+      "name": "Direct Bank App",
+      "repository": "carbonactual/direct-bank-app",
+      "role": "manual-bank-customer-interface",
+      "defaultSealLevel": 4,
+      "status": "development"
+    },
+    {
+      "id": "open-ballot",
+      "name": "Open Ballot",
+      "repository": "carbonactual/open-ballot",
+      "role": "transparent-election-proof-system",
+      "defaultSealLevel": 4,
+      "status": "development"
+    }
+  ]
+}
