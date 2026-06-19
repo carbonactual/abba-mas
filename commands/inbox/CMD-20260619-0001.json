@@ -1,0 +1,26 @@
+{
+  "commandId": "CMD-20260619-0001",
+  "source": "chatgpt",
+  "requestedBy": "ABBA",
+  "intent": "initialize-control-plane",
+  "product": "abba-mas",
+  "repository": "carbonactual/abba-mas",
+  "provider": "github",
+  "environment": "development",
+  "riskLevel": "low",
+  "sealLevel": 1,
+  "status": "inbox",
+  "requiredSecrets": [],
+  "parameters": {
+    "scope": [
+      "product-registry",
+      "provider-registry",
+      "seal-policy",
+      "command-schema",
+      "validation-router"
+    ]
+  },
+  "proofRequired": true,
+  "createdAt": "2026-06-19T22:00:00+01:00",
+  "expiresAt": null
+}
