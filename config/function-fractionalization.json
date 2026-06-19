@@ -1,0 +1,40 @@
+{
+  "version": "1.0.0",
+  "principle": "Classify each provider as a set of independently routed capability fractions. A provider can belong to multiple swarms through different fractions.",
+  "fractionTypes": ["capability","delivery","data","risk","value","cost","access","proof","humanRole","aiRole"],
+  "requiredFields": ["fractionId","providerId","function","inputs","outputs","deliveryClass","dataClasses","sealLevel","riskLevel","swarmMemberships","dependencies","proofRequirement"],
+  "rules": [
+    "A provider may have many fractions.",
+    "A fraction may belong to many swarms.",
+    "Different fractions of one provider may carry different risk and SEAL levels.",
+    "Only the fraction required for a task should be invoked.",
+    "A fraction receives no access outside its declared data and delivery scope.",
+    "Financial tokenization or ownership division is a separate governed process and is not implied by functional fractionalization."
+  ],
+  "deliveryAnalysis": {
+    "questions": [
+      "What exact function is delivered?",
+      "Who receives it?",
+      "What triggers it?",
+      "What data enters and leaves?",
+      "Which human and AI roles participate?",
+      "Which provider performs each step?",
+      "What is the failure and fallback route?",
+      "What proof confirms completion?",
+      "What cost, latency and quota apply?",
+      "What SEAL level governs the fraction?"
+    ],
+    "classes": {
+      "interface": "human-facing app, dashboard, chat, voice or visual surface",
+      "api": "request-response capability",
+      "webhook": "event-driven inbound or outbound delivery",
+      "workflow": "multi-step automated process",
+      "agent": "delegated reasoning or task execution",
+      "batch": "scheduled or bulk processing",
+      "stream": "continuous or realtime delivery",
+      "human-service": "human action remains part of delivery",
+      "physical": "delivery occurs through a person, device or physical system",
+      "proof-only": "delivery is a receipt, verification, timestamp or attestation"
+    }
+  }
+}
