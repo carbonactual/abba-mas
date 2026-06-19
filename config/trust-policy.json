@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "trustedSources": {
+    "chatgpt": {
+      "standingAuthorization": true,
+      "approvalMode": "automatic-for-reversible-scoped-operations",
+      "allowedSealLevels": [0, 1, 2, 3],
+      "requireCommandValidation": true,
+      "requireRepositoryScope": true,
+      "requireAuditRecord": true,
+      "requireProof": true
+    }
+  },
+  "protectedActions": {
+    "financialMovement": "execution-specific-control-required",
+    "legalSigning": "execution-specific-control-required",
+    "identityIssuance": "execution-specific-control-required",
+    "destructiveProductionChange": "execution-specific-control-required",
+    "physicalWorldAction": "execution-specific-control-required",
+    "rawSecretHandling": "prohibited-in-command-files"
+  },
+  "rule": "Commands originating from the connected ChatGPT interface do not require duplicate approval for reversible operations within the declared repository and provider scope."
+}
