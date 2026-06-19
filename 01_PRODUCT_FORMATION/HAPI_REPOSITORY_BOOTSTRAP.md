@@ -3,7 +3,7 @@
 ## Repository target
 
 Owner: B3C0M1NG
-Repository: hapi-protocol
+Repository: HAPI
 Visibility: Private during formation
 
 ## Purpose
