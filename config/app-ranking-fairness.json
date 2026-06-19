@@ -1,0 +1,114 @@
+{
+  "version": "1.0.0",
+  "name": "ABBA App Ranking, Fair Opportunity and Peak Performance System",
+  "principle": "Every app and capability fraction earns rank from verified accomplishments under comparable conditions. Popularity, brand size and prior usage do not guarantee advantage.",
+  "rankingScopes": [
+    "global-app-ranking",
+    "swarm-ranking",
+    "capability-fraction-ranking",
+    "delivery-class-ranking",
+    "product-pathway-ranking",
+    "league-team-contribution-ranking",
+    "growth-potential-ranking"
+  ],
+  "fairOpportunityRules": [
+    "Every eligible app receives a minimum number of comparable trials before permanent ranking conclusions.",
+    "New apps enter an unranked qualification pool and are not penalized for having no history.",
+    "Apps compete against equivalent capability, delivery, risk, budget and data classes.",
+    "Test briefs, test data, time windows, success conditions and budget ceilings are equal within each match class.",
+    "ABBA rotates opportunities so dominant apps do not consume all product work.",
+    "Low-volume apps receive exploration trials until confidence is sufficient.",
+    "Poor performance triggers diagnosis and optimization trials before restriction or retirement.",
+    "Apps may be tested as standalone fractions and as members of different teams to separate individual strength from team compatibility.",
+    "Scores are adjusted for task difficulty, data sensitivity, human effort, latency requirements and operating constraints.",
+    "No app is promoted solely because it belongs to a winning team; its measured contribution must be proven."
+  ],
+  "minimumTesting": {
+    "qualificationTrials": 3,
+    "comparisonTrials": 5,
+    "peakSearchTrials": 8,
+    "liveEvidenceRequiredForPremier": 3,
+    "retestAfterMaterialUpdate": true,
+    "confidenceBands": ["insufficient", "emerging", "reliable", "high-confidence"]
+  },
+  "scoreWeights": {
+    "verifiedAccomplishments": 18,
+    "taskSuccessRate": 14,
+    "outcomeQuality": 12,
+    "reliability": 10,
+    "costEfficiency": 8,
+    "deliverySpeed": 7,
+    "securityAndSeal": 8,
+    "proofQuality": 6,
+    "humanEffortReduction": 4,
+    "aiAmplification": 3,
+    "ecosystemReuse": 4,
+    "growthEnablement": 4,
+    "fallbackStrength": 2
+  },
+  "accomplishmentClasses": [
+    "successful-task",
+    "successful-product-delivery",
+    "verified-cost-saving",
+    "verified-time-saving",
+    "failure-recovery",
+    "security-safe-execution",
+    "proof-complete-execution",
+    "human-impact-improvement",
+    "new-capability-discovery",
+    "cross-swarm-reuse",
+    "growth-pathway-contribution",
+    "championship-contribution"
+  ],
+  "rankingLevels": [
+    {"id":"unranked","meaning":"awaiting fair qualification trials"},
+    {"id":"qualifying","meaning":"testing under controlled comparable conditions"},
+    {"id":"developing","meaning":"useful but still being optimized"},
+    {"id":"competitive","meaning":"reliable evidence and comparable performance"},
+    {"id":"elite","meaning":"top performance in a defined capability and condition class"},
+    {"id":"peak","meaning":"best currently verified configuration for a defined pathway"},
+    {"id":"reserve","meaning":"qualified specialist or fallback option"},
+    {"id":"restricted","meaning":"limited by risk, reliability or policy"},
+    {"id":"retired","meaning":"no longer selected except for historical evidence"}
+  ],
+  "peakPerformanceLoop": [
+    "baseline-test",
+    "diagnose-bottlenecks",
+    "change-one-variable",
+    "retest-under-equal-conditions",
+    "compare-team-combinations",
+    "optimize-cost-latency-quality-and-proof",
+    "validate-live-performance",
+    "record-peak-profile",
+    "continue-growth-and-periodic-rechallenge"
+  ],
+  "peakProfile": {
+    "dimensions": [
+      "best-task-types",
+      "best-swarm-roles",
+      "best-team-combinations",
+      "best-delivery-class",
+      "safe-data-boundary",
+      "optimal-budget-range",
+      "latency-range",
+      "capacity-limit",
+      "fallback-needs",
+      "human-role-needs",
+      "ai-role-needs",
+      "growth-pathways"
+    ],
+    "rule": "Peak is contextual, not absolute. An app may be peak in one function, region, budget or risk class and ordinary in another."
+  },
+  "explorationPolicy": {
+    "method": "balanced exploration and evidence-based exploitation",
+    "rules": [
+      "Reserve test capacity for new, under-tested and improving apps.",
+      "Use proven apps for critical delivery while challengers are tested in sandbox, shadow or low-risk work.",
+      "Increase opportunity as evidence improves.",
+      "Reduce opportunity only with sufficient evidence, not a single failure.",
+      "Reopen competition after major provider updates, price changes, security changes or ecosystem pathway changes."
+    ]
+  },
+  "growthRule": "Ranking is not merely a table. It directs training, integration investment, team selection, fallback design, optimization work and future product pathways.",
+  "truthRule": "All rankings must link to test evidence, accomplishments, conditions, confidence and date. No manually inflated rank is valid."
+}
