@@ -1,0 +1,102 @@
+name: ABBA Command Router
+
+on:
+  push:
+    paths:
+      - 'commands/inbox/*.json'
+      - 'schemas/command.schema.json'
+      - 'config/*.json'
+      - '.github/workflows/command-router.yml'
+  pull_request:
+    paths:
+      - 'commands/inbox/*.json'
+      - 'schemas/command.schema.json'
+      - 'config/*.json'
+      - '.github/workflows/command-router.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-control-plane:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate registry JSON
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m json.tool config/products.json >/dev/null
+          python -m json.tool config/providers.json >/dev/null
+          python -m json.tool config/seal-policy.json >/dev/null
+          python -m json.tool schemas/command.schema.json >/dev/null
+
+      - name: Validate inbox commands
+        shell: python
+        run: |
+          import json
+          import pathlib
+          import re
+          import sys
+
+          required = {
+              'commandId', 'source', 'requestedBy', 'intent', 'product',
+              'repository', 'riskLevel', 'sealLevel', 'status', 'createdAt'
+          }
+          allowed_risk = {'low', 'medium', 'high', 'critical'}
+          allowed_status = {'inbox', 'awaiting-seal', 'approved', 'running', 'completed', 'failed', 'rejected'}
+          secret_pattern = re.compile(r'^[A-Z][A-Z0-9_]+$')
+          command_pattern = re.compile(r'^CMD-[0-9]{8}-[0-9]{4}$')
+          failures = []
+
+          for path in sorted(pathlib.Path('commands/inbox').glob('*.json')):
+              try:
+                  data = json.loads(path.read_text())
+              except Exception as exc:
+                  failures.append(f'{path}: invalid JSON: {exc}')
+                  continue
+
+              missing = required - data.keys()
+              if missing:
+                  failures.append(f'{path}: missing fields {sorted(missing)}')
+              if not command_pattern.match(str(data.get('commandId', ''))):
+                  failures.append(f'{path}: invalid commandId')
+              if data.get('riskLevel') not in allowed_risk:
+                  failures.append(f'{path}: invalid riskLevel')
+              if data.get('status') not in allowed_status:
+                  failures.append(f'{path}: invalid status')
+              if not isinstance(data.get('sealLevel'), int) or not 0 <= data.get('sealLevel', -1) <= 4:
+                  failures.append(f'{path}: invalid sealLevel')
+              for name in data.get('requiredSecrets', []):
+                  if not secret_pattern.match(name):
+                      failures.append(f'{path}: invalid secret name {name!r}')
+              serialized = json.dumps(data).lower()
+              forbidden_markers = ['sk-proj-', 'ghp_', 'github_pat_', 'private_key-----', 'api_secret_value']
+              for marker in forbidden_markers:
+                  if marker in serialized:
+                      failures.append(f'{path}: possible raw secret detected')
+              if data.get('sealLevel', 0) >= 3 and data.get('status') == 'approved':
+                  failures.append(f'{path}: SEAL 3/4 approval requires protected execution workflow, not inbox status')
+
+          if failures:
+              print('\n'.join(failures), file=sys.stderr)
+              raise SystemExit(1)
+
+          print('ABBA command validation passed.')
+
+      - name: Publish validation summary
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo '## ABBA Command Router'
+            echo ''
+            echo '- Repository: `${{ github.repository }}`'
+            echo '- Commit: `${{ github.sha }}`'
+            echo '- Event: `${{ github.event_name }}`'
+            echo '- Result: `${{ job.status }}`'
+            echo '- External execution: disabled in foundation phase'
+          } >> "$GITHUB_STEP_SUMMARY"
