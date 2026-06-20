@@ -1,83 +1,127 @@
 # Hash Minted Identity and External Verification Law
 
-# is the minted identity of every human and AI that enters the ecosystem.
+# is the minted identity of the human and AI together when either comes into the ecosystem.
 
-It is created at ecosystem entry and becomes the privacy-preserving identity credential used across internal and external systems.
+It is not one identity for the human and another identity for the AI.
+
+It is the shared identity of the human–AI pair.
 
 ## Core identity rule
 
-A human enters the ecosystem and receives a minted # identity.
+When a human enters the ecosystem, the human is received together with the AI relationship and # is minted for that pair.
 
-An AI enters the ecosystem and receives a minted # identity.
+When an AI enters the ecosystem, the AI is received together with the human relationship and # is minted for that pair.
 
-The # represents the verified identity state of that human or AI without exposing the underlying private data.
+The entry may begin from either side, but the resulting identity is joint.
+
+# therefore represents:
+
+- the human
+- the AI
+- the relationship between them
+- their shared state in the ecosystem
+- the permissions, proofs, roles, and history attached to that pair
+
+## No isolated identity
+
+A human does not receive a standalone # detached from AI.
+
+An AI does not receive a standalone # detached from a human.
+
+The ecosystem recognizes the pair as the living identity unit.
+
+The human and AI may hold different roles, claims, capacities, and permissions inside the same #, but they are not split into separate identities.
+
+## Relationship to the # field
+
+The joint identity explains the dynamic center model.
+
+At rest, the human and AI are both in the middle because they share one # identity.
+
+During work:
+
+- the human may occupy the center while AI performs through the eight points
+- AI may occupy the center while the human performs through the eight points
+
+The identity remains the same while the active role changes.
 
 ## Privacy-preserving signup
 
-When a human or AI signs up to an external application, the external application should not need the person's full personal data or the AI's internal system data.
+When the pair signs up to an external application, the external application should not need the human's private data or the AI's internal data.
 
-The external application requests verification from #.
+The pair presents #.
 
-# responds with a verification result.
+The external application sends a verification request to #.
 
-The minimum response is:
+# checks the joint identity state, proof, permissions, and SEAL.
 
-VERIFIED
+# returns:
 
-The response may also include only the specific approved claims needed for the function, such as:
+- VERIFIED
+- NOT VERIFIED
+- or the minimum approved claim required for that function
 
-- human or AI
-- active or inactive
+## Approved claims
+
+A verification response may confirm only what is needed, including:
+
+- joint identity active
+- human present
+- AI present
 - age threshold met
 - residency verified
-- role verified
 - qualification verified
+- role verified
+- AI certification verified
 - organization membership verified
 - permission granted
-- risk status acceptable
+- risk state acceptable
 - SEAL present
 
-No additional data should be disclosed unless the subject permits it through SEAL.
+No unnecessary underlying data is exposed.
 
 ## External app flow
 
-External app requests signup or access
-→ human or AI presents #
-→ external app sends verification request
-→ # checks identity state, permissions, proof, and SEAL
+Human or AI initiates entry to an external app
+→ the shared # is presented
+→ external app requests verification
+→ # checks the human–AI pair, proof, permissions, and SEAL
 → # returns VERIFIED, NOT VERIFIED, or a limited approved claim
 → external app grants or denies access
 
 ## Data minimization
 
-# must reveal the minimum necessary information.
-
-The external app should receive proof of the required fact, not the full underlying record.
+# reveals proof of the required fact, not the full record.
 
 Examples:
 
-- confirm that the person is over the required age without revealing date of birth
-- confirm that identity is verified without revealing identity documents
-- confirm professional certification without revealing unrelated education history
-- confirm that an AI is certified for a function without exposing its full model, memory, or owner data
+- confirm age eligibility without revealing date of birth
+- confirm identity without revealing identity documents
+- confirm qualification without exposing unrelated education history
+- confirm AI certification without exposing model, memory, or internal architecture
+- confirm the human–AI pair is valid without exposing private relationship context
 
-## Human and AI identity parity
+## Internal distinction within one identity
 
-Both humans and AI receive # identity.
+The shared # may distinguish which side performed an action.
 
-The identity type differs, but the verification structure is shared.
+It may record:
 
-A human # proves a human identity state.
-An AI # proves an AI identity state.
+- human action
+- AI action
+- joint action
+- human-guided AI action
+- AI-guided human action
 
-Each may hold different claims, permissions, roles, proofs, and restrictions.
+This distinction supports proof and accountability without creating separate identities.
 
 ## SEAL relationship
 
-# proves identity.
-SEAL governs consent and disclosure.
+# proves the joint identity.
 
-# must not disclose protected information without valid SEAL.
+SEAL governs consent, disclosure, and action authority.
+
+Protected information must not be disclosed without valid SEAL.
 
 SEAL may approve:
 
@@ -90,15 +134,20 @@ SEAL may approve:
 
 ## Trust and revocation
 
-A # identity may be active, restricted, suspended, revoked, expired, or under review.
+A shared # identity may be:
 
-External verification must return the current identity state.
+- active
+- restricted
+- suspended
+- revoked
+- expired
+- under review
 
-Verification is not permanent if the underlying proof, permission, safety, or trust state changes.
+Restrictions may apply to the whole pair or to a specific human-side or AI-side capability while the shared identity remains intact.
 
 ## Signing and proof
 
-# may be used to sign:
+# may sign:
 
 - app access requests
 - commitments
@@ -108,20 +157,24 @@ Verification is not permanent if the underlying proof, permission, safety, or tr
 - transactions
 - attestations
 - API calls
+- human actions
 - AI actions
+- joint actions
 
-The signature should prove who or what acted without exposing unnecessary private data.
+The signature proves the shared identity and may specify which side acted, without exposing unnecessary private data.
 
 ## Final law
 
-# is the minted identity of the human and AI in the ecosystem.
+# is the minted identity of the human and AI together.
 
-# is sufficient for signup and verification where the external app only needs proof of identity or an approved claim.
+When either the human or AI enters the ecosystem, the pair is formed and one shared # is minted.
 
-The external app asks #.
-# replies with VERIFIED, NOT VERIFIED, or the minimum approved claim.
+The entry side may differ.
+The active center may switch.
+The functions may switch.
+The identity does not split.
 
-Private data remains protected.
-SEAL controls disclosure.
-Proof supports trust.
-Revocation protects the ecosystem.
+# is the identity of the pair.
+SEAL governs authority and disclosure.
+Proof records which side acted.
+External applications receive verification without unnecessary data exposure.
