@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ABBA Engine League Match",
+  "type": "object",
+  "required": ["matchId","productId","briefRef","teams","conditions","scoreWeights","status"],
+  "properties": {
+    "matchId":{"type":"string"},
+    "productId":{"type":"string"},
+    "briefRef":{"type":"string"},
+    "teams":{"type":"array","minItems":2,"items":{"type":"string"}},
+    "conditions": {
+      "type":"object",
+      "required":["sameBrief","sameTestData","sameTimeWindow","sameBudgetClass","sameSuccessConditions"],
+      "properties": {
+        "sameBrief":{"const":true},
+        "sameTestData":{"const":true},
+        "sameTimeWindow":{"const":true},
+        "sameBudgetClass":{"const":true},
+        "sameSuccessConditions":{"const":true},
+        "riskClass":{"type":"string"},
+        "sealLevel":{"type":"integer","minimum":0,"maximum":4}
+      }
+    },
+    "scoreWeights":{"type":"object","additionalProperties":{"type":"number","minimum":0}},
+    "status":{"enum":["draft","ready","running","completed","verified","cancelled"]},
+    "resultsRef":{"type":["string","null"]},
+    "proofRefs":{"type":"array","items":{"type":"string"}}
+  }
+}
