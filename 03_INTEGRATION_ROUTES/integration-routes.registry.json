@@ -1,0 +1,26 @@
+{
+  "system": "ABBA MAS / Carbon Actual",
+  "source_register": "03_INTEGRATION_ROUTES/ABBA_MAS_CARBON_ACTUAL_INTEGRATION_OPPORTUNITY_REGISTER_2026-06-20.md",
+  "total_routes": 70,
+  "status": "github_setup_scaffolded",
+  "rules": {
+    "no_raw_secrets_in_repo": true,
+    "secret_values_location": ["GitHub Actions secrets", "Vercel env", "Cloudflare secrets", "Supabase vault"],
+    "seal_required_for_live_activation": true,
+    "human_approval_required_for_seal_3_plus": true
+  },
+  "lanes": [
+    {"lane": "foundation", "routes": ["OpenAI", "Supabase", "GitHub Actions", "GitHub Webhooks", "Cloudflare Workers", "Vercel"], "priority": 1},
+    {"lane": "automation", "routes": ["n8n", "Make", "Zapier", "Pipedream", "LangGraph", "LlamaIndex"], "priority": 2},
+    {"lane": "communication", "routes": ["Twilio", "SendGrid", "Resend", "Brevo", "WhatsApp Business", "Slack", "Discord", "Matrix"], "priority": 3},
+    {"lane": "identity_proof", "routes": ["W3C DID", "W3C VC", "SpruceID", "OpenAttestation", "EAS", "Sign Protocol", "OpenZeppelin"], "priority": 4},
+    {"lane": "data_impact", "routes": ["KoboToolbox", "ODK", "OpenStreetMap", "QGIS", "MQTT", "Home Assistant", "Node-RED"], "priority": 5},
+    {"lane": "revenue", "routes": ["Stripe", "Paystack", "Flutterwave", "WooCommerce", "Shopify"], "priority": 6}
+  ],
+  "activation_counts": {
+    "registered_routes": 70,
+    "github_scaffold_files": 4,
+    "live_external_accounts_activated": 0,
+    "requires_secret_entry": true
+  }
+}
