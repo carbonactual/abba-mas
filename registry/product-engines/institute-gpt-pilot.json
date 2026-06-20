@@ -1,0 +1,61 @@
+{
+  "version": "1.0.0",
+  "productId": "institute-gpt",
+  "name": "InstituteGPT Onboarding and Certification Pilot",
+  "objective": "Onboard a learner, establish identity and consent, deliver orientation, assess readiness, issue a verifiable certification outcome, preserve continuity and expose only approved public proof.",
+  "status": "candidate-formation",
+  "pathway": ["identity","seal","education","data","continuum","proof","actual","atlas","communication"],
+  "brief": {
+    "need": "A learner must enter safely, receive guided formation, complete an assessment and receive a trusted result.",
+    "outcomes": [
+      "learner identity established",
+      "consent and disclosure boundary recorded",
+      "orientation delivered",
+      "assessment completed",
+      "certificate result generated",
+      "proof stored",
+      "approved public proof exposed",
+      "continuity context preserved"
+    ],
+    "riskClass": "medium",
+    "sealLevel": 3,
+    "publicExposure": "approved-proof-only"
+  },
+  "teamCandidates": [
+    {
+      "teamId": "institute-gpt-alpha",
+      "formation": [
+        {"providerId":"supabase","fractions":["auth","database","storage","audit-records"]},
+        {"providerId":"google-drive","fractions":["document-read","document-write","shared-workspace"]},
+        {"providerId":"memorae","fractions":["memory-ingest","memory-recall","context-return"]},
+        {"providerId":"gmail","fractions":["draft-mail","send-mail","delivery-record"]},
+        {"providerId":"opentimestamps","fractions":["timestamp","hash-proof","verification"]},
+        {"providerId":"vercel","fractions":["preview-deploy","production-deploy","deployment-status"]}
+      ]
+    },
+    {
+      "teamId": "institute-gpt-beta",
+      "formation": [
+        {"providerId":"supabase","fractions":["auth","database","realtime","edge-functions"]},
+        {"providerId":"supermemory","fractions":["long-term-memory","semantic-retrieval","document-memory"]},
+        {"providerId":"livekit","fractions":["voice-room","video-room","session-events"]},
+        {"providerId":"canva","fractions":["presentation","brand-assets"]},
+        {"providerId":"github","fractions":["actions","audit-history","release-routing"]},
+        {"providerId":"vercel","fractions":["preview-deploy","hosting","build-logs"]}
+      ]
+    }
+  ],
+  "successMetrics": [
+    "completion rate",
+    "assessment integrity",
+    "certificate proof quality",
+    "time to completion",
+    "cost per learner",
+    "human effort required",
+    "learner satisfaction",
+    "memory continuity quality",
+    "privacy and SEAL compliance",
+    "fallback success"
+  ],
+  "truthRule": "These are candidate teams. No champion or production-ready claim exists until live bindings, equal-condition tests, verified evidence and task receipts are present."
+}
