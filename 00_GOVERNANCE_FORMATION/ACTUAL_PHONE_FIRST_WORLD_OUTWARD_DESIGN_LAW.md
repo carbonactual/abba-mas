@@ -21,6 +21,25 @@ The phone should:
 
 The phone should not become a redundant container where every part of life is repeated in one place.
 
+## Distance principle
+
+The farther the human moves from unnecessary phone dependence, the better Actual is working.
+
+Distance from the phone may mean:
+
+- physical distance
+- less screen attention
+- fewer repeated interactions
+- more direct human contact
+- more movement through places
+- more embodied activity
+- more outdoor and social participation
+- more trust in the personal AI to coordinate quietly in the background
+
+Actual should not reward keeping the human inside the interface.
+
+Actual should reward successful release from the interface into real life.
+
 ## World-outward design
 
 Actual should encourage:
@@ -93,6 +112,21 @@ see
 → experience
 → return PULSE
 
+## Success measure
+
+A strong Actual experience should create:
+
+- less unnecessary screen time
+- fewer repeated taps
+- faster movement into the world
+- more meaningful human contact
+- more outdoor and physical participation
+- more completed commitments
+- richer return PULSE
+- stronger Root, Continuum, merit, connection, and starmap formation
+
+The interface should disappear once its work is done.
+
 ## Final law
 
 The phone is the main doorway into Actual.
@@ -100,6 +134,8 @@ The phone is the main doorway into Actual.
 It is not the whole of Actual.
 
 Actual must use the phone to coordinate life, then help the human move outward into people, places, adventure, nature, work, and shared experience.
+
+The farther the human can move from unnecessary phone dependence while remaining safely connected, the better Actual is working.
 
 The phone starts the movement.
 The world is where Actual happens.
