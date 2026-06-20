@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "name": "ABBA Ecosystem Formation Engine",
+  "doctrine": "Products do not invent separate doctrine. They are formed from the canonical Carbon Actual layers, swarm capabilities, app fractions, human roles, AI roles, delivery routes and proof rules.",
+  "canonicalFlow": ["need","boundary","seal","root","index","pathway","required-functions","eligible-swarms","eligible-fractions","team-formation","league-match","engine-selection","actual-delivery","proof","pulse","return","continuum","growth"],
+  "operatingLaw": ["role","route","return","boundary","state"],
+  "mandatoryChecks": ["purpose","human-seal","risk","data-boundary","audit-log","redress-path","revocation-option","fallback","proof-requirement"],
+  "formationStages": [
+    {"id":"resolve-need","output":"normalized product brief and measurable outcome"},
+    {"id":"apply-boundary","output":"scope, exclusions, data classes, SEAL level and risk ceiling"},
+    {"id":"map-pathway","output":"ecosystem layers and product pathway"},
+    {"id":"derive-functions","output":"atomic capability and delivery requirements"},
+    {"id":"select-swarms","output":"eligible permanent capability homes"},
+    {"id":"select-fractions","output":"ranked provider fractions with evidence and constraints"},
+    {"id":"form-teams","output":"at least two comparable engine candidates where feasible"},
+    {"id":"run-match","output":"weighted performance, penalties, evidence and confidence"},
+    {"id":"select-engine","output":"champion, reserve and fallback configuration"},
+    {"id":"deliver-actual","output":"user-facing result after SEAL authorization"},
+    {"id":"return-learning","output":"proof, pulse, KPI updates and authorized learning returned to swarms"}
+  ],
+  "selectionRules": [
+    "Select fractions by verified capability and contextual rank, not provider popularity.",
+    "One provider may contribute several fractions and belong to several swarms.",
+    "Each team must include delivery, state, proof, security, fallback and human authority where required.",
+    "Use duplicate-function providers where useful to preserve competition, fallback and decentralization.",
+    "New and under-tested fractions receive controlled exploration opportunities.",
+    "Actual value is revealed only after ABBA resolution and SEAL approval.",
+    "Private product data does not return to swarms; only authorized learning, metadata and proof references return."
+  ],
+  "productPathways": {
+    "institute-gpt": ["identity","seal","education","data","continuum","proof","actual","atlas"],
+    "direct-bank-app": ["identity","seal","finance","io","data","vault","proof","actual"],
+    "open-polling": ["identity","seal","government","proof","root","atlas","actual"],
+    "spare": ["index","atlas","commerce","io","operations","actual","proof"],
+    "hapi": ["identity","hapi","communication","continuum","actual","proof"],
+    "carbon-actual-public": ["root","index","atlas","actual","communication","proof"]
+  },
+  "pilot": {
+    "productId":"institute-gpt",
+    "objective":"onboard a learner, establish identity and consent, deliver orientation, assess readiness, issue a verifiable certification outcome, preserve continuity and expose only approved public proof",
+    "requiredSwarms":["identity","seal","education","data","continuum","proof","actual","atlas","communication"],
+    "minimumTeams":2,
+    "riskClass":"medium",
+    "defaultSealLevel":3
+  }
+}
