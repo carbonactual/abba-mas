@@ -1,0 +1,39 @@
+name: Integration Registry Check
+
+on:
+  push:
+    paths:
+      - '03_INTEGRATION_ROUTES/**'
+      - '.github/workflows/integration-registry-check.yml'
+  pull_request:
+    paths:
+      - '03_INTEGRATION_ROUTES/**'
+  workflow_dispatch:
+
+jobs:
+  validate-integration-registry:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate JSON registry
+        run: |
+          python -m json.tool 03_INTEGRATION_ROUTES/integration-routes.registry.json > /tmp/integration-routes.registry.validated.json
+
+      - name: Enforce no obvious raw secret values in placeholders
+        run: |
+          if grep -E '(sk-[A-Za-z0-9]|ghp_[A-Za-z0-9]|xox[baprs]-|SG\.|AKIA[0-9A-Z]{16})' 03_INTEGRATION_ROUTES/integration-secrets.example.env; then
+            echo 'Possible raw secret found. Remove it and use only secret names/placeholders.'
+            exit 1
+          fi
+
+      - name: Confirm route count
+        run: |
+          python - <<'PY'
+          import json
+          p='03_INTEGRATION_ROUTES/integration-routes.registry.json'
+          data=json.load(open(p))
+          assert data['total_routes'] == 70, 'Expected 70 registered routes'
+          print('ABBA MAS integration routes registered:', data['total_routes'])
+          PY
