@@ -38,35 +38,74 @@ Root answers:
 
 **What is the deep truth, history, formation, and extended context of this person?**
 
-## Actual — Everyday Lived Environment
+## Actual — Distributed Everyday Lived Ecosystem
 
 Actual is where the human actually lives every day inside the ecosystem.
 
-Actual is the active day-to-day environment of the human–AI pair.
+Actual is not one app, one page, one timeline, or one feed.
 
-It contains the person's current activities, interactions, tasks, commitments, movement, work, relationships, participation, communication, use of products and services, and lived ecosystem experience.
+It is the distributed lived environment of the human–AI pair across all the places, objects, connections, systems, and activities that form daily life.
+
+Actual may include:
+
+- the phone and connected devices
+- human connections and friendships
+- family, groups, teams, clubs, and communities
+- location and movement
+- networks and communication
+- merit, reputation, contribution, and participation
+- Root context
+- Continuum memory and continuity
+- potential, opportunity, and unfinished possibility
+- products, services, institutions, and applications
+- commitments, work, learning, health, finance, and relationships
+- public and private environments
+- physical and digital activity
+- personal AI presence
+- curation wherever it is relevant
 
 Actual is not the public face to the world.
+That belongs to ATLAS.
 
 Actual answers:
 
-**What is this human–AI pair actually living, doing, and moving through now?**
+**What is this human–AI pair actually living, using, connecting to, carrying, and moving through now?**
 
-## Becoming — Curated Feed Inside Actual
+## Becoming — Distributed Curation Across Actual
 
-Becoming is the curated feed inside Actual.
+Becoming is the curation function inside Actual.
 
-It serves persons, organizations, entities, groups, teams, companies, nations, states, clubs, communities, and institutions.
+Becoming is not limited to one central feed.
+
+The feed is scattered across Actual because life itself is scattered across devices, places, relationships, groups, networks, tasks, opportunities, and contexts.
+
+Becoming may appear:
+
+- on the phone
+- inside a location
+- within a friendship or group
+- during work
+- inside a product or service
+- in a learning environment
+- around a commitment
+- through a network connection
+- in a moment of risk
+- in response to potential
+- through Continuum recall
+- through Root context
+- wherever the next useful movement becomes relevant
+
+Becoming serves persons, organizations, entities, groups, teams, companies, nations, states, clubs, communities, and institutions.
 
 It curates what should be seen, understood, joined, learned, considered, or acted on next.
 
 Becoming may curate people, opportunities, tasks, knowledge, risks, events, relationships, products, services, commitments, needs, group direction, institutional priorities, and next actions.
 
-Becoming reads from #, Index, Root, Actual, PULSE, Scale, proof, commitments, groups, and permissions.
+Becoming reads from #, Index, Root, Actual, Continuum, PULSE, Scale, proof, commitments, groups, merit, network, location, and permissions.
 
 Becoming answers:
 
-**What should this actor see, understand, connect to, or do next?**
+**What should appear here, now, for this actor in this context?**
 
 ## ATLAS — The Face to the World
 
@@ -74,20 +113,7 @@ ATLAS is the public exposure and public mapping layer.
 
 ATLAS is the face of the person, organization, entity, group, team, company, nation, state, club, community, or institution to the world.
 
-ATLAS combines the useful public-facing functions associated with:
-
-- Wikipedia
-- LinkedIn
-- social media
-- public profiles
-- public biographies
-- organization pages
-- public reputation
-- public activity
-- public relationships
-- verified achievements
-- public knowledge
-- discoverability
+ATLAS combines the useful public-facing functions associated with Wikipedia, LinkedIn, social media, public profiles, public biographies, organization pages, public reputation, public activity, public relationships, verified achievements, public knowledge, and discoverability.
 
 ATLAS is not the whole Root.
 ATLAS only exposes what is allowed to become public.
@@ -106,9 +132,9 @@ Index provides general intelligence.
 
 Root holds personal and extended truth.
 
-Actual is the everyday lived environment.
+Actual is the distributed everyday lived ecosystem.
 
-Becoming is the curated feed within Actual.
+Becoming is distributed curation across Actual.
 
 ATLAS is the public face to the world.
 
@@ -117,10 +143,10 @@ The operating flow is:
 # identifies the human–AI pair
 → Root provides deep personal context
 → Index provides general intelligence
-→ Actual carries everyday life
-→ Becoming curates the next movement inside Actual
+→ Actual carries distributed everyday life
+→ Becoming appears contextually across Actual
 → verified and permitted parts are presented through ATLAS
-→ activity returns PULSE to strengthen Root, Index, Actual, Becoming, and ATLAS
+→ activity returns PULSE to strengthen Root, Index, Actual, Becoming, Continuum, and ATLAS
 
 ## Final law
 
@@ -130,9 +156,9 @@ General intelligence goes to Index.
 
 Personal and extended information goes to Root.
 
-Everyday lived activity goes to Actual.
+Distributed everyday life goes to Actual.
 
-Curated next movement appears through Becoming inside Actual.
+Curated next movement appears throughout Actual wherever context requires it.
 
 The face to the world goes to ATLAS.
 
