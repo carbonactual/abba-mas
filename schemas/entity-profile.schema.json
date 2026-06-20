@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Universal Entity Profile",
+  "type": "object",
+  "required": ["entityId","entityType","displayName","entryRoute","status","purpose","sealLevel","roles","redressRoute"],
+  "properties": {
+    "entityId": {"type":"string","minLength":1},
+    "entityType": {
+      "enum": ["human","household","informal-group","club","association","cooperative","enterprise","nonprofit","professional-body","school","university","traditional-institution","government-body","international-organization","product","device","ai-agent"]
+    },
+    "displayName": {"type":"string","minLength":1},
+    "legalName": {"type":["string","null"]},
+    "entryRoute": {"type":"string"},
+    "status": {"enum":["discovered","invited","entered","identified","represented","sealed","verified","enabled","active","expanded","paused","revoked"]},
+    "purpose": {"type":"array","minItems":1,"items":{"type":"string"}},
+    "roles": {"type":"array","items":{"type":"string"}},
+    "representatives": {
+      "type":"array",
+      "items": {
+        "type":"object",
+        "required":["entityId","authorityType","scope","validFrom"],
+        "properties": {
+          "entityId":{"type":"string"},
+          "authorityType":{"type":"string"},
+          "scope":{"type":"array","items":{"type":"string"}},
+          "validFrom":{"type":"string"},
+          "validUntil":{"type":["string","null"]},
+          "proofRefs":{"type":"array","items":{"type":"string"}}
+        }
+      }
+    },
+    "sealLevel": {"type":"integer","minimum":0,"maximum":4},
+    "consentRefs": {"type":"array","items":{"type":"string"}},
+    "dataBoundary": {
+      "type":"object",
+      "properties": {
+        "public":{"type":"array","items":{"type":"string"}},
+        "private":{"type":"array","items":{"type":"string"}},
+        "restricted":{"type":"array","items":{"type":"string"}}
+      }
+    },
+    "accessibilityNeeds": {"type":"array","items":{"type":"string"}},
+    "languagePreferences": {"type":"array","items":{"type":"string"}},
+    "safeguardingRequirements": {"type":"array","items":{"type":"string"}},
+    "capabilities": {"type":"array","items":{"type":"string"}},
+    "proofRefs": {"type":"array","items":{"type":"string"}},
+    "redressRoute": {"type":"string"},
+    "revocationRoute": {"type":["string","null"]},
+    "createdAt": {"type":"string"},
+    "updatedAt": {"type":"string"}
+  }
+}
