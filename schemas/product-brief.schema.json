@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ABBA Product Formation Brief",
+  "type": "object",
+  "required": ["productId","name","need","outcomes","users","boundaries","requiredCapabilities","deliveryClasses","riskClass","sealLevel"],
+  "properties": {
+    "productId": {"type":"string","minLength":1},
+    "name": {"type":"string","minLength":1},
+    "need": {"type":"string","minLength":1},
+    "outcomes": {"type":"array","minItems":1,"items":{"type":"string"}},
+    "users": {"type":"array","minItems":1,"items":{"type":"string"}},
+    "boundaries": {
+      "type":"object",
+      "required":["allowedData","forbiddenData","excludedActions"],
+      "properties": {
+        "allowedData":{"type":"array","items":{"type":"string"}},
+        "forbiddenData":{"type":"array","items":{"type":"string"}},
+        "excludedActions":{"type":"array","items":{"type":"string"}}
+      }
+    },
+    "requiredCapabilities":{"type":"array","minItems":1,"items":{"type":"string"}},
+    "preferredSwarms":{"type":"array","items":{"type":"string"}},
+    "deliveryClasses":{"type":"array","minItems":1,"items":{"type":"string"}},
+    "humanRoles":{"type":"array","items":{"type":"string"}},
+    "aiRoles":{"type":"array","items":{"type":"string"}},
+    "riskClass":{"enum":["low","medium","high","critical"]},
+    "sealLevel":{"type":"integer","minimum":0,"maximum":4},
+    "budgetCeiling":{"type":["number","null"],"minimum":0},
+    "timeWindow":{"type":["string","null"]},
+    "proofRequirements":{"type":"array","items":{"type":"string"}},
+    "fallbackRequired":{"type":"boolean"},
+    "publicExposure":{"enum":["none","approved-proof-only","approved-summary","public"]}
+  }
+}
