@@ -1,0 +1,70 @@
+{
+  "version": "1.0.0",
+  "name": "SEAL Authority Levels",
+  "identityField": "#",
+  "principle": "Every ecosystem entity has # identity. SEAL grants scoped authority to that identity. Final action requires sufficient SEAL, valid scope and proof.",
+  "levels": [
+    {
+      "level": 0,
+      "name": "visible",
+      "authority": "identity existence and reference only",
+      "allowed": ["discover", "reference", "request-entry"],
+      "finality": false
+    },
+    {
+      "level": 1,
+      "name": "self-use",
+      "authority": "low-risk actions for the same #",
+      "allowed": ["view", "draft", "save", "personalize", "request-support"],
+      "finality": "limited-self"
+    },
+    {
+      "level": 2,
+      "name": "operational",
+      "authority": "bounded, reversible and auditable execution",
+      "allowed": ["submit", "schedule", "route", "invoke-provider", "publish-approved-content"],
+      "finality": "reversible-operational"
+    },
+    {
+      "level": 3,
+      "name": "consequential",
+      "authority": "actions affecting records, rights, money, certification, access, status or another #",
+      "allowed": ["approve-payment", "issue-certificate", "change-access", "confirm-record", "approve-status"],
+      "requirements": ["strong-identity", "human-accountability", "proof", "audit", "redress"],
+      "finality": "consequential"
+    },
+    {
+      "level": 4,
+      "name": "constitutional",
+      "authority": "structural, ecosystem-wide, sovereign, emergency, governance or irreversible change",
+      "allowed": ["change-governance", "change-core-policy", "authorize-emergency", "approve-irreversible-structure"],
+      "requirements": ["multi-party-authority", "enhanced-proof", "explicit-scope", "exceptional-review"],
+      "finality": "constitutional"
+    }
+  ],
+  "requiredScopeFields": [
+    "actorHash",
+    "subjectHash",
+    "role",
+    "function",
+    "product",
+    "swarm",
+    "dataClass",
+    "jurisdiction",
+    "riskClass",
+    "validFrom",
+    "validUntil",
+    "delegationChain",
+    "proofRef",
+    "revocationRoute",
+    "redressRoute"
+  ],
+  "finalityRules": [
+    "No action becomes final without actor #, subject #, sufficient SEAL, valid scope and proof.",
+    "A # may hold different SEAL levels in different products, swarms, roles and jurisdictions.",
+    "Delegated SEAL cannot exceed the issuer's authority.",
+    "Expired, revoked, challenged or out-of-scope SEAL cannot authorize final action.",
+    "AI and machine SEAL must trace to an accountable human or organization #.",
+    "SEAL 4 requires multi-party approval and cannot be granted by a single automated agent."
+  ]
+}
