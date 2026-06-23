@@ -1,50 +1,55 @@
 {
-  "version": "1.0.0",
-  "name": "SEAL Authority Levels",
+  "version": "1.1.0",
+  "name": "SEAL Human Authority Levels",
   "identityField": "#",
-  "principle": "Every ecosystem entity has # identity. SEAL grants scoped authority to that identity. Final action requires sufficient SEAL, valid scope and proof.",
+  "principle": "Every ecosystem entity has # identity. Only a human may grant, deny, approve, reject, change, pause or revoke SEAL. AI may only explain, suggest, compare, warn, simulate, prepare, route after approval and record the human decision.",
   "levels": [
     {
       "level": 0,
       "name": "visible",
       "authority": "identity existence and reference only",
-      "allowed": ["discover", "reference", "request-entry"],
+      "humanDecisionRequired": false,
       "finality": false
     },
     {
       "level": 1,
-      "name": "self-use",
-      "authority": "low-risk actions for the same #",
-      "allowed": ["view", "draft", "save", "personalize", "request-support"],
+      "name": "personal-choice",
+      "authority": "human permission for low-risk actions affecting the same #",
+      "humanDecisionRequired": true,
       "finality": "limited-self"
     },
     {
       "level": 2,
-      "name": "operational",
-      "authority": "bounded, reversible and auditable execution",
-      "allowed": ["submit", "schedule", "route", "invoke-provider", "publish-approved-content"],
+      "name": "operational-permission",
+      "authority": "human permission for bounded, reversible and auditable execution",
+      "humanDecisionRequired": true,
       "finality": "reversible-operational"
     },
     {
       "level": 3,
-      "name": "consequential",
-      "authority": "actions affecting records, rights, money, certification, access, status or another #",
-      "allowed": ["approve-payment", "issue-certificate", "change-access", "confirm-record", "approve-status"],
-      "requirements": ["strong-identity", "human-accountability", "proof", "audit", "redress"],
+      "name": "consequential-approval",
+      "authority": "human approval for actions affecting money, rights, access, certification, status, records or another #",
+      "humanDecisionRequired": true,
+      "requirements": ["strong-identity", "explicit-human-choice", "proof", "audit", "redress"],
       "finality": "consequential"
     },
     {
       "level": 4,
-      "name": "constitutional",
-      "authority": "structural, ecosystem-wide, sovereign, emergency, governance or irreversible change",
-      "allowed": ["change-governance", "change-core-policy", "authorize-emergency", "approve-irreversible-structure"],
-      "requirements": ["multi-party-authority", "enhanced-proof", "explicit-scope", "exceptional-review"],
+      "name": "constitutional-approval",
+      "authority": "authorized humans jointly approve structural, governance, sovereign, emergency or irreversible change",
+      "humanDecisionRequired": true,
+      "requirements": ["multi-human-approval", "enhanced-proof", "explicit-scope", "exceptional-review"],
       "finality": "constitutional"
     }
   ],
+  "aiBoundary": {
+    "allowed": ["explain", "suggest", "compare", "warn", "simulate", "prepare", "route-after-human-approval", "record-human-decision"],
+    "forbidden": ["grant-seal", "deny-seal", "approve", "reject", "revoke", "expand-permission", "reduce-permission", "infer-consent", "make-final-decision"]
+  },
   "requiredScopeFields": [
     "actorHash",
     "subjectHash",
+    "humanDecisionMakerHash",
     "role",
     "function",
     "product",
@@ -60,11 +65,11 @@
     "redressRoute"
   ],
   "finalityRules": [
-    "No action becomes final without actor #, subject #, sufficient SEAL, valid scope and proof.",
-    "A # may hold different SEAL levels in different products, swarms, roles and jurisdictions.",
-    "Delegated SEAL cannot exceed the issuer's authority.",
+    "No action becomes final without explicit human SEAL, valid scope and proof.",
+    "Silence, inactivity, predicted preference, behavioral inference and AI recommendation never count as SEAL.",
+    "Delegated SEAL must originate from an authorized human and cannot exceed the issuer's authority.",
+    "AI and machines never hold independent SEAL authority.",
     "Expired, revoked, challenged or out-of-scope SEAL cannot authorize final action.",
-    "AI and machine SEAL must trace to an accountable human or organization #.",
-    "SEAL 4 requires multi-party approval and cannot be granted by a single automated agent."
+    "SEAL 4 always requires multiple authorized humans."
   ]
 }
