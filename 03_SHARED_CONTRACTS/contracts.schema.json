@@ -1,0 +1,169 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://carbonactual.com/contracts/0.1.0/contracts.schema.json",
+  "title": "Carbon Actual Shared Contracts",
+  "type": "object",
+  "$defs": {
+    "ISODateTime": { "type": "string", "format": "date-time" },
+    "EntityId": { "type": "string", "minLength": 1 },
+    "ProofRef": {
+      "type": "object",
+      "required": ["proofId", "type", "issuer", "subject", "issuedAt", "status"],
+      "properties": {
+        "proofId": { "$ref": "#/$defs/EntityId" },
+        "type": { "type": "string" },
+        "issuer": { "$ref": "#/$defs/EntityId" },
+        "subject": { "$ref": "#/$defs/EntityId" },
+        "issuedAt": { "$ref": "#/$defs/ISODateTime" },
+        "expiresAt": { "$ref": "#/$defs/ISODateTime" },
+        "uri": { "type": "string", "format": "uri" },
+        "digest": { "type": "string" },
+        "status": { "enum": ["valid", "revoked", "expired", "unknown"] }
+      },
+      "additionalProperties": false
+    },
+    "HashIdentity": {
+      "type": "object",
+      "required": ["version", "hashId", "humanId", "personalAiId", "subjectKind", "status", "mintedAt", "updatedAt", "proofRefs"],
+      "properties": {
+        "version": { "const": "0.1.0" },
+        "hashId": { "$ref": "#/$defs/EntityId" },
+        "humanId": { "$ref": "#/$defs/EntityId" },
+        "personalAiId": { "$ref": "#/$defs/EntityId" },
+        "subjectKind": { "const": "human_ai_pair" },
+        "status": { "enum": ["pending", "active", "restricted", "suspended", "revoked", "expired", "under_review"] },
+        "mintedAt": { "$ref": "#/$defs/ISODateTime" },
+        "updatedAt": { "$ref": "#/$defs/ISODateTime" },
+        "publicKey": { "type": "string" },
+        "proofRefs": { "type": "array", "items": { "$ref": "#/$defs/ProofRef" } },
+        "tags": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    },
+    "PersonalAIMint": {
+      "type": "object",
+      "required": ["version", "mintId", "humanId", "personalAiId", "hashId", "status", "requestedAt"],
+      "properties": {
+        "version": { "const": "0.1.0" },
+        "mintId": { "$ref": "#/$defs/EntityId" },
+        "humanId": { "$ref": "#/$defs/EntityId" },
+        "personalAiId": { "$ref": "#/$defs/EntityId" },
+        "hashId": { "$ref": "#/$defs/EntityId" },
+        "status": { "enum": ["requested", "minting", "minted", "failed"] },
+        "requestedAt": { "$ref": "#/$defs/ISODateTime" },
+        "completedAt": { "$ref": "#/$defs/ISODateTime" },
+        "modelRoute": { "type": "string" },
+        "memoryRoute": { "type": "string" },
+        "capabilityProfile": { "type": "array", "items": { "type": "string" } },
+        "proofRef": { "$ref": "#/$defs/ProofRef" },
+        "failureReason": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "SealGrant": {
+      "type": "object",
+      "required": ["version", "sealGrantId", "hashId", "grantedBy", "audience", "scopes", "grantedAt", "status"],
+      "properties": {
+        "version": { "const": "0.1.0" },
+        "sealGrantId": { "$ref": "#/$defs/EntityId" },
+        "hashId": { "$ref": "#/$defs/EntityId" },
+        "grantedBy": { "$ref": "#/$defs/EntityId" },
+        "audience": { "$ref": "#/$defs/EntityId" },
+        "scopes": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "claims": { "type": "array", "items": { "type": "string" } },
+        "constraints": { "type": "object" },
+        "grantedAt": { "$ref": "#/$defs/ISODateTime" },
+        "expiresAt": { "$ref": "#/$defs/ISODateTime" },
+        "revokedAt": { "$ref": "#/$defs/ISODateTime" },
+        "status": { "enum": ["active", "revoked", "expired"] }
+      },
+      "additionalProperties": false
+    },
+    "PulseEvent": {
+      "type": "object",
+      "required": ["version", "pulseId", "hashId", "actorId", "actorKind", "source", "eventType", "direction", "occurredAt", "receivedAt", "payload"],
+      "properties": {
+        "version": { "const": "0.1.0" },
+        "pulseId": { "$ref": "#/$defs/EntityId" },
+        "hashId": { "$ref": "#/$defs/EntityId" },
+        "actorId": { "$ref": "#/$defs/EntityId" },
+        "actorKind": { "type": "string" },
+        "source": { "type": "string" },
+        "eventType": { "type": "string" },
+        "direction": { "enum": ["inward", "outward", "bidirectional"] },
+        "occurredAt": { "$ref": "#/$defs/ISODateTime" },
+        "receivedAt": { "$ref": "#/$defs/ISODateTime" },
+        "context": { "type": "object" },
+        "payload": {},
+        "proofRefs": { "type": "array", "items": { "$ref": "#/$defs/ProofRef" } },
+        "sealGrantId": { "$ref": "#/$defs/EntityId" },
+        "correlationId": { "$ref": "#/$defs/EntityId" }
+      },
+      "additionalProperties": false
+    },
+    "ActualSession": {
+      "type": "object",
+      "required": ["version", "actualSessionId", "hashId", "startedAt", "status", "surfaces"],
+      "properties": {
+        "version": { "const": "0.1.0" },
+        "actualSessionId": { "$ref": "#/$defs/EntityId" },
+        "hashId": { "$ref": "#/$defs/EntityId" },
+        "startedAt": { "$ref": "#/$defs/ISODateTime" },
+        "endedAt": { "$ref": "#/$defs/ISODateTime" },
+        "status": { "enum": ["active", "paused", "completed", "abandoned"] },
+        "surfaces": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "contextRefs": { "type": "array", "items": { "$ref": "#/$defs/EntityId" } },
+        "goalRefs": { "type": "array", "items": { "$ref": "#/$defs/EntityId" } },
+        "locationRef": { "$ref": "#/$defs/EntityId" },
+        "groupRefs": { "type": "array", "items": { "$ref": "#/$defs/EntityId" } },
+        "pulseIds": { "type": "array", "items": { "$ref": "#/$defs/EntityId" } }
+      },
+      "additionalProperties": false
+    },
+    "BecomingCard": {
+      "type": "object",
+      "required": ["version", "becomingCardId", "hashId", "cardType", "title", "reasonCodes", "surface", "priority", "validFrom", "sourceRefs"],
+      "properties": {
+        "version": { "const": "0.1.0" },
+        "becomingCardId": { "$ref": "#/$defs/EntityId" },
+        "hashId": { "$ref": "#/$defs/EntityId" },
+        "cardType": { "type": "string" },
+        "title": { "type": "string" },
+        "summary": { "type": "string" },
+        "reasonCodes": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "surface": { "type": "string" },
+        "priority": { "type": "number", "minimum": 0, "maximum": 1 },
+        "validFrom": { "$ref": "#/$defs/ISODateTime" },
+        "validUntil": { "$ref": "#/$defs/ISODateTime" },
+        "action": { "type": "object" },
+        "sourceRefs": { "type": "array", "items": { "$ref": "#/$defs/EntityId" }, "minItems": 1 },
+        "sealGrantId": { "$ref": "#/$defs/EntityId" },
+        "proofRefs": { "type": "array", "items": { "$ref": "#/$defs/ProofRef" } }
+      },
+      "additionalProperties": false
+    },
+    "AtlasProjection": {
+      "type": "object",
+      "required": ["version", "atlasId", "subjectId", "subjectKind", "publicHandle", "displayName", "publicClaims", "publishedAt", "updatedAt", "visibility"],
+      "properties": {
+        "version": { "const": "0.1.0" },
+        "atlasId": { "$ref": "#/$defs/EntityId" },
+        "subjectId": { "$ref": "#/$defs/EntityId" },
+        "subjectKind": { "type": "string" },
+        "publicHandle": { "type": "string" },
+        "displayName": { "type": "string" },
+        "headline": { "type": "string" },
+        "summary": { "type": "string" },
+        "publicClaims": { "type": "object" },
+        "relationshipRefs": { "type": "array", "items": { "$ref": "#/$defs/EntityId" } },
+        "achievementRefs": { "type": "array", "items": { "$ref": "#/$defs/EntityId" } },
+        "activityRefs": { "type": "array", "items": { "$ref": "#/$defs/EntityId" } },
+        "proofRefs": { "type": "array", "items": { "$ref": "#/$defs/ProofRef" } },
+        "publishedAt": { "$ref": "#/$defs/ISODateTime" },
+        "updatedAt": { "$ref": "#/$defs/ISODateTime" },
+        "visibility": { "enum": ["public", "limited", "unlisted"] }
+      },
+      "additionalProperties": false
+    }
+  }
+}
