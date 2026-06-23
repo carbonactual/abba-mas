@@ -1,0 +1,30 @@
+{
+  "system": "ABBA MAS / Carbon Actual",
+  "activation_date": "2026-06-23",
+  "status": "swirms_activated_in_github_control_layer",
+  "truth_note": "Swirm definitions, routing rules, team templates, lifecycle states and SEAL gates are active in GitHub. Live provider activation still requires vendor credentials, health checks and proof receipts.",
+  "lifecycle_states": ["candidate", "scouted", "registry_ready", "credentials_pending", "sandboxed", "connected", "pilot_active", "production_active", "strengthened", "core", "paused", "blocked", "retired"],
+  "swirms": [
+    {"id":"identity_swirm","name":"Identity Swirm","labels":["identity","#","auth","did","vc","ens","hns","access","ownership"],"core_providers":["Supabase Auth","Keycloak","Authentik","Zitadel","W3C DID","W3C VC","SpruceID","OpenAttestation","ENS","HNS"],"status":"registry_ready","activation_priority":1,"seal_minimum":3},
+    {"id":"intelligence_swirm","name":"Intelligence Swirm","labels":["ai","llm","reasoning","multimodal","model-router","forecast"],"core_providers":["OpenAI","Gemini","Anthropic","OpenRouter","Groq","Ollama","Hugging Face"],"status":"credentials_pending","activation_priority":1,"seal_minimum":2},
+    {"id":"agent_swirm","name":"Agent Swirm","labels":["agents","workers","tools","swarm","delegation","execution"],"core_providers":["LangGraph","CrewAI","AutoGen","Semantic Kernel","OpenAI Agents SDK","MCP Gateway"],"status":"sandboxed","activation_priority":1,"seal_minimum":2},
+    {"id":"memory_swirm","name":"Memory Swirm","labels":["memory","continuum","recall","context","session","learning"],"core_providers":["Memorae","Supermemory","Zep","Graphiti","Letta","Qdrant","pgvector"],"status":"registry_ready","activation_priority":1,"seal_minimum":3},
+    {"id":"knowledge_swirm","name":"Knowledge Swirm","labels":["root","index","atlas","rag","search","graph","documents"],"core_providers":["LlamaIndex","Haystack","GraphRAG","Neo4j","Qdrant","Typesense","OpenSearch"],"status":"registry_ready","activation_priority":1,"seal_minimum":2},
+    {"id":"automation_swirm","name":"Automation Swirm","labels":["workflow","pulse","events","webhook","scheduler","routing"],"core_providers":["n8n","GitHub Actions","Temporal","Activepieces","Pipedream","Node-RED","Windmill"],"status":"credentials_pending","activation_priority":1,"seal_minimum":2},
+    {"id":"communication_swirm","name":"Communication Swirm","labels":["hapi","email","sms","whatsapp","voice","video","notifications","community"],"core_providers":["Resend","Brevo","Twilio","WhatsApp Cloud API","Telegram","Matrix","LiveKit","Jitsi","CALL-E"],"status":"credentials_pending","activation_priority":2,"seal_minimum":3},
+    {"id":"data_swirm","name":"Data Swirm","labels":["database","storage","analytics","vault","records","event-log"],"core_providers":["Supabase","PostgreSQL","Redis","MinIO","ClickHouse","Metabase","PostHog"],"status":"credentials_pending","activation_priority":1,"seal_minimum":2},
+    {"id":"value_swirm","name":"Value Swirm","labels":["io","payments","ledger","settlement","token","minting","fractionalization"],"core_providers":["Paystack","Stripe","Flutterwave","Monnify","Safe","Thirdweb","Polygon","Base","Hyperledger FireFly"],"status":"blocked_until_controls","activation_priority":3,"seal_minimum":3},
+    {"id":"proof_swirm","name":"Proof Swirm","labels":["proof","seal","attestation","audit","signature","receipt","truth-state"],"core_providers":["EAS","Sign Protocol","OpenAttestation","GitHub Artifact Attestations","IPFS","Pinata","OpenZeppelin"],"status":"registry_ready","activation_priority":1,"seal_minimum":3},
+    {"id":"infrastructure_swirm","name":"Infrastructure Swirm","labels":["hosting","deployment","network","edge","security","monitoring","scale"],"core_providers":["GitHub","Vercel","Cloudflare","Docker","Coolify","Sentry","OpenTelemetry","Grafana","Infisical"],"status":"connected_partial","activation_priority":1,"seal_minimum":2},
+    {"id":"builder_swirm","name":"Builder Swirm","labels":["no-code","low-code","apps","website","dashboard","prototype","admin"],"core_providers":["Lovable","Base44","Appsmith","Budibase","ToolJet","Directus","Strapi","FlutterFlow","Adalo"],"status":"registry_ready","activation_priority":2,"seal_minimum":2},
+    {"id":"hardware_reality_swirm","name":"Hardware / Reality Swirm","labels":["iot","devices","sensors","robotics","field","mqtt","edge"],"core_providers":["MQTT","Mosquitto","Home Assistant","Node-RED","Raspberry Pi","Arduino","ESP32","ODK","KoboToolbox"],"status":"registry_ready","activation_priority":3,"seal_minimum":3}
+  ],
+  "team_templates": [
+    {"command_type":"build_product","team":["identity_swirm","intelligence_swirm","agent_swirm","data_swirm","automation_swirm","infrastructure_swirm","builder_swirm","proof_swirm"]},
+    {"command_type":"mint_ai","team":["identity_swirm","agent_swirm","memory_swirm","proof_swirm","value_swirm"]},
+    {"command_type":"deploy_public_site","team":["builder_swirm","infrastructure_swirm","communication_swirm","knowledge_swirm","proof_swirm"]},
+    {"command_type":"run_field_program","team":["hardware_reality_swirm","data_swirm","identity_swirm","proof_swirm","communication_swirm","automation_swirm"]},
+    {"command_type":"revenue_operation","team":["value_swirm","identity_swirm","data_swirm","proof_swirm","automation_swirm"]},
+    {"command_type":"research_and_report","team":["knowledge_swirm","intelligence_swirm","memory_swirm","data_swirm","proof_swirm"]}
+  ]
+}
