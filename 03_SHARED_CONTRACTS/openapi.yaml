@@ -1,0 +1,480 @@
+openapi: 3.1.0
+info:
+  title: Carbon Actual Shared Contracts API
+  version: 0.1.0
+  description: Initial API surface for the minimum living ecosystem loop.
+servers:
+  - url: https://api.carbonactual.com
+paths:
+  /v1/entry:
+    post:
+      summary: Begin human entry and request personal AI minting
+      operationId: createHumanAIEntry
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/HumanAIEntry'
+      responses:
+        '202':
+          description: Entry accepted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EntryAccepted'
+  /v1/hash/{hashId}:
+    get:
+      summary: Read shared identity state
+      operationId: getHashIdentity
+      parameters:
+        - in: path
+          name: hashId
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Shared identity
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HashIdentity'
+  /v1/hash/verify:
+    post:
+      summary: Verify identity or approved claims
+      operationId: verifyHashIdentity
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VerificationRequest'
+      responses:
+        '200':
+          description: Verification result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VerificationResponse'
+  /v1/ai/mint:
+    post:
+      summary: Mint the personal AI bound to the shared identity
+      operationId: mintPersonalAI
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PersonalAIMintRequest'
+      responses:
+        '202':
+          description: Mint accepted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PersonalAIMint'
+  /v1/seal/grants:
+    post:
+      summary: Create a SEAL grant
+      operationId: createSealGrant
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SealGrant'
+      responses:
+        '201':
+          description: Grant created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SealGrant'
+  /v1/pulse:
+    post:
+      summary: Ingest a PULSE event
+      operationId: ingestPulse
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PulseEvent'
+      responses:
+        '202':
+          description: PULSE accepted
+  /v1/actual/sessions:
+    post:
+      summary: Open an Actual session
+      operationId: createActualSession
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ActualSession'
+      responses:
+        '201':
+          description: Session created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ActualSession'
+  /v1/becoming/cards:
+    post:
+      summary: Publish a contextual Becoming card
+      operationId: createBecomingCard
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BecomingCard'
+      responses:
+        '201':
+          description: Card created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BecomingCard'
+  /v1/atlas/projections:
+    post:
+      summary: Publish or update an ATLAS projection
+      operationId: upsertAtlasProjection
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AtlasProjection'
+      responses:
+        '200':
+          description: Projection saved
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AtlasProjection'
+components:
+  schemas:
+    HumanAIEntry:
+      type: object
+      required: [version, entryId, requestedAt, human]
+      properties:
+        version:
+          const: 0.1.0
+        entryId:
+          type: string
+        requestedAt:
+          type: string
+          format: date-time
+        human:
+          type: object
+          properties:
+            humanId:
+              type: string
+            locale:
+              type: string
+            timezone:
+              type: string
+            preferredName:
+              type: string
+        requestedCapabilities:
+          type: array
+          items:
+            type: string
+        sealGrantId:
+          type: string
+    EntryAccepted:
+      type: object
+      required: [entryId, status]
+      properties:
+        entryId:
+          type: string
+        status:
+          enum: [accepted, processing]
+        hashId:
+          type: string
+        mintId:
+          type: string
+    HashIdentity:
+      type: object
+      required: [version, hashId, humanId, personalAiId, subjectKind, status, mintedAt, updatedAt, proofRefs]
+      properties:
+        version:
+          const: 0.1.0
+        hashId:
+          type: string
+        humanId:
+          type: string
+        personalAiId:
+          type: string
+        subjectKind:
+          const: human_ai_pair
+        status:
+          enum: [pending, active, restricted, suspended, revoked, expired, under_review]
+        mintedAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+        publicKey:
+          type: string
+        proofRefs:
+          type: array
+          items:
+            type: object
+    VerificationRequest:
+      type: object
+      required: [version, requestId, hashId, audience, requestedClaims, nonce, requestedAt]
+      properties:
+        version:
+          const: 0.1.0
+        requestId:
+          type: string
+        hashId:
+          type: string
+        audience:
+          type: string
+        requestedClaims:
+          type: array
+          items:
+            type: string
+        nonce:
+          type: string
+        sealGrantId:
+          type: string
+        requestedAt:
+          type: string
+          format: date-time
+    VerificationResponse:
+      type: object
+      required: [version, requestId, hashId, result, issuedAt, expiresAt, audience, nonce]
+      properties:
+        version:
+          const: 0.1.0
+        requestId:
+          type: string
+        hashId:
+          type: string
+        result:
+          enum: [verified, not_verified, consent_required]
+        approvedClaims:
+          type: object
+          additionalProperties: true
+        proofRefs:
+          type: array
+          items:
+            type: object
+        issuedAt:
+          type: string
+          format: date-time
+        expiresAt:
+          type: string
+          format: date-time
+        audience:
+          type: string
+        nonce:
+          type: string
+        signature:
+          type: string
+    PersonalAIMintRequest:
+      type: object
+      required: [version, mintId, humanId, hashId, requestedAt]
+      properties:
+        version:
+          const: 0.1.0
+        mintId:
+          type: string
+        humanId:
+          type: string
+        hashId:
+          type: string
+        requestedAt:
+          type: string
+          format: date-time
+        capabilityProfile:
+          type: array
+          items:
+            type: string
+    PersonalAIMint:
+      type: object
+      required: [version, mintId, humanId, personalAiId, hashId, status, requestedAt]
+      properties:
+        version:
+          const: 0.1.0
+        mintId:
+          type: string
+        humanId:
+          type: string
+        personalAiId:
+          type: string
+        hashId:
+          type: string
+        status:
+          enum: [requested, minting, minted, failed]
+        requestedAt:
+          type: string
+          format: date-time
+        completedAt:
+          type: string
+          format: date-time
+    SealGrant:
+      type: object
+      required: [version, sealGrantId, hashId, grantedBy, audience, scopes, grantedAt, status]
+      properties:
+        version:
+          const: 0.1.0
+        sealGrantId:
+          type: string
+        hashId:
+          type: string
+        grantedBy:
+          type: string
+        audience:
+          type: string
+        scopes:
+          type: array
+          items:
+            type: string
+        claims:
+          type: array
+          items:
+            type: string
+        constraints:
+          type: object
+        grantedAt:
+          type: string
+          format: date-time
+        expiresAt:
+          type: string
+          format: date-time
+        status:
+          enum: [active, revoked, expired]
+    PulseEvent:
+      type: object
+      required: [version, pulseId, hashId, actorId, actorKind, source, eventType, direction, occurredAt, receivedAt, payload]
+      properties:
+        version:
+          const: 0.1.0
+        pulseId:
+          type: string
+        hashId:
+          type: string
+        actorId:
+          type: string
+        actorKind:
+          type: string
+        source:
+          type: string
+        eventType:
+          type: string
+        direction:
+          enum: [inward, outward, bidirectional]
+        occurredAt:
+          type: string
+          format: date-time
+        receivedAt:
+          type: string
+          format: date-time
+        context:
+          type: object
+        payload: {}
+        proofRefs:
+          type: array
+          items:
+            type: object
+        sealGrantId:
+          type: string
+        correlationId:
+          type: string
+    ActualSession:
+      type: object
+      required: [version, actualSessionId, hashId, startedAt, status, surfaces]
+      properties:
+        version:
+          const: 0.1.0
+        actualSessionId:
+          type: string
+        hashId:
+          type: string
+        startedAt:
+          type: string
+          format: date-time
+        endedAt:
+          type: string
+          format: date-time
+        status:
+          enum: [active, paused, completed, abandoned]
+        surfaces:
+          type: array
+          items:
+            type: string
+    BecomingCard:
+      type: object
+      required: [version, becomingCardId, hashId, cardType, title, reasonCodes, surface, priority, validFrom, sourceRefs]
+      properties:
+        version:
+          const: 0.1.0
+        becomingCardId:
+          type: string
+        hashId:
+          type: string
+        cardType:
+          type: string
+        title:
+          type: string
+        summary:
+          type: string
+        reasonCodes:
+          type: array
+          items:
+            type: string
+        surface:
+          type: string
+        priority:
+          type: number
+          minimum: 0
+          maximum: 1
+        validFrom:
+          type: string
+          format: date-time
+        validUntil:
+          type: string
+          format: date-time
+        sourceRefs:
+          type: array
+          items:
+            type: string
+    AtlasProjection:
+      type: object
+      required: [version, atlasId, subjectId, subjectKind, publicHandle, displayName, publicClaims, publishedAt, updatedAt, visibility]
+      properties:
+        version:
+          const: 0.1.0
+        atlasId:
+          type: string
+        subjectId:
+          type: string
+        subjectKind:
+          type: string
+        publicHandle:
+          type: string
+        displayName:
+          type: string
+        headline:
+          type: string
+        summary:
+          type: string
+        publicClaims:
+          type: object
+          additionalProperties: true
+        publishedAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+        visibility:
+          enum: [public, limited, unlisted]
