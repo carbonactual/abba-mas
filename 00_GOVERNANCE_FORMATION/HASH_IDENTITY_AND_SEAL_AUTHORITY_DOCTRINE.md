@@ -5,65 +5,64 @@
 Everything in the Carbon Actual ecosystem has an identity expressed through **#**.
 
 # is the universal identity field.
-SEAL is the authority, consent, and approval attached to that identity.
-No final action is valid unless the acting # has the required SEAL level, scope, duration, and proof.
+SEAL is the human authority, consent, approval, rejection, and permission attached to that identity.
+
+No AI, app, agent, workflow, or machine may grant, deny, approve, reject, expand, reduce, or revoke SEAL.
+
+AI may only explain, suggest, compare, warn, simulate, prepare, and record. The human remains fully autonomous and final.
 
 ## # — universal identity
 
-# identifies:
+# identifies humans, households, clubs, associations, cooperatives, enterprises, institutions, governments, products, apps, devices, AI agents, documents, assets, liabilities, transactions, events, teams, swarms, proofs, and decisions.
 
-- humans
-- households
-- clubs
-- associations
-- cooperatives
-- enterprises
-- institutions
-- governments
-- products
-- apps
-- devices
-- AI agents
-- documents
-- assets
-- liabilities
-- transactions
-- events
-- teams
-- swarms
-- proofs
-- decisions
+# does not mean public exposure. Identity may be public, private, restricted, role-based, delegated, pseudonymous where lawful, or machine-readable only.
 
-# does not mean public exposure.
-An identity may be public, private, restricted, role-based, delegated, pseudonymous where lawful, or machine-readable only.
-
-## SEAL — authority attached to #
+## SEAL — human authority attached to #
 
 SEAL answers:
 
-- Who approved?
-- What was approved?
-- For which identity?
-- At what authority level?
+- Which human approved or rejected?
+- What was approved or rejected?
+- For which # identity?
+- At what level?
 - Within what scope?
 - For how long?
 - Under which conditions?
 - With what proof?
-- Who can revoke it?
-- What happens if it is challenged?
+- How may the human revoke or challenge it?
 
-SEAL does not create identity.
-SEAL authorizes an identified entity to act.
+SEAL does not create identity. SEAL records the human's autonomous decision over an identified action.
+
+## Human autonomy rule
+
+The human may:
+
+- grant permission
+- refuse permission
+- approve
+- reject
+- pause
+- revoke
+- narrow scope
+- expand scope
+- set duration
+- set conditions
+- request review
+- reverse a reversible decision
+
+AI may not pressure, manipulate, substitute for, silently infer, or manufacture consent.
+
+No default, inactivity, silence, predicted preference, behavioral score, or AI recommendation counts as SEAL.
 
 ## Finality rule
 
-The final state of any action must reference:
+A final action must reference:
 
 1. the acting #
 2. the affected #
-3. the SEAL level used
-4. the approval scope
-5. the approval issuer
+3. the human decision-maker #
+4. the SEAL level used
+5. the approval or rejection scope
 6. the validity period
 7. the proof reference
 8. the revocation and redress route
@@ -73,77 +72,67 @@ Without these, the action may be proposed, simulated, drafted, or pending, but n
 ## Authority levels
 
 ### SEAL 0 — visible
-The # exists and may be discovered or referenced according to its privacy boundary.
-No authority to act.
+The # exists and may be discovered or referenced according to its privacy boundary. No authority to act.
 
-### SEAL 1 — self-use
-The # may perform low-risk actions for itself within declared limits.
-Examples: view, draft, save, personalize, request support.
+### SEAL 1 — personal choice
+The human permits low-risk actions for their own # within declared limits.
 
-### SEAL 2 — operational
-The # may execute bounded operational actions that are reversible and auditable.
-Examples: submit, schedule, route, publish approved content, invoke a provider fraction.
+### SEAL 2 — operational permission
+The human permits bounded, reversible, and auditable execution.
 
-### SEAL 3 — consequential
-The # may approve consequential actions affecting records, rights, money, certification, access, status, or another entity.
-Requires stronger identity, proof, audit, and human accountability.
+### SEAL 3 — consequential approval
+The human explicitly approves actions affecting records, rights, money, certification, access, status, or another entity.
 
-### SEAL 4 — constitutional
-The # may authorize structural, ecosystem-wide, sovereign, emergency, governance, or irreversible changes.
-Requires multi-party authority, enhanced proof, explicit scope, and exceptional review.
+### SEAL 4 — constitutional approval
+Humans with valid authority explicitly approve structural, ecosystem-wide, sovereign, emergency, governance, or irreversible changes. This requires multi-human approval and enhanced proof.
 
 ## Scope rule
 
-SEAL authority is never universal by default.
-It is bound to:
+SEAL authority is never universal by default. It is bound to identity, role, function, product, swarm, data class, jurisdiction, time, transaction limit, risk class, and delegation chain.
 
-- identity
-- role
-- function
-- product
-- swarm
-- data class
-- jurisdiction
-- time
-- transaction limit
-- risk class
-- delegation chain
-
-A # may hold different SEAL levels in different contexts.
+A human may grant different SEAL levels in different contexts.
 
 ## Delegation rule
 
-A # may delegate authority only if its own SEAL permits delegation.
-The delegated authority cannot exceed the issuer's authority.
-Every delegation must state:
+Delegation is valid only when a human explicitly grants it. Delegated authority cannot exceed the human issuer's authority and must include scope, maximum level, start, expiry, revocation route, and proof.
 
-- issuer #
-- delegate #
-- scope
-- maximum SEAL level
-- start and expiry
-- revocation route
-- proof
+## AI rule
 
-## Human final authority
+AI may:
 
-AI, apps, devices, and products may receive operational SEAL authority, but their authority must trace back to an accountable human or organization #.
+- suggest
+- explain
+- warn
+- compare
+- prepare
+- simulate
+- route after approval
+- record the decision
 
-AI may recommend, route, draft, classify, and execute within scope.
-It cannot independently create unrestricted authority over human dignity, identity, consent, rights, or irreversible consequence.
+AI may not:
+
+- grant SEAL
+- deny SEAL
+- approve
+- reject
+- revoke
+- expand permission
+- infer consent
+- make the final decision
 
 ## Ecosystem equation
 
 ```text
 # = identity
-SEAL = authority over action
-# + valid SEAL + scope + proof = authorized final action
+SEAL = autonomous human authority over action
+AI = suggestion only
+# + explicit human SEAL + valid scope + proof = authorized final action
 ```
 
 ## Final rule
 
 Everything has #.
-Nothing acts finally without SEAL.
-Every SEAL is scoped.
-Every final action is provable.
-Every authority is revocable or challengeable according to its class.
+Only humans grant SEAL.
+AI only suggests.
+Nothing acts finally without explicit human approval.
+Every SEAL is scoped, provable, revocable, and challengeable.
