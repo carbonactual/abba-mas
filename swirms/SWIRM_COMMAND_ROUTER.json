@@ -1,0 +1,24 @@
+{
+  "router_id": "abba-swirm-command-router-v1",
+  "purpose": "Map ecosystem commands to inter-Swirm teams and enforce SEAL gates.",
+  "default_rules": {
+    "never_expose_raw_secrets": true,
+    "require_health_evidence_before_active": true,
+    "require_human_approval_for_seal_3_plus": true,
+    "block_value_reveal_by_default": true,
+    "prefer_free_low_hassle_paths_first": true,
+    "fallback_to_open_source_when_saas_cost_or_lockin_is_high": true
+  },
+  "command_patterns": [
+    {"match": ["build", "create", "ship", "deploy app", "mvp"], "team_template": "build_product", "default_seal": 2},
+    {"match": ["mint ai", "create agent", "assign shadow", "certify ai"], "team_template": "mint_ai", "default_seal": 3},
+    {"match": ["website", "landing page", "public site", "gateway"], "team_template": "deploy_public_site", "default_seal": 2},
+    {"match": ["field", "survey", "sensor", "device", "iot"], "team_template": "run_field_program", "default_seal": 3},
+    {"match": ["payment", "ledger", "settlement", "token", "value", "money"], "team_template": "revenue_operation", "default_seal": 3},
+    {"match": ["research", "analyze", "report", "registry", "search"], "team_template": "research_and_report", "default_seal": 1}
+  ],
+  "output_contract": {
+    "must_return": ["selected_swirms", "provider_candidates", "missing_credentials", "risk_level", "seal_level", "activation_steps", "proof_required"],
+    "must_not_return": ["raw_api_secret", "private_key", "password", "unapproved_external_action"]
+  }
+}
