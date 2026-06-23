@@ -1,0 +1,42 @@
+{
+  "ruleset_id": "carbon-actual-common-product-rules-v1",
+  "status": "locked_for_product_builds",
+  "identity": {
+    "root": "#",
+    "external_bindings_supported": ["did", "vc", "ens", "hns", "oauth", "wallet", "email", "phone", "sso", "government_id_ref", "biometric_ref"],
+    "external_bindings_replace_root": false,
+    "required_fields": ["hash_id", "subject_type", "controller_id", "authority_scope", "consent_state", "revocation_route", "audit_event_ids"]
+  },
+  "seal": {
+    "human_controlled": true,
+    "ai_can": ["recommend", "classify", "draft", "route", "warn", "prepare_evidence"],
+    "ai_cannot": ["approve", "reject_as_final_authority", "self_authorize", "override_human", "move_money", "issue_irreversible_identity_or_value_change"],
+    "seal_3_plus_requires_human_approval": true
+  },
+  "proof": {
+    "required_for": ["identity_change", "delegation", "external_action", "payment", "public_claim", "certification", "tokenization", "product_launch"],
+    "proof_channels": ["supabase_proofs", "github_artifact_attestation", "eas_offchain", "openattestation", "ipfs_hash"],
+    "public_proof_requires_redaction": true
+  },
+  "memory": {
+    "continuum_enabled": true,
+    "actual_value_hidden_by_default": true,
+    "memory_providers": ["memorae", "supermemory", "zep", "graphiti", "qdrant", "pgvector"],
+    "rules": ["minimize_sensitive_context", "separate_recall_from_authority", "log_memory_use", "allow_deletion_or_revocation"]
+  },
+  "ranking": {
+    "criteria": ["seal_fit", "cost", "free_tier", "maintenance", "security", "data_control", "ecosystem_fit", "latency", "scalability", "vendor_lockin", "proofability"],
+    "default_preference": ["open_source", "free_or_low_hassle", "self_hostable", "api_first", "webhook_ready", "exportable"]
+  },
+  "swirms": {
+    "multi_membership_allowed": true,
+    "inter_swirm_teams_allowed": true,
+    "required_for_product": true,
+    "minimum_team_fields": ["selected_swirms", "provider_candidates", "missing_credentials", "risk_level", "seal_level", "activation_steps", "proof_required"]
+  },
+  "integrations": {
+    "lifecycle_states": ["candidate", "scouted", "registry_ready", "credentials_pending", "sandboxed", "connected", "pilot_active", "production_active", "strengthened", "core", "paused", "blocked", "retired"],
+    "active_requires_evidence": true,
+    "secrets_in_chat_or_repo_forbidden": true
+  }
+}
