@@ -1,0 +1,30 @@
+name: Shared Contracts CI
+
+on:
+  push:
+    paths:
+      - '03_SHARED_CONTRACTS/**'
+      - '.github/workflows/shared-contracts-ci.yml'
+  pull_request:
+    paths:
+      - '03_SHARED_CONTRACTS/**'
+      - '.github/workflows/shared-contracts-ci.yml'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: 03_SHARED_CONTRACTS
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: 03_SHARED_CONTRACTS/package-lock.json
+      - run: npm install
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run validate:example
+      - run: npm run build
