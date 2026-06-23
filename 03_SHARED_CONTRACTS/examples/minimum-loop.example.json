@@ -1,0 +1,90 @@
+{
+  "entry": {
+    "version": "0.1.0",
+    "entryId": "entry_demo_001",
+    "requestedAt": "2026-06-23T09:00:00Z",
+    "human": {
+      "humanId": "human_demo_001",
+      "locale": "en-NG",
+      "timezone": "Africa/Lagos",
+      "preferredName": "Demo Human"
+    },
+    "requestedCapabilities": ["memory", "curation", "coordination"]
+  },
+  "identity": {
+    "version": "0.1.0",
+    "hashId": "hash_demo_001",
+    "humanId": "human_demo_001",
+    "personalAiId": "ai_demo_001",
+    "subjectKind": "human_ai_pair",
+    "status": "active",
+    "mintedAt": "2026-06-23T09:00:03Z",
+    "updatedAt": "2026-06-23T09:00:03Z",
+    "proofRefs": []
+  },
+  "personalAiMint": {
+    "version": "0.1.0",
+    "mintId": "mint_demo_001",
+    "humanId": "human_demo_001",
+    "personalAiId": "ai_demo_001",
+    "hashId": "hash_demo_001",
+    "status": "minted",
+    "requestedAt": "2026-06-23T09:00:00Z",
+    "completedAt": "2026-06-23T09:00:03Z",
+    "capabilityProfile": ["memory", "curation", "coordination"]
+  },
+  "actualSession": {
+    "version": "0.1.0",
+    "actualSessionId": "actual_demo_001",
+    "hashId": "hash_demo_001",
+    "startedAt": "2026-06-23T09:05:00Z",
+    "status": "active",
+    "surfaces": ["phone", "location", "outdoor"]
+  },
+  "becomingCard": {
+    "version": "0.1.0",
+    "becomingCardId": "becoming_demo_001",
+    "hashId": "hash_demo_001",
+    "cardType": "outdoor",
+    "title": "Take the next activity outside",
+    "reasonCodes": ["low_screen_dependency", "location_fit", "available_time"],
+    "surface": "phone",
+    "priority": 0.82,
+    "validFrom": "2026-06-23T09:05:00Z",
+    "sourceRefs": ["actual_demo_001"]
+  },
+  "pulse": {
+    "version": "0.1.0",
+    "pulseId": "pulse_demo_001",
+    "hashId": "hash_demo_001",
+    "actorId": "human_demo_001",
+    "actorKind": "human",
+    "source": "joint",
+    "eventType": "outdoor_activity_started",
+    "direction": "bidirectional",
+    "occurredAt": "2026-06-23T09:12:00Z",
+    "receivedAt": "2026-06-23T09:12:01Z",
+    "context": {
+      "actualSessionId": "actual_demo_001",
+      "becomingCardId": "becoming_demo_001"
+    },
+    "payload": {
+      "screenReleased": true,
+      "activityType": "walk"
+    }
+  },
+  "atlasProjection": {
+    "version": "0.1.0",
+    "atlasId": "atlas_demo_001",
+    "subjectId": "human_demo_001",
+    "subjectKind": "human",
+    "publicHandle": "demo-human",
+    "displayName": "Demo Human",
+    "publicClaims": {
+      "identityVerified": true
+    },
+    "publishedAt": "2026-06-23T09:20:00Z",
+    "updatedAt": "2026-06-23T09:20:00Z",
+    "visibility": "public"
+  }
+}
