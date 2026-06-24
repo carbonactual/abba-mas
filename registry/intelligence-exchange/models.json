@@ -1,0 +1,70 @@
+{
+  "version": "1.0.0",
+  "updated_at": "2026-06-24",
+  "models": [
+    {
+      "id": "openrouter/auto",
+      "provider": "openrouter",
+      "status": "active",
+      "capabilities": ["routing", "fallback", "structured_output", "tool_calling"],
+      "modalities": ["text"],
+      "strengths": ["general", "dynamic_selection"],
+      "privacy_profile": "provider-dependent",
+      "cost_tier": "dynamic",
+      "latency_tier": "dynamic",
+      "schema_support": true,
+      "tool_support": true,
+      "streaming": true,
+      "allowed_data_classes": ["public", "masked", "sandbox"],
+      "seal_level": 2
+    },
+    {
+      "id": "capability:reasoning",
+      "provider": "virtual",
+      "status": "active",
+      "capabilities": ["reasoning", "structured_output", "tool_calling"],
+      "modalities": ["text"],
+      "strengths": ["planning", "analysis", "verification"],
+      "privacy_profile": "resolved-at-runtime",
+      "cost_tier": "variable",
+      "latency_tier": "variable",
+      "schema_support": true,
+      "tool_support": true,
+      "streaming": true,
+      "allowed_data_classes": ["public", "masked", "sandbox"],
+      "seal_level": 3
+    },
+    {
+      "id": "capability:vision",
+      "provider": "virtual",
+      "status": "active",
+      "capabilities": ["vision", "structured_output", "tool_calling"],
+      "modalities": ["text", "image"],
+      "strengths": ["identification", "comparison", "document_vision"],
+      "privacy_profile": "resolved-at-runtime",
+      "cost_tier": "variable",
+      "latency_tier": "variable",
+      "schema_support": true,
+      "tool_support": true,
+      "streaming": true,
+      "allowed_data_classes": ["public", "masked", "sandbox"],
+      "seal_level": 3
+    },
+    {
+      "id": "capability:private",
+      "provider": "virtual",
+      "status": "active",
+      "capabilities": ["reasoning", "structured_output", "privacy-aware-routing"],
+      "modalities": ["text"],
+      "strengths": ["sensitive-context-minimization", "deterministic-output"],
+      "privacy_profile": "strict",
+      "cost_tier": "variable",
+      "latency_tier": "variable",
+      "schema_support": true,
+      "tool_support": false,
+      "streaming": true,
+      "allowed_data_classes": ["public", "masked"],
+      "seal_level": 4
+    }
+  ]
+}
