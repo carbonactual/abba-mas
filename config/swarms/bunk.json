@@ -1,0 +1,36 @@
+{
+  "version": "1.0.0",
+  "product": "bunk",
+  "coordinator": "abba-mas",
+  "activationMode": "sandbox-build",
+  "defaultSealLevel": 4,
+  "swarms": [
+    {"id":"bunk-foundation-swarm","name":"BUNK Foundation and Property Identity Swarm","status":"active","priority":1},
+    {"id":"bunk-discovery-swarm","name":"Discovery, Search, Map and Saved Demand Swarm","status":"active","priority":2},
+    {"id":"bunk-title-swarm","name":"Title, Ownership, Documents and Proof Swarm","status":"active","priority":1},
+    {"id":"bunk-local-market-swarm","name":"Local Listings, Realtors, Developers and Deals Swarm","status":"active","priority":2},
+    {"id":"bunk-ability-swarm","name":"Rent, Buy, Build, Mortgage and Invest Ability Swarm","status":"active","priority":2},
+    {"id":"bunk-finance-swarm","name":"Mortgage, Property Finance, Escrow and Insurance Swarm","status":"active","priority":3},
+    {"id":"bunk-investment-swarm","name":"Single, Pooled, Fractional and Land-Banking Investment Swarm","status":"active","priority":3},
+    {"id":"bunk-tokenization-swarm","name":"Decimalized, Tokenized and Decentralized Interests Swarm","status":"active","priority":4},
+    {"id":"bunk-trading-swarm","name":"Trade, Bid, Auction, Barter and Secondary Market Swarm","status":"active","priority":3},
+    {"id":"bunk-portfolio-swarm","name":"Portfolio, Valuation, Yield, Liability and Exit Swarm","status":"active","priority":3},
+    {"id":"bunk-rental-swarm","name":"Rent, Lease, Shortlet, Hostel and Occupancy Swarm","status":"active","priority":2},
+    {"id":"bunk-development-swarm","name":"Land, Development, Construction and Off-Plan Swarm","status":"active","priority":3},
+    {"id":"bunk-management-swarm","name":"Property, Facility, Estate and Tenancy Management Swarm","status":"active","priority":3},
+    {"id":"bunk-maintenance-swarm","name":"Maintenance, Repair, SPARE and Lifecycle Swarm","status":"active","priority":3},
+    {"id":"bunk-foreclosure-swarm","name":"Foreclosure, Distress, Repossession and Resolution Swarm","status":"active","priority":4},
+    {"id":"bunk-future-habitat-swarm","name":"Moon, Mars, Orbital, Underwater and Extreme Habitat Swarm","status":"active","priority":5},
+    {"id":"bunk-risk-swarm","name":"Property Risk, Regulation and Compliance Swarm","status":"active","priority":1},
+    {"id":"bunk-experience-swarm","name":"BUNK Product Experience Swarm","status":"active","priority":4},
+    {"id":"bunk-devsecops-swarm","name":"BUNK DevSecOps, Data and Reliability Swarm","status":"active","priority":1}
+  ],
+  "globalGates": {
+    "humanFinalAuthority": true,
+    "proofRequiredForActual": true,
+    "legalTitleSeparateFromToken": true,
+    "futureConceptSeparateFromPhysicalActual": true,
+    "externalFinancialExecution": false,
+    "realValueMovement": false
+  }
+}
