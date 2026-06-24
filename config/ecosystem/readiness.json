@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "program": "ecosystem-readiness",
+  "target": 95,
+  "products": ["foundation","hapi","management","spare","institute-gpt","marketplace","io","capital","omni","open-polling","coreflow"],
+  "included": ["specification","schemas","apis","permissions","agents","sandbox-workflows","tests","security","audit","proof","deployment-config","documentation","demo-flows"],
+  "reserved": ["production-credentials","live-financial-execution","regulated-provider-approval","jurisdiction-signoff","final-human-acceptance"],
+  "sandboxDefault": true,
+  "humanFinalAuthority": true,
+  "status": "active"
+}
