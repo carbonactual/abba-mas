@@ -2,13 +2,25 @@
   "id": "openrouter",
   "name": "OpenRouter",
   "category": "model router",
-  "route_type": ["model gateway", "API", "OpenAI-compatible endpoint", "fallback routing", "auto routing"],
+  "route_type": [
+    "model gateway",
+    "API",
+    "OpenAI-compatible endpoint",
+    "fallback routing",
+    "auto routing",
+    "streaming",
+    "structured outputs",
+    "provider preference routing"
+  ],
   "function_classification": [
     "ABBA model routing",
     "multi-model access",
     "provider fallback",
     "cost-quality routing",
+    "latency routing",
+    "privacy-aware routing",
     "agent model gateway",
+    "schema-enforced agent outputs",
     "free model exploration"
   ],
   "access_method": "API key via OpenRouter dashboard; OpenAI-compatible base URL; official SDK; Agent SDK",
@@ -21,19 +33,61 @@
     "OPENROUTER_APP_TITLE",
     "OPENROUTER_DEFAULT_MODEL",
     "OPENROUTER_ALLOWED_MODELS",
+    "OPENROUTER_PRODUCTION_ENABLED",
     "OPENROUTER_WEBHOOK_SECRET_IF_USED"
   ],
   "setup_links": [
     "https://openrouter.ai/docs/quickstart",
+    "https://openrouter.ai/docs/api-reference/streaming",
+    "https://openrouter.ai/docs/features/structured-outputs",
+    "https://openrouter.ai/docs/features/provider-routing",
     "https://openrouter.ai/docs/guides/routing/routers/auto-router",
     "https://openrouter.ai/docs/guides/routing/model-fallbacks",
-    "https://openrouter.ai/docs/guides/routing/routers/free-models-router",
     "https://openrouter.ai/models"
   ],
   "default_models": {
     "auto": "openrouter/auto",
     "fresh_openai_alias": "~openai/gpt-latest",
     "fresh_anthropic_alias": "~anthropic/claude-sonnet-latest"
+  },
+  "capabilities": {
+    "streaming": true,
+    "structured_outputs": true,
+    "provider_preferences": true,
+    "fallbacks": true,
+    "tool_calls": true,
+    "request_abort_forwarding": true,
+    "raw_prompt_logging": false
+  },
+  "provider_policies": {
+    "balanced": "Default OpenRouter routing with fallback enabled.",
+    "fast": "Prefer the lowest observed latency while retaining fallback.",
+    "economy": "Prefer lower-priced providers while retaining fallback.",
+    "private": "Deny provider data collection where supported and require requested parameters.",
+    "reasoning": "Require providers to support requested reasoning parameters and allow fallback.",
+    "vision": "Require providers to support requested multimodal parameters and allow fallback.",
+    "fallback": "Maximize continuity through provider fallback."
+  },
+  "request_contract": {
+    "route": "/api/swarm/openrouter",
+    "method": "POST",
+    "required": ["messages"],
+    "optional": [
+      "model",
+      "stream",
+      "response_schema",
+      "response_format",
+      "provider_policy",
+      "provider",
+      "fallback_enabled",
+      "temperature",
+      "max_tokens",
+      "tools",
+      "tool_choice",
+      "metadata",
+      "data_class",
+      "seal_approved"
+    ]
   },
   "abba_policy": {
     "default_mode": "router_not_decider",
@@ -56,12 +110,13 @@
     ]
   },
   "activation_path": [
-    "Add OPENROUTER_API_KEY to Vercel and GitHub secrets only, never repo files.",
-    "Expose a health-safe provider card in /api/swarm/providers.",
-    "Use openrouter/auto only for sandbox and non-sensitive ABBA tasks first.",
-    "Add allowed model patterns for OpenAI, Anthropic, Google, DeepSeek, Meta, Mistral, Qwen and free-model candidates after testing.",
-    "Log selected model metadata, cost estimate, latency and error status only; do not log raw private prompts by default.",
-    "Add SEAL-4 review before customer-facing, identity, finance, legal, or HAPI memory tasks."
+    "Keep OPENROUTER_API_KEY in Vercel and GitHub secrets only, never repo files.",
+    "Set OPENROUTER_SITE_URL and OPENROUTER_APP_TITLE for request attribution.",
+    "Set OPENROUTER_ALLOWED_MODELS to a comma-separated allowlist or leave empty during controlled sandbox testing.",
+    "Test streaming, structured output validation, each provider policy, fallback behavior and request cancellation.",
+    "Set OPENROUTER_PRODUCTION_ENABLED=true only after SEAL-4 review.",
+    "Log selected model metadata, latency and error status only; do not log raw private prompts by default.",
+    "Keep identity, finance, legal, HAPI memory and irreversible actions behind product-specific authorization beyond the request-level SEAL flag."
   ],
-  "status": "candidate_model_router_production_blocked"
+  "status": "gateway_capabilities_committed_activation_pending"
 }
