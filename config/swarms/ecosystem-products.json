@@ -1,0 +1,38 @@
+{
+  "version": "1.0.0",
+  "coordinator": "abba-mas",
+  "activationMode": "sandbox-build",
+  "products": [
+    {"id":"foundation","status":"active","swarms":["identity","vector-capability","seal-proof-actual","sdk","data-security"]},
+    {"id":"hapi","status":"active","swarms":["identity-onboarding","becoming-vector","optimization","network-curation","human-ai-equilibrium"]},
+    {"id":"management","status":"active","swarms":["entity-structure","operations","finance","hr-performance","strategy-risk","industry-modules"]},
+    {"id":"spare","status":"active","swarms":["vision-identification","compatibility","repair","market","product-passport","enterprise-assets"]},
+    {"id":"institute-gpt","status":"active","swarms":["learning","assessment","certification","ai-formation","institution-admin","cpd-market"]},
+    {"id":"marketplace","status":"active","swarms":["catalog","search-match","listing-order","reputation-proof","vendor-tools","becoming-feed"]},
+    {"id":"io","status":"active","swarms":["accounts-ledger","payments","escrow","credit","settlement","value-routing"]},
+    {"id":"capital","status":"active","registry":"config/swarms/capital.json"},
+    {"id":"omni","status":"active","swarms":["browse","shadow","vault","proof","pulse","provider-routing"]},
+    {"id":"open-polling","status":"active","swarms":["identity-verification","ballot","routing-collation","observer-proof","dispute","scale-reliability"]},
+    {"id":"coreflow","status":"active","swarms":["customer-account","admin-operations","reconciliation","kyc-readiness","officer-ai","bank-integration"]}
+  ],
+  "sharedSwarms": [
+    "product-architecture",
+    "frontend-experience",
+    "backend-api",
+    "data-schema",
+    "ai-agents",
+    "security-privacy",
+    "devops-reliability",
+    "analytics-growth",
+    "documentation-testing"
+  ],
+  "rules": {
+    "inheritFoundation": true,
+    "reuseOpenStack": true,
+    "noDuplicateIdentity": true,
+    "noDuplicateConsent": true,
+    "noDuplicateProof": true,
+    "sandboxBeforeProduction": true,
+    "humanApprovalForIrreversibleActions": true
+  }
+}
