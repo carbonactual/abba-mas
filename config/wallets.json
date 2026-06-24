@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0",
+  "engine": "one-shared-io-wallet-engine",
+  "ledgerModel": "double-entry",
+  "balanceStates": ["available","pending","reserved","locked","disputed","settled","reversed"],
+  "templates": [
+    {"id":"hash-wallet","subject":"hash","holds":["identity-rights","credentials","permissions","ownership-claims","tokens","proofs","reputation","access-rights"],"publicByDefault":false},
+    {"id":"hapi-wallet","subject":"hapi","subwallets":["personal","work","trading","savings","credit","escrow","capability","credentials","carbon","private-vault"]},
+    {"id":"product-wallet","subject":"product","subwallets":["revenue","operations","customer-escrow","commissions","vendor-settlement","refunds","reserves","tax","ecosystem-contribution"]},
+    {"id":"entity-wallet","subject":"entity","subwallets":["treasury","operations","payroll","procurement","tax","credit","escrow","investment","departments"]},
+    {"id":"abba-wallet","subject":"abba","purpose":"authorized-orchestration-only","subwallets":["execution-budget","provider-spend","swarm-allowance","task-escrow","resource-reservation","rewards"],"controls":["purpose-bound","spending-limit","expiry","seal-approval","multi-approval","kill-switch","proof-required"]},
+    {"id":"agent-wallet","subject":"ai-agent","purpose":"allowance-and-task-bound-execution","controls":["principal-required","mandate-required","non-transferable-authority","expiry","revocation"]},
+    {"id":"project-wallet","subject":"project","subwallets":["budget","escrow","procurement","contributors","contingency"]}
+  ],
+  "nonMonetaryHoldings": ["assets","liabilities","rights","credentials","positions","contracts","capabilities","reservations","proof-references"],
+  "requiredFields": ["walletId","subjectId","subjectType","owner","controller","beneficiary","purpose","unit","permissions","limits","status","riskClass","createdAt"]
+}
