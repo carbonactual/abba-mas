@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "engine": "one-shared-io-communication-fabric",
+  "participants": ["hapi","abba","ai-agent","product","entity","department","project","swarm","external-system","device"],
+  "routes": ["hapi-hapi","hapi-ai","hapi-product","hapi-entity","hapi-abba","ai-ai","ai-product","ai-abba","product-product","product-entity","entity-entity","swarm-swarm","internal-external"],
+  "channels": ["direct-message","group-room","voice","video","notification","command","approval","negotiation-room","support","document","report","api","webhook","event-stream","queue","broadcast","emergency"],
+  "privacyLevels": ["public","ecosystem","organization","department","project","transaction","private","confidential","root-protected","seal-restricted","vault-only"],
+  "modes": ["synchronous","asynchronous","one-to-one","one-to-many","many-to-many","broadcast","transactional","instructional","emergency","automated","human-reviewed"],
+  "authorityActions": ["read","reply","send","broadcast","invite","escalate","approve","sign","publish","forward","archive","delete","delegate","automate"],
+  "agentActions": ["draft","summarize","classify","translate","route","schedule","recommend","respond-within-mandate","escalate"],
+  "mandatoryControls": ["sender-identity","recipient-authority","purpose","privacy-classification","agent-disclosure","retention-policy","consent","blocking","delivery-state","thread-identity","transaction-link","proof-link","audit-event"],
+  "transactionTriggers": ["payment-request","quote-request","approval-request","escrow-create","contract-create","trade-create","refund-request","task-create","proof-submit"],
+  "primaryOpenStack": ["matrix-synapse","element","livekit","novu","chatwoot","nats"],
+  "fallbackOpenStack": ["zulip","rocket-chat","jitsi","apprise","ntfy","rabbitmq"]
+}
