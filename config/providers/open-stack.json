@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0",
+  "policy": "adapter-first-no-lock-in",
+  "providers": [
+    {"id":"supabase","category":"database-auth-storage","mode":"open-source-or-managed","products":["all"]},
+    {"id":"n8n","category":"automation","mode":"open-source-or-managed","products":["all"]},
+    {"id":"qdrant","category":"vector-memory","mode":"open-source-or-managed","products":["all"]},
+    {"id":"typesense","category":"search","mode":"open-source-or-managed","products":["all"]},
+    {"id":"minio","category":"object-storage","mode":"open-source","products":["all"]},
+    {"id":"posthog","category":"analytics","mode":"open-source-or-managed","products":["all"]},
+    {"id":"langgraph","category":"agent-orchestration","mode":"open-source","products":["all"]},
+    {"id":"crewai","category":"multi-agent-swarms","mode":"open-source","products":["all"]},
+    {"id":"google-adk","category":"agent-development","mode":"developer-framework","products":["all"]},
+    {"id":"nautilustrader","category":"trading-engine","mode":"open-source","products":["capital"]},
+    {"id":"lean","category":"backtesting-and-research","mode":"open-source","products":["capital"]},
+    {"id":"hummingbot","category":"digital-market-connectors","mode":"open-source","products":["capital"]},
+    {"id":"qlib","category":"quant-ai-research","mode":"open-source","products":["capital"]},
+    {"id":"finrl","category":"reinforcement-learning-research","mode":"open-source","products":["capital"]},
+    {"id":"openbb","category":"financial-research-workspace","mode":"open-core","products":["capital"]},
+    {"id":"alpaca-paper","category":"paper-broker-api","mode":"sandbox","products":["capital"]},
+    {"id":"medusa","category":"headless-commerce","mode":"open-source","products":["marketplace","spare","capital"]},
+    {"id":"vendure","category":"headless-commerce-alternative","mode":"open-source","products":["marketplace","spare","capital"]},
+    {"id":"moodle","category":"learning-management","mode":"open-source","products":["institute-gpt"]},
+    {"id":"matrix","category":"messaging","mode":"open-source","products":["hapi","management","marketplace","spare","institute-gpt"]},
+    {"id":"livekit","category":"realtime-calls","mode":"open-source-or-managed","products":["hapi","institute-gpt","management"]},
+    {"id":"coolify","category":"deployment","mode":"open-source","products":["all"]},
+    {"id":"opentelemetry","category":"observability","mode":"open-source","products":["all"]}
+  ]
+}
