@@ -1,37 +1,94 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
+  "architectureStatus": "layer-complete-and-frozen",
   "ecosystemProduct": {
     "id": "carbon-actual",
     "name": "Carbon Actual",
-    "classification": ["single-ecosystem-product", "shared-operating-layer"],
+    "classification": ["single-ecosystem-product", "shared-operating-foundation", "specialized-product-branches"],
     "coordinator": "abba-mas",
     "status": "active"
   },
-  "sharedLayers": [
-    "identity",
-    "root",
-    "vector",
-    "capability",
-    "commitment",
-    "relationship",
-    "allocation",
-    "index",
-    "atlas",
-    "vault",
-    "pulse",
-    "proof",
-    "actual",
-    "seal",
-    "io",
-    "management",
-    "trading",
-    "communication",
-    "agents",
-    "audit",
-    "reputation",
-    "search",
-    "messaging",
-    "notifications"
+  "universalLayers": [
+    {
+      "id": "identity-subject",
+      "includes": ["identity", "subjects", "hash", "roles", "entities", "products", "assets", "places"]
+    },
+    {
+      "id": "root-continuity",
+      "includes": ["root", "history", "provenance", "memory", "inheritance", "records", "continuum"]
+    },
+    {
+      "id": "direction-capability",
+      "includes": ["vector", "goals", "constraints", "milestones", "capability", "eligibility", "capacity"]
+    },
+    {
+      "id": "relationship-commitment-allocation",
+      "includes": ["relationships", "appointments", "authority", "commitments", "contracts", "tasks", "resources", "allocation"]
+    },
+    {
+      "id": "governance-policy-jurisdiction",
+      "includes": ["governance", "constitution", "doctrine", "policy", "law", "jurisdiction", "regulation", "decision-rights"]
+    },
+    {
+      "id": "seal-trust-safety-privacy",
+      "includes": ["seal", "consent", "privacy", "access", "safeguarding", "moderation", "fraud", "suitability", "revocation"]
+    },
+    {
+      "id": "data-knowledge-intelligence",
+      "includes": ["index", "data", "documents", "knowledge", "memory", "research", "analytics", "models", "forecasting", "explainability"]
+    },
+    {
+      "id": "atlas-time-environment",
+      "includes": ["atlas", "maps", "boundaries", "location", "time", "calendar", "temporal-validity", "environment", "future-scenarios"]
+    },
+    {
+      "id": "communication-experience",
+      "includes": ["communication", "messaging", "calls", "notifications", "inbox", "feeds", "collaboration", "localization", "accessibility", "interfaces"]
+    },
+    {
+      "id": "discovery-market",
+      "includes": ["search", "recommendation", "matching", "directories", "listings", "demand", "marketplace", "reputation", "curation"]
+    },
+    {
+      "id": "management-orchestration",
+      "includes": ["management", "governance", "strategy", "operations", "projects", "people", "assets", "finance", "risk", "workflows", "agents", "swarms"]
+    },
+    {
+      "id": "io-value",
+      "includes": ["io", "accounts", "wallets", "ledger", "payments", "credit", "escrow", "collateral", "fees", "taxes", "settlement", "rewards", "liabilities"]
+    },
+    {
+      "id": "trading-exchange",
+      "includes": ["trading", "offers", "bids", "negotiation", "barter", "auctions", "swaps", "orders", "markets", "delivery"]
+    },
+    {
+      "id": "pulse-proof-actual",
+      "includes": ["pulse", "events", "evidence", "proof", "verification", "actual", "state-transitions", "audit", "outcomes"]
+    },
+    {
+      "id": "lifecycle-continuity",
+      "includes": ["creation", "onboarding", "activation", "operation", "maintenance", "transfer", "inheritance", "recovery", "suspension", "deprecation", "archive", "deletion"]
+    },
+    {
+      "id": "integration-interoperability",
+      "includes": ["apis", "sdks", "events", "webhooks", "adapters", "imports", "exports", "connectors", "federation", "provider-abstraction"]
+    },
+    {
+      "id": "security-resilience-infrastructure",
+      "includes": ["authentication", "authorization", "encryption", "keys", "backup", "availability", "incident-response", "observability", "deployment", "disaster-recovery"]
+    },
+    {
+      "id": "quality-assurance-improvement",
+      "includes": ["testing", "validation", "standards", "certification", "monitoring", "feedback", "experimentation", "performance", "optimization"]
+    },
+    {
+      "id": "economics-sustainability-impact",
+      "includes": ["business-models", "pricing", "incentives", "contribution", "carbon", "environmental-impact", "social-value", "unit-economics", "viability"]
+    },
+    {
+      "id": "support-remedy-dispute",
+      "includes": ["help", "support", "cases", "complaints", "appeals", "mediation", "claims", "refunds", "remediation", "enforcement", "restoration"]
+    }
   ],
   "productBranches": [
     "hapi",
@@ -44,16 +101,28 @@
     "open-polling",
     "coreflow"
   ],
-  "management": {
-    "classification": ["shared-layer", "standalone-product"],
-    "sharedRole": "provides governance, planning, operations, finance, people, risk, assets, projects, AI and performance management to every branch",
-    "standaloneRole": "provides complete entity management and Management-as-a-Service for internal and external entities",
-    "inheritanceRule": "product branches inherit management capabilities and add only domain-specific workflows"
+  "dualRoleProducts": {
+    "management": {
+      "classification": ["universal-layer", "standalone-product", "management-as-a-service"]
+    },
+    "trading": {
+      "classification": ["universal-layer", "capital-product", "trading-as-a-service"]
+    },
+    "io": {
+      "classification": ["universal-layer", "financial-product-family", "value-as-a-service"]
+    },
+    "communication": {
+      "classification": ["universal-layer", "communication-product-family", "communication-as-a-service"]
+    }
   },
-  "trading": {
-    "classification": ["shared-layer", "capital-product"],
-    "sharedRole": "provides listing, bidding, barter, auction, negotiation, escrow and settlement capabilities across products",
-    "standaloneRole": "CAPITAL provides specialist multi-market trading and Trading-as-a-Service"
+  "foundationFreeze": {
+    "enabled": true,
+    "rule": "new requirements map to an existing layer, policy, schema, reusable service, product module or provider adapter unless they are proven universal and irreducible",
+    "newLayerRequires": ["cross-product-need", "architecture-review", "non-duplication-proof", "seal-approval"]
+  },
+  "productFocus": {
+    "enabled": true,
+    "deliveryModel": ["user-problem", "complete-journey", "domain-model", "inherit-shared-services", "apis-workflows", "interface", "tests-security", "sandbox", "proof-review", "production-gate"]
   },
   "rules": {
     "oneIdentityUniverse": true,
@@ -61,8 +130,13 @@
     "oneProofUniverse": true,
     "oneValueRoutingUniverse": true,
     "oneAgentGovernanceUniverse": true,
+    "oneAuditUniverse": true,
+    "oneInteroperabilityStandard": true,
     "branchesDoNotDuplicateFoundation": true,
     "domainSpecificLogicRemainsInBranch": true,
+    "pastPresentFutureRequired": true,
+    "conceptSimulationActualSeparated": true,
+    "securityAccessibilitySupportLifecycleRequired": true,
     "humanFinalAuthority": true
   }
 }
