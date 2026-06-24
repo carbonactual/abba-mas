@@ -1,20 +1,29 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "doctrine": {
     "industry_to_domain": true,
     "domain_to_product_family": true,
     "entity_centred_products": true,
     "shared_layer_inheritance": true,
     "management_integrates_every_entity": true,
+    "actual_management_is_parent": true,
+    "specific_managements_are_branches": true,
     "hapi_continuous_identity": true,
     "seal_permission_specific": true,
     "temporal_scope": ["past", "present", "future"]
   },
   "shared_layers": ["hash_identity", "root", "vector", "index", "continuum", "vault", "seal", "io", "communication", "actual_management", "marketplace", "trading", "pulse", "proof", "actual", "reputation", "audit", "value_routing", "forecasting", "foresight"],
+  "management_architecture": {
+    "parent": "actual_management",
+    "branch_types": ["functional", "industry", "institutional", "entity", "asset", "hapi", "ai", "environmental", "frontier"],
+    "inheritance_required": ["identity", "root", "vector", "seal", "entity_relationship_graph", "workflow", "records", "communications", "assets_liabilities_obligations", "finance_value_routing", "marketplace", "pulse", "proof", "actual", "analytics", "forecasting", "integration_gateway"],
+    "functional_branches": ["executive_governance", "finance_treasury", "it_data_cybersecurity", "ai_agent", "hr_workforce", "customer_relationship", "operations_process", "project_programme_portfolio", "product_service_innovation", "procurement_supply_chain_logistics", "asset_property_facility_maintenance", "legal_contract_risk_compliance_audit", "knowledge_records_archive_continuity", "security_emergency_resilience", "past_recovery_restitution", "forecast_foresight_future_readiness"]
+  },
   "domain_families": [
     "agriculture_food_biological", "mining_minerals_resources", "energy_utilities", "manufacturing_industrial", "construction_engineering_infrastructure", "real_estate_property_facilities", "transport_mobility_logistics", "aviation_aerospace_space", "maritime_ocean_water", "retail_wholesale_commerce", "finance_banking_capital", "insurance_protection", "health_care_life_sciences", "education_skills_knowledge", "legal_justice_rights", "government_civic_public_administration", "security_defence_emergency", "hospitality_tourism_experiences", "media_entertainment_creative", "telecommunications_communication", "technology_software_digital_infrastructure", "professional_business_services", "human_resources_employment_labour", "sports_fitness_recreation", "nonprofit_development_faith_humanitarian", "environment_climate_circular", "research_science_laboratories", "personal_household_family_community", "associations_cooperatives_membership", "frontier_ocean_polar_underground_space_planetary"
   ],
   "entity_classes": ["human", "ai", "organisation", "physical", "digital", "financial", "legal", "operational", "environmental", "future"],
-  "standard_product_family": ["industry_os", "management", "marketplace_trading", "finance_capital", "insurance_protection", "compliance_legal_audit", "learning_certification_workforce", "data_search_intelligence", "asset_maintenance_spare", "communication_relationships", "forecast_foresight_digital_twin", "hapi_personal_office"],
+  "standard_product_family": ["industry_os", "management_branch", "marketplace_trading", "finance_capital", "insurance_protection", "compliance_legal_audit", "learning_certification_workforce", "data_search_intelligence", "asset_maintenance_spare", "communication_relationships", "forecast_foresight_digital_twin", "hapi_personal_office"],
+  "branch_contract": ["parent", "domain", "subsector", "managed_entities", "relationships", "human_roles", "ai_roles", "workflows", "rules_standards_controls", "assets_liabilities_obligations", "records", "proof_conditions", "actual_outcomes", "dashboards_reports_sla", "marketplace_finance_insurance_trading", "past_requirements", "present_requirements", "future_requirements", "integrations"],
   "management_cycle": ["discover", "root", "index", "assess", "vector", "plan", "assign", "operate", "pulse", "verify", "actualise", "learn", "optimise"]
 }
