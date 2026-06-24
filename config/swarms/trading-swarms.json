@@ -1,0 +1,109 @@
+{
+  "version": "1.0.0",
+  "program": "io-trading-capital",
+  "orchestrator": "abba-mas",
+  "swarmPolicy": {
+    "humanFinalAuthority": true,
+    "sealRequired": true,
+    "proofRequired": true,
+    "secretsInGitHub": false
+  },
+  "swarms": [
+    {
+      "id": "swarm-io-ledger",
+      "name": "I/O Ledger and Movement Swarm",
+      "mission": "Build accounts, wallets, double-entry ledger, transfers, escrow, custody, clearing, settlement, reconciliation, revenue routing and audit events.",
+      "owns": ["io.accounts", "io.wallets", "io.ledger", "io.escrow", "io.custody", "io.clearing", "io.settlement", "io.reconciliation"],
+      "dependencies": ["seal", "proof", "supabase"],
+      "priority": 1
+    },
+    {
+      "id": "swarm-market-core",
+      "name": "Market Core Swarm",
+      "mission": "Build the universal market-object registry, listings, requests, quotes, bids, matching, negotiation, orders, contracts and dispute states.",
+      "owns": ["trading.market-objects", "trading.listings", "trading.rfq", "trading.matching", "trading.orders", "trading.contracts"],
+      "dependencies": ["swarm-io-ledger", "marketplace", "index"],
+      "priority": 1
+    },
+    {
+      "id": "swarm-auction-barter",
+      "name": "Auction, Bidding and Barter Swarm",
+      "mission": "Implement open and sealed bidding, English, Dutch, reverse and double auctions, direct and multi-party barter, swaps and cooperative trades.",
+      "owns": ["trading.bids", "trading.auctions", "trading.barter", "trading.swaps"],
+      "dependencies": ["swarm-market-core", "swarm-io-ledger"],
+      "priority": 2
+    },
+    {
+      "id": "swarm-capital-product",
+      "name": "CAPITAL Product Swarm",
+      "mission": "Build the CAPITAL web and mobile product shell, market navigation, portfolios, watchlists, order workflows, user dashboards and domain adapters.",
+      "owns": ["products.capital", "capital.portfolio", "capital.watchlists", "capital.order-ui", "capital.market-adapters"],
+      "dependencies": ["swarm-market-core", "swarm-auction-barter", "swarm-io-ledger"],
+      "priority": 2
+    },
+    {
+      "id": "swarm-real-economy",
+      "name": "Real Economy Markets Swarm",
+      "mission": "Implement commodities, agriculture, food, livestock, metals, energy, recyclables, reusables, industrial by-products, logistics and quality grading.",
+      "owns": ["capital.commodities", "capital.agriculture", "capital.food", "capital.livestock", "capital.metals", "capital.energy", "capital.circular"],
+      "dependencies": ["swarm-capital-product", "atlas", "spare"],
+      "priority": 2
+    },
+    {
+      "id": "swarm-digital-finance",
+      "name": "Digital and Financial Markets Swarm",
+      "mission": "Design regulated adapters for forex, securities, crypto, DeFi, futures, derivatives, tokenized assets and custody without enabling unlicensed execution.",
+      "owns": ["capital.fx", "capital.securities", "capital.crypto", "capital.defi", "capital.futures", "capital.derivatives", "capital.tokenization"],
+      "dependencies": ["swarm-io-ledger", "swarm-risk-compliance"],
+      "priority": 3
+    },
+    {
+      "id": "swarm-carbon-environment",
+      "name": "Carbon and Environmental Markets Swarm",
+      "mission": "Build carbon-credit, offset, allowance, retirement, environmental-unit, registry and integrity workflows with double-counting protection.",
+      "owns": ["capital.carbon", "capital.offsets", "capital.environment", "capital.retirement", "capital.registry-connectors"],
+      "dependencies": ["swarm-market-core", "proof", "atlas"],
+      "priority": 2
+    },
+    {
+      "id": "swarm-ai-capability-ideas",
+      "name": "AI, Capability and Ideas Swarm",
+      "mission": "Build markets for AI services, compute, data, consented human and institutional capabilities, ideas, IP, licences, royalties and protected disclosure.",
+      "owns": ["capital.ai", "capital.compute", "capital.data", "capital.capabilities", "capital.ideas", "capital.ip"],
+      "dependencies": ["institute-gpt", "seal", "proof", "continuum"],
+      "priority": 3
+    },
+    {
+      "id": "swarm-risk-compliance",
+      "name": "Risk, Compliance and Market Integrity Swarm",
+      "mission": "Create market classification, jurisdiction rules, KYC/KYB hooks, sanctions controls, suitability, surveillance, fraud detection, restricted-market and non-commercial allocation policies.",
+      "owns": ["trading.risk", "trading.compliance", "trading.surveillance", "trading.jurisdictions", "trading.restrictions"],
+      "dependencies": ["seal", "proof", "management"],
+      "priority": 1
+    },
+    {
+      "id": "swarm-taas",
+      "name": "Trading-as-a-Service Swarm",
+      "mission": "Expose safe external APIs, SDKs, webhooks, embedded components, tenant isolation, white-label markets, billing and managed-market administration.",
+      "owns": ["taas.api", "taas.sdk", "taas.webhooks", "taas.white-label", "taas.tenancy", "taas.billing", "taas.operator-console"],
+      "dependencies": ["swarm-market-core", "swarm-io-ledger", "swarm-risk-compliance"],
+      "priority": 3
+    },
+    {
+      "id": "swarm-proof-actual",
+      "name": "Trade Proof and Actualization Swarm",
+      "mission": "Link ownership, origin, quality, delivery, settlement, registry transfer, environmental retirement and achieved outcomes to Proof and Actual.",
+      "owns": ["trading.proof", "trading.actualization", "trading.audit", "trading.evidence"],
+      "dependencies": ["proof", "actual", "continuum"],
+      "priority": 1
+    },
+    {
+      "id": "swarm-devsecops-qa",
+      "name": "Trading DevSecOps and QA Swarm",
+      "mission": "Provide CI, schema validation, migrations, tests, security scanning, observability, performance testing, release gates and incident playbooks.",
+      "owns": ["trading.ci", "trading.tests", "trading.security", "trading.observability", "trading.releases"],
+      "dependencies": ["all-trading-swarms"],
+      "priority": 1
+    }
+  ]
+}
