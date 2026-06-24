@@ -1,0 +1,43 @@
+{
+  "version": "1.0.0",
+  "policy": {
+    "architecture": "adapter-first-federated-no-lock-in",
+    "preference": ["open-source","self-hostable","free-tier","open-api","sdk","managed-fallback"],
+    "rules": ["no-secrets-in-git","provider-health-checks","primary-and-fallback-per-critical-function","licensed-partner-for-regulated-finance","data-portability-required"]
+  },
+  "groups": [
+    {"function":"database-auth-realtime","primary":["supabase"],"alternatives":["appwrite","pocketbase","hasura","postgresql"]},
+    {"function":"identity-sso","primary":["keycloak"],"alternatives":["authentik","zitadel","ory"]},
+    {"function":"fine-grained-authorization","primary":["openfga","opa"],"alternatives":["cerbos","oso"]},
+    {"function":"workflow-durable-execution","primary":["temporal"],"alternatives":["windmill","kestra","conductor"]},
+    {"function":"automation-integrations","primary":["n8n","activepieces"],"alternatives":["node-red","huginn"]},
+    {"function":"event-bus-queues","primary":["nats"],"alternatives":["redpanda","rabbitmq","apache-kafka"]},
+    {"function":"cache-rate-limit-locks","primary":["valkey"],"alternatives":["redis","dragonfly"]},
+    {"function":"object-storage","primary":["minio"],"alternatives":["seaweedfs","garage","cloudflare-r2"]},
+    {"function":"vector-memory","primary":["qdrant"],"alternatives":["weaviate","milvus","pgvector"]},
+    {"function":"graph-knowledge","primary":["neo4j-community","apache-age"],"alternatives":["arangodb","memgraph"]},
+    {"function":"search","primary":["typesense"],"alternatives":["meilisearch","opensearch","tantivy"]},
+    {"function":"analytics-events","primary":["posthog","clickhouse"],"alternatives":["plausible","matomo","apache-superset"]},
+    {"function":"observability","primary":["opentelemetry","prometheus","grafana","loki"],"alternatives":["signoz","victoriametrics"]},
+    {"function":"communication-federation","primary":["matrix-synapse","element"],"alternatives":["zulip","rocket-chat","mattermost"]},
+    {"function":"voice-video-ai-realtime","primary":["livekit"],"alternatives":["jitsi","janus","mediasoup"]},
+    {"function":"notifications","primary":["novu","ntfy"],"alternatives":["apprise","gotify"]},
+    {"function":"support-omnichannel","primary":["chatwoot"],"alternatives":["freeScout","zammad"]},
+    {"function":"management-projects","primary":["plane","openproject"],"alternatives":["leantime","taiga"]},
+    {"function":"erp-operations","primary":["erpnext"],"alternatives":["dolibarr","odoo-community"]},
+    {"function":"commerce-marketplace","primary":["medusa","vendure"],"alternatives":["saleor","spree"]},
+    {"function":"ledger-billing-subscriptions","primary":["kill-bill"],"alternatives":["lago","solidus-ledger-pattern","custom-postgres-double-entry"]},
+    {"function":"ai-agent-orchestration","primary":["langgraph","crewai","google-adk"],"alternatives":["autogen","semantic-kernel","pydantic-ai"]},
+    {"function":"ai-knowledge-rag","primary":["llamaindex","haystack"],"alternatives":["graphrag","dify","flowise"]},
+    {"function":"model-serving","primary":["ollama","vllm"],"alternatives":["llama-cpp-python","text-generation-inference"]},
+    {"function":"mcp-tools","primary":["model-context-protocol-servers"],"alternatives":["activepieces-mcp","custom-mcp-gateway"]},
+    {"function":"web3-contracts","primary":["openzeppelin-contracts"],"alternatives":["thirdweb-contracts","foundry"]},
+    {"function":"attestations-proof","primary":["ethereum-attestation-service","sign-protocol"],"alternatives":["openattestation","veramo"]},
+    {"function":"permissioned-ledger","primary":["hyperledger-besu"],"alternatives":["hyperledger-fabric","corda-community"]},
+    {"function":"decentralized-storage","primary":["ipfs-kubo"],"alternatives":["helia","arweave-gateway"]},
+    {"function":"did-verifiable-credentials","primary":["veramo","didkit"],"alternatives":["spruceid","walt-id"]},
+    {"function":"deployment","primary":["coolify","docker"],"alternatives":["dokploy","kubernetes","nomad"]},
+    {"function":"api-gateway","primary":["kong"],"alternatives":["traefik","krakend","apache-apisix"]},
+    {"function":"secrets","primary":["infisical"],"alternatives":["openbao","sops-age","github-environments"]}
+  ]
+}
