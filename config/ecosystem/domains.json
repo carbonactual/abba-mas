@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0",
+  "doctrine": {
+    "industry_to_domain": true,
+    "domain_to_product_family": true,
+    "entity_centred_products": true,
+    "shared_layer_inheritance": true,
+    "management_integrates_every_entity": true,
+    "hapi_continuous_identity": true,
+    "seal_permission_specific": true,
+    "temporal_scope": ["past", "present", "future"]
+  },
+  "shared_layers": ["hash_identity", "root", "vector", "index", "continuum", "vault", "seal", "io", "communication", "actual_management", "marketplace", "trading", "pulse", "proof", "actual", "reputation", "audit", "value_routing", "forecasting", "foresight"],
+  "domain_families": [
+    "agriculture_food_biological", "mining_minerals_resources", "energy_utilities", "manufacturing_industrial", "construction_engineering_infrastructure", "real_estate_property_facilities", "transport_mobility_logistics", "aviation_aerospace_space", "maritime_ocean_water", "retail_wholesale_commerce", "finance_banking_capital", "insurance_protection", "health_care_life_sciences", "education_skills_knowledge", "legal_justice_rights", "government_civic_public_administration", "security_defence_emergency", "hospitality_tourism_experiences", "media_entertainment_creative", "telecommunications_communication", "technology_software_digital_infrastructure", "professional_business_services", "human_resources_employment_labour", "sports_fitness_recreation", "nonprofit_development_faith_humanitarian", "environment_climate_circular", "research_science_laboratories", "personal_household_family_community", "associations_cooperatives_membership", "frontier_ocean_polar_underground_space_planetary"
+  ],
+  "entity_classes": ["human", "ai", "organisation", "physical", "digital", "financial", "legal", "operational", "environmental", "future"],
+  "standard_product_family": ["industry_os", "management", "marketplace_trading", "finance_capital", "insurance_protection", "compliance_legal_audit", "learning_certification_workforce", "data_search_intelligence", "asset_maintenance_spare", "communication_relationships", "forecast_foresight_digital_twin", "hapi_personal_office"],
+  "management_cycle": ["discover", "root", "index", "assess", "vector", "plan", "assign", "operate", "pulse", "verify", "actualise", "learn", "optimise"]
+}
