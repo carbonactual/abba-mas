@@ -1,0 +1,40 @@
+{
+  "version": "1.0.0",
+  "program": "bunk-spare-full-build",
+  "coordinator": "abba-mas",
+  "status": "active",
+  "sharedSwarms": [
+    {"id":"product-experience","owns":["design-system","navigation","cards","accessibility","mobile-flows"]},
+    {"id":"api-integration","owns":["openapi","route-adapters","provider-reuse","webhooks","events"]},
+    {"id":"rls-security","owns":["rls","auth-mapping","tenant-isolation","protected-data","audit"]},
+    {"id":"search-intelligence","owns":["semantic-search","image-search","ranking","saved-demands","recommendations"]},
+    {"id":"marketplace-transaction","owns":["listings","offers","negotiation","reservations","fulfillment"]},
+    {"id":"portfolio-memory","owns":["ownership-memory","portfolio","documents","history","alerts"]},
+    {"id":"proof-verification","owns":["evidence","verification","confidence","proof","actual-transitions"]},
+    {"id":"quality-devsecops","owns":["tests","ci","observability","sandbox-deployment","reliability"]}
+  ],
+  "bunkSwarms": [
+    {"id":"bunk-discovery-map","owns":["property-search","maps","location","filters"]},
+    {"id":"bunk-property-title","owns":["property-identity","title","mandates","inspection"]},
+    {"id":"bunk-ability-finance","owns":["affordability","mortgage-readiness","true-cost"]},
+    {"id":"bunk-management","owns":["tenancy","rent","maintenance","facility","service-charge"]},
+    {"id":"bunk-investment","owns":["fractional","pooled","land-banking","portfolio","exit"]}
+  ],
+  "spareSwarms": [
+    {"id":"spare-identification","owns":["camera","image","barcode","serial","model-resolution"]},
+    {"id":"spare-compatibility","owns":["fitment-graph","constraints","exact-match","alternatives"]},
+    {"id":"spare-repair-network","owns":["repairers","workshops","service-centers","quotes"]},
+    {"id":"spare-lifecycle","owns":["warranty","manuals","maintenance","service-history","replacement-forecast"]},
+    {"id":"spare-procurement","owns":["vendors","enterprise-sourcing","logistics","salvage","obsolete-recovery"]}
+  ],
+  "deliveryGates": [
+    "schema-valid",
+    "rls-tested",
+    "api-contract-tested",
+    "proof-path-tested",
+    "mobile-flow-reviewed",
+    "accessibility-reviewed",
+    "sandbox-deployed",
+    "human-accepted"
+  ]
+}
