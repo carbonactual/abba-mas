@@ -1,0 +1,80 @@
+{
+  "version": "1.0.0",
+  "schemas": {
+    "abba.route-result.v1": {
+      "type": "object",
+      "properties": {
+        "product": {"type":"string"},
+        "operation": {"type":"string"},
+        "selected_policy": {"type":"string"},
+        "required_capabilities": {"type":"array","items":{"type":"string"}},
+        "confidence": {"type":"number","minimum":0,"maximum":1},
+        "human_review_required": {"type":"boolean"}
+      },
+      "required": ["product","operation","selected_policy","required_capabilities","confidence","human_review_required"],
+      "additionalProperties": false
+    },
+    "abba.task-result.v1": {
+      "type":"object",
+      "properties": {
+        "status":{"type":"string"},
+        "summary":{"type":"string"},
+        "actions":{"type":"array","items":{"type":"object"}},
+        "evidence_refs":{"type":"array","items":{"type":"string"}},
+        "confidence":{"type":"number","minimum":0,"maximum":1}
+      },
+      "required":["status","summary","actions","evidence_refs","confidence"],
+      "additionalProperties":false
+    },
+    "product.match-result.v1": {
+      "type":"object",
+      "properties": {
+        "subject":{"type":"string"},
+        "candidate":{"type":"string"},
+        "match_state":{"type":"string"},
+        "reasons":{"type":"array","items":{"type":"string"}},
+        "evidence_refs":{"type":"array","items":{"type":"string"}},
+        "confidence":{"type":"number","minimum":0,"maximum":1},
+        "human_review_required":{"type":"boolean"}
+      },
+      "required":["subject","candidate","match_state","reasons","evidence_refs","confidence","human_review_required"],
+      "additionalProperties":false
+    },
+    "learning.result.v1": {
+      "type":"object",
+      "properties": {
+        "learning_goal":{"type":"string"},
+        "level":{"type":"string"},
+        "outcomes":{"type":"array","items":{"type":"string"}},
+        "assessment":{"type":"array","items":{"type":"object"}},
+        "confidence":{"type":"number","minimum":0,"maximum":1}
+      },
+      "required":["learning_goal","level","outcomes","assessment","confidence"],
+      "additionalProperties":false
+    },
+    "human.signal-result.v1": {
+      "type":"object",
+      "properties": {
+        "signal":{"type":"string"},
+        "consent_state":{"type":"string"},
+        "visibility":{"type":"string"},
+        "memory_action":{"type":"string"},
+        "confidence":{"type":"number","minimum":0,"maximum":1}
+      },
+      "required":["signal","consent_state","visibility","memory_action","confidence"],
+      "additionalProperties":false
+    },
+    "proof.evidence-result.v1": {
+      "type":"object",
+      "properties": {
+        "claim":{"type":"string"},
+        "evidence_refs":{"type":"array","items":{"type":"string"}},
+        "contradictions":{"type":"array","items":{"type":"string"}},
+        "confidence":{"type":"number","minimum":0,"maximum":1},
+        "review_required":{"type":"boolean"}
+      },
+      "required":["claim","evidence_refs","contradictions","confidence","review_required"],
+      "additionalProperties":false
+    }
+  }
+}
