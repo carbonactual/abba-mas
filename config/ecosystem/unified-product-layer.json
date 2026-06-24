@@ -1,0 +1,68 @@
+{
+  "version": "1.0.0",
+  "ecosystemProduct": {
+    "id": "carbon-actual",
+    "name": "Carbon Actual",
+    "classification": ["single-ecosystem-product", "shared-operating-layer"],
+    "coordinator": "abba-mas",
+    "status": "active"
+  },
+  "sharedLayers": [
+    "identity",
+    "root",
+    "vector",
+    "capability",
+    "commitment",
+    "relationship",
+    "allocation",
+    "index",
+    "atlas",
+    "vault",
+    "pulse",
+    "proof",
+    "actual",
+    "seal",
+    "io",
+    "management",
+    "trading",
+    "communication",
+    "agents",
+    "audit",
+    "reputation",
+    "search",
+    "messaging",
+    "notifications"
+  ],
+  "productBranches": [
+    "hapi",
+    "bunk",
+    "spare",
+    "institute-gpt",
+    "marketplace",
+    "capital",
+    "omni",
+    "open-polling",
+    "coreflow"
+  ],
+  "management": {
+    "classification": ["shared-layer", "standalone-product"],
+    "sharedRole": "provides governance, planning, operations, finance, people, risk, assets, projects, AI and performance management to every branch",
+    "standaloneRole": "provides complete entity management and Management-as-a-Service for internal and external entities",
+    "inheritanceRule": "product branches inherit management capabilities and add only domain-specific workflows"
+  },
+  "trading": {
+    "classification": ["shared-layer", "capital-product"],
+    "sharedRole": "provides listing, bidding, barter, auction, negotiation, escrow and settlement capabilities across products",
+    "standaloneRole": "CAPITAL provides specialist multi-market trading and Trading-as-a-Service"
+  },
+  "rules": {
+    "oneIdentityUniverse": true,
+    "oneConsentUniverse": true,
+    "oneProofUniverse": true,
+    "oneValueRoutingUniverse": true,
+    "oneAgentGovernanceUniverse": true,
+    "branchesDoNotDuplicateFoundation": true,
+    "domainSpecificLogicRemainsInBranch": true,
+    "humanFinalAuthority": true
+  }
+}
