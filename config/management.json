@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "engine": "one-shared-io-management-control-plane",
+  "objects": ["vector","goal","portfolio","programme","project","milestone","task","workflow","department","role","team","swarm","resource","budget","asset","vendor","risk","incident","decision","approval","policy","meeting","performance","evidence","outcome"],
+  "lifecycle": ["identify-need","define-objective","assign-responsibility","reserve-resources","authorize-work","execute","monitor","handle-exception","verify-proof","actualize-outcome"],
+  "capabilities": ["portfolio-management","programme-management","project-management","workflow-management","resource-allocation","budget-control","workforce-management","swarm-coordination","vendor-management","service-level-management","risk-management","incident-management","change-management","quality-management","compliance-management","forecasting","scenario-planning","continuity","recovery","performance-management","outcome-measurement"],
+  "expressions": ["ecosystem-management","product-and-hapi-management","management-product","management-as-a-service"],
+  "primaryOpenStack": ["plane","openproject","erpnext","temporal","windmill","n8n","openfga","opa"],
+  "fallbackOpenStack": ["leantime","taiga","dolibarr","activepieces","kestra","cerbos"],
+  "mandatoryControls": ["responsible-owner","authority","budget-boundary","resource-boundary","deadline","proof-condition","escalation-path","recovery-path","actual-outcome"]
+}
