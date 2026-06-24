@@ -1,0 +1,36 @@
+{
+  "version": "1.0.0",
+  "theme": "continuity-market",
+  "products": ["bunk", "spare"],
+  "principle": "A shared Carbon Actual experience for discovering, verifying, acquiring, owning, managing, maintaining, repairing and continuing physical things.",
+  "visualSystem": {
+    "character": ["calm", "premium", "futuristic", "practical", "evidence-led", "low-clutter"],
+    "navigation": ["discover", "saved", "activity", "portfolio", "profile"],
+    "cardPattern": ["image", "identity", "status", "price-or-value", "location-or-compatibility", "proof-state", "primary-action"],
+    "interactionPattern": ["search", "camera-or-map", "filters", "compare", "save", "message", "request", "track"],
+    "accessibility": ["large-touch-targets", "screen-reader-labels", "high-contrast", "reduced-motion", "low-bandwidth", "localization"]
+  },
+  "sharedCapabilities": [
+    "natural-language-search",
+    "image-and-camera-search",
+    "saved-searches",
+    "alerts",
+    "verified-professionals",
+    "proof-status",
+    "marketplace",
+    "offers-and-negotiation",
+    "messaging",
+    "portfolio",
+    "ownership-memory",
+    "management",
+    "maintenance",
+    "insurance",
+    "logistics",
+    "reviews",
+    "disputes"
+  ],
+  "productDifferences": {
+    "bunk": "property, land, space, shelter, occupancy, development, investment and habitat continuity",
+    "spare": "product, component, compatibility, repair, replacement, ownership and operational continuity"
+  }
+}
