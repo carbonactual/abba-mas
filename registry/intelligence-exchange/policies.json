@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "default_policy": "balanced",
+  "policies": {
+    "balanced": {"objective":"maximum_value","provider_policy":"balanced","minimum_confidence":0.75,"max_retries":1,"verification":"on_low_confidence"},
+    "fast": {"objective":"latency","provider_policy":"fast","minimum_confidence":0.65,"max_retries":0,"verification":"off"},
+    "economy": {"objective":"cost","provider_policy":"economy","minimum_confidence":0.70,"max_retries":1,"verification":"on_failure"},
+    "private": {"objective":"privacy","provider_policy":"private","minimum_confidence":0.85,"max_retries":1,"verification":"always","minimum_seal_level":4},
+    "reasoning": {"objective":"quality","provider_policy":"reasoning","minimum_confidence":0.88,"max_retries":2,"verification":"always"},
+    "vision": {"objective":"multimodal_accuracy","provider_policy":"vision","minimum_confidence":0.82,"max_retries":1,"verification":"on_disagreement"},
+    "fallback": {"objective":"continuity","provider_policy":"fallback","minimum_confidence":0.65,"max_retries":2,"verification":"on_failure"}
+  },
+  "products": {
+    "spare": {"default_policy":"vision","required_capabilities":["vision","structured_output","tool_calling"],"default_schema":"spare.compatibility-result.v1"},
+    "institute": {"default_policy":"reasoning","required_capabilities":["reasoning","structured_output","multilingual"],"default_schema":"institute.learning-result.v1"},
+    "coreflow": {"default_policy":"private","required_capabilities":["structured_output","deterministic_output","privacy-aware-routing"],"default_schema":"coreflow.operation-result.v1"},
+    "civic": {"default_policy":"private","required_capabilities":["reasoning","evidence","multilingual","structured_output"],"default_schema":"proof.evidence-result.v1"},
+    "hapi": {"default_policy":"private","required_capabilities":["consent-awareness","context","structured_output"],"default_schema":"hapi.becoming-signal.v1"},
+    "omni": {"default_policy":"reasoning","required_capabilities":["browser_reasoning","extraction","tool_calling","evidence"],"default_schema":"abba.task-result.v1"},
+    "abba": {"default_policy":"balanced","required_capabilities":["routing","reasoning","structured_output","tool_calling"],"default_schema":"abba.route-result.v1"}
+  }
+}
