@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --spare-bg: #0b0d0e;
+  --spare-panel: #161a1d;
+  --spare-text: #f4f1ea;
+  --spare-muted: #9aa2a6;
+  --spare-line: #2b3236;
+  --spare-lime: #b6ff4d;
+  --spare-cyan: #59d8ff;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--spare-bg);
+  color: var(--spare-text);
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+button, input, textarea, select { font: inherit; }
+button { cursor: pointer; }
