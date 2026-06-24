@@ -1,0 +1,104 @@
+{
+  "version": "1.0.0",
+  "product": "capital",
+  "coordinator": "abba-mas",
+  "defaultSealLevel": 4,
+  "swarms": [
+    {
+      "id": "capital-foundation-swarm",
+      "name": "CAPITAL Foundation Swarm",
+      "mission": "Define canonical market, instrument, order, trade, position, custody, settlement and proof contracts inherited from the Carbon Actual foundation.",
+      "deliverables": ["domain schemas", "state machines", "event taxonomy", "foundation inheritance contract", "TypeScript types"],
+      "dependencies": [],
+      "priority": 1
+    },
+    {
+      "id": "capital-market-swarm",
+      "name": "Market and Exchange Swarm",
+      "mission": "Build market discovery, RFQ, auctions, bids, offers, negotiation, barter, swaps and order-book services.",
+      "deliverables": ["market service", "RFQ engine", "auction engine", "barter matcher", "order APIs"],
+      "dependencies": ["capital-foundation-swarm"],
+      "priority": 2
+    },
+    {
+      "id": "capital-asset-swarm",
+      "name": "Asset and Instrument Swarm",
+      "mission": "Model financial, physical, circular, environmental, digital, enterprise and future-value instruments with jurisdiction-aware restrictions.",
+      "deliverables": ["asset taxonomy", "instrument registry", "underlying-link model", "restricted-market policy"],
+      "dependencies": ["capital-foundation-swarm"],
+      "priority": 2
+    },
+    {
+      "id": "capital-io-swarm",
+      "name": "I/O Settlement Swarm",
+      "mission": "Connect trading commitments to accounts, escrow, collateral, clearing, delivery, fees, taxes and settlement.",
+      "deliverables": ["ledger contracts", "escrow workflow", "settlement orchestrator", "reconciliation events"],
+      "dependencies": ["capital-foundation-swarm", "capital-market-swarm"],
+      "priority": 3
+    },
+    {
+      "id": "capital-proof-swarm",
+      "name": "Custody, Delivery and Proof Swarm",
+      "mission": "Verify title, provenance, quantity, quality, custody, delivery, performance and final settlement.",
+      "deliverables": ["proof policies", "inspection workflow", "custody records", "delivery verification", "Actual transitions"],
+      "dependencies": ["capital-foundation-swarm", "capital-io-swarm"],
+      "priority": 3
+    },
+    {
+      "id": "capital-risk-swarm",
+      "name": "Risk, Compliance and Market Integrity Swarm",
+      "mission": "Enforce participant eligibility, market permissions, limits, surveillance, conflict controls and jurisdiction-specific restrictions.",
+      "deliverables": ["capability matrix", "SEAL policies", "risk limits", "compliance rules", "surveillance events"],
+      "dependencies": ["capital-foundation-swarm", "capital-asset-swarm"],
+      "priority": 2
+    },
+    {
+      "id": "capital-intelligence-swarm",
+      "name": "Market Intelligence and Forecast Swarm",
+      "mission": "Build research, price intelligence, opportunity curation, scenario analysis, forecasts and evidence-aware recommendations.",
+      "deliverables": ["research registry", "signal model", "forecast interfaces", "opportunity router", "explainability contract"],
+      "dependencies": ["capital-foundation-swarm", "capital-asset-swarm"],
+      "priority": 4
+    },
+    {
+      "id": "capital-hapi-swarm",
+      "name": "HAPI Trading and Capability Swarm",
+      "mission": "Connect HAPI VECTORs, capability unlocks, research, risk suitability, mandates, portfolios and human final authority to CAPITAL.",
+      "deliverables": ["HAPI trading profile", "mandate model", "capability unlocks", "human approval flows", "contribution attribution"],
+      "dependencies": ["capital-foundation-swarm", "capital-risk-swarm"],
+      "priority": 3
+    },
+    {
+      "id": "capital-entity-swarm",
+      "name": "Entity Treasury and Procurement Swarm",
+      "mission": "Support company treasury, procurement, inventory trading, supplier markets, hedging, approvals and entity-AI coordination.",
+      "deliverables": ["treasury workspace", "procurement routes", "approval matrix", "entity mandates", "KPI integration"],
+      "dependencies": ["capital-market-swarm", "capital-io-swarm", "capital-risk-swarm"],
+      "priority": 4
+    },
+    {
+      "id": "capital-taas-swarm",
+      "name": "Trading-as-a-Service Swarm",
+      "mission": "Expose secure APIs, webhooks, white-label workspaces and external entity onboarding for authorized trading functions.",
+      "deliverables": ["public API", "webhook contracts", "tenant isolation", "white-label workspace", "external integration guide"],
+      "dependencies": ["capital-market-swarm", "capital-io-swarm", "capital-proof-swarm", "capital-risk-swarm"],
+      "priority": 5
+    },
+    {
+      "id": "capital-experience-swarm",
+      "name": "CAPITAL Experience Swarm",
+      "mission": "Design the futuristic, immersive but operational trading interface for HAPIs, entities, operators and external clients.",
+      "deliverables": ["information architecture", "market workspace", "portfolio views", "risk views", "mobile flows", "accessibility"],
+      "dependencies": ["capital-market-swarm", "capital-hapi-swarm", "capital-entity-swarm"],
+      "priority": 5
+    },
+    {
+      "id": "capital-devsecops-swarm",
+      "name": "CAPITAL DevSecOps and Reliability Swarm",
+      "mission": "Provide CI/CD, test environments, observability, security, backups, incident response and release controls.",
+      "deliverables": ["CI workflows", "security scanning", "test strategy", "monitoring", "runbooks", "release gates"],
+      "dependencies": ["capital-foundation-swarm"],
+      "priority": 2
+    }
+  ]
+}

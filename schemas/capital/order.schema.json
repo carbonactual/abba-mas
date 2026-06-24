@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://carbonactual.com/schemas/capital/order.schema.json",
+  "title": "CAPITAL Order",
+  "type": "object",
+  "required": ["orderId", "actorHash", "marketHash", "instrumentHash", "side", "orderType", "quantity", "status", "sealReference"],
+  "properties": {
+    "orderId": {"type": "string", "minLength": 1},
+    "actorHash": {"type": "string", "pattern": "^#"},
+    "entityHash": {"type": ["string", "null"], "pattern": "^#"},
+    "marketHash": {"type": "string", "pattern": "^#"},
+    "instrumentHash": {"type": "string", "pattern": "^#"},
+    "vectorHash": {"type": ["string", "null"], "pattern": "^#"},
+    "side": {"enum": ["buy", "sell", "bid", "offer", "barter", "swap"]},
+    "orderType": {"enum": ["market", "limit", "rfq", "auction", "forward", "capacity_reservation", "procurement"]},
+    "quantity": {"type": "number", "exclusiveMinimum": 0},
+    "unit": {"type": "string"},
+    "limitPrice": {"type": ["number", "null"], "minimum": 0},
+    "currency": {"type": ["string", "null"]},
+    "expiresAt": {"type": ["string", "null"], "format": "date-time"},
+    "capabilityReferences": {"type": "array", "items": {"type": "string"}},
+    "sealReference": {"type": "string", "minLength": 1},
+    "commitmentReference": {"type": ["string", "null"]},
+    "status": {"enum": ["draft", "pending_authorization", "active", "partially_filled", "matched", "cancelled", "expired", "rejected", "suspended", "disputed"]},
+    "sandbox": {"type": "boolean", "const": true},
+    "createdAt": {"type": "string", "format": "date-time"}
+  },
+  "additionalProperties": false
+}

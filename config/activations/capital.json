@@ -1,0 +1,36 @@
+{
+  "version": "1.0.0",
+  "product": "capital",
+  "sealGrant": {
+    "status": "granted",
+    "grantedBy": "HAPI",
+    "scope": "full-build-and-sandbox-activation",
+    "productionFinancialExecution": false,
+    "reason": "Production execution requires licensed providers, jurisdiction controls, protected credentials and provider-specific approval gates."
+  },
+  "activationMode": "sandbox",
+  "swarms": [
+    {"id":"capital-foundation-swarm","status":"active","wave":0},
+    {"id":"capital-asset-swarm","status":"active","wave":0},
+    {"id":"capital-risk-swarm","status":"active","wave":0},
+    {"id":"capital-devsecops-swarm","status":"active","wave":0},
+    {"id":"capital-market-swarm","status":"active","wave":1},
+    {"id":"capital-hapi-swarm","status":"active","wave":1},
+    {"id":"capital-io-swarm","status":"active","wave":2},
+    {"id":"capital-proof-swarm","status":"active","wave":2},
+    {"id":"capital-intelligence-swarm","status":"active","wave":3},
+    {"id":"capital-entity-swarm","status":"active","wave":3},
+    {"id":"capital-taas-swarm","status":"active","wave":4},
+    {"id":"capital-experience-swarm","status":"active","wave":4}
+  ],
+  "globalGates": {
+    "identityRequired": true,
+    "sealRequired": true,
+    "capabilityRequired": true,
+    "auditRequired": true,
+    "proofRequiredForActual": true,
+    "humanApprovalForIrreversibleActions": true,
+    "externalExecutionEnabled": false,
+    "realValueMovementEnabled": false
+  }
+}
