@@ -1,0 +1,69 @@
+{
+  "version": "1.0.0",
+  "policy": "network-value-connection-proximity-ease",
+  "scope": ["all-products", "all-services", "all-opportunities", "all-assets", "all-people", "all-entities", "all-agents", "all-routes"],
+  "rankingDimensions": [
+    {
+      "id": "network",
+      "meaning": "existing trusted network, verified relationships, communities, institutions, providers and reachable support around the HAPI or entity",
+      "signals": ["relationship-strength", "shared-network", "trusted-referral", "community-presence", "institutional-link", "service-coverage"]
+    },
+    {
+      "id": "value",
+      "meaning": "expected usefulness, affordability, savings, income, resilience, learning, ownership, reduced risk and long-term benefit",
+      "signals": ["net-value", "true-cost", "expected-benefit", "risk-adjusted-return", "time-saved", "capability-gained", "lifecycle-value"]
+    },
+    {
+      "id": "connection",
+      "meaning": "fit with the HAPI VECTOR, current need, owned assets, commitments, relationships, history and present context",
+      "signals": ["vector-fit", "need-fit", "asset-fit", "compatibility", "commitment-fit", "history-fit", "portfolio-fit"]
+    },
+    {
+      "id": "proximity",
+      "meaning": "physical, temporal, social, operational, logistical, legal and digital closeness",
+      "signals": ["distance", "travel-time", "delivery-time", "response-time", "jurisdiction-fit", "language-fit", "timezone-fit", "availability-now"]
+    },
+    {
+      "id": "ease",
+      "meaning": "how simply and safely the HAPI can understand, access, afford, activate, use, maintain and complete the route",
+      "signals": ["steps-required", "documents-required", "cost-to-start", "accessibility", "payment-options", "support-availability", "integration-readiness", "completion-probability"]
+    }
+  ],
+  "defaultWeighting": {
+    "network": 0.20,
+    "value": 0.30,
+    "connection": 0.25,
+    "proximity": 0.15,
+    "ease": 0.10
+  },
+  "contextOverrides": {
+    "emergency": {"proximity": 0.35, "ease": 0.25, "value": 0.20, "connection": 0.15, "network": 0.05},
+    "high-value-investment": {"value": 0.35, "connection": 0.25, "network": 0.20, "ease": 0.10, "proximity": 0.10},
+    "repair-or-replacement": {"connection": 0.35, "proximity": 0.20, "value": 0.20, "ease": 0.15, "network": 0.10},
+    "property": {"value": 0.30, "connection": 0.25, "proximity": 0.20, "network": 0.15, "ease": 0.10}
+  },
+  "presentationRules": {
+    "showWhyThisAppears": true,
+    "showDimensionSummary": true,
+    "showTradeoffs": true,
+    "allowUserReweighting": true,
+    "allowSortByDimension": true,
+    "sponsoredPlacementCannotOverrideSuitability": true,
+    "proofAndSafetyGatesAlwaysApply": true,
+    "unverifiedItemsMustBeClearlyMarked": true,
+    "diversityAndExplorationRequired": true
+  },
+  "feedbackLoop": {
+    "capture": ["view", "save", "dismiss", "compare", "contact", "complete", "dispute", "satisfaction"],
+    "update": ["preference-model", "network-model", "proximity-model", "ease-model", "value-model"],
+    "humanControl": ["reset", "edit-preferences", "hide-source", "explain-ranking", "disable-personalization"]
+  },
+  "nonNegotiableRules": {
+    "humanFinalAuthority": true,
+    "noPayToWinRanking": true,
+    "noHiddenManipulation": true,
+    "noSensitiveInferenceWithoutConsent": true,
+    "proofBeforeActual": true,
+    "jurisdictionAndSafetyBeforeConvenience": true
+  }
+}
