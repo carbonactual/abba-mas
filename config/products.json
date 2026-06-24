@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "products": [
     {
       "id": "abba-mas",
@@ -16,6 +16,24 @@
       "role": "ecosystem-and-public-actual-layer",
       "defaultSealLevel": 2,
       "status": "active"
+    },
+    {
+      "id": "capital",
+      "name": "CAPITAL",
+      "repository": "carbonactual/abba-mas",
+      "role": "dedicated-universal-trading-product-built-on-io",
+      "foundationDomain": "io.trading",
+      "defaultSealLevel": 4,
+      "status": "planned"
+    },
+    {
+      "id": "trading-as-a-service",
+      "name": "Trading-as-a-Service",
+      "repository": "carbonactual/abba-mas",
+      "role": "external-white-label-api-sdk-and-managed-market-service",
+      "foundationDomain": "io.trading",
+      "defaultSealLevel": 4,
+      "status": "planned"
     },
     {
       "id": "shadow",
