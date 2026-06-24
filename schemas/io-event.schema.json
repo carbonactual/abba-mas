@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://carbonactual.com/schemas/io-event.schema.json",
+  "title": "Carbon Actual I/O Event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["eventId","eventType","subject","actor","principal","purpose","resource","occurredAt","authority","state","risk","correlationId"],
+  "properties": {
+    "eventId": {"type":"string","minLength":8},
+    "eventType": {"type":"string","pattern":"^[a-z0-9-]+\\.[a-z0-9.-]+$"},
+    "subject": {"$ref":"#/$defs/party"},
+    "actor": {"$ref":"#/$defs/party"},
+    "principal": {"$ref":"#/$defs/party"},
+    "purpose": {"type":"string","minLength":2},
+    "resource": {"type":"object","required":["type","id"],"properties":{"type":{"type":"string"},"id":{"type":"string"}},"additionalProperties":true},
+    "occurredAt": {"type":"string","format":"date-time"},
+    "authority": {"type":"object","required":["sealLevel","mandateId","decision"],"properties":{"sealLevel":{"type":"integer","minimum":0},"mandateId":{"type":["string","null"]},"decision":{"enum":["allowed","denied","review-required"]}}},
+    "state": {"type":"object","required":["before","after"],"properties":{"before":{},"after":{}}},
+    "risk": {"type":"object","required":["level"],"properties":{"level":{"enum":["low","standard","enhanced","high","regulated","restricted","prohibited"]},"score":{"type":["number","null"],"minimum":0,"maximum":100}}},
+    "proofRefs": {"type":"array","items":{"type":"string"},"default":[]},
+    "correlationId": {"type":"string"},
+    "causationId": {"type":["string","null"]},
+    "tenantId": {"type":["string","null"]},
+    "metadata": {"type":"object","additionalProperties":true}
+  },
+  "$defs": {
+    "party": {
+      "type":"object",
+      "additionalProperties":false,
+      "required":["id","type"],
+      "properties": {
+        "id":{"type":"string"},
+        "type":{"enum":["hash","hapi","abba","ai-agent","product","entity","department","project","swarm","marketplace","external-partner","device","system"]}
+      }
+    }
+  }
+}
