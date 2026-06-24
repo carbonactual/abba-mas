@@ -1,0 +1,120 @@
+{
+  "system": "ABBA MAS / Carbon Actual",
+  "source_register": "docs/integrations/INTEGRATION_OPPORTUNITIES_2026-06-24.md",
+  "status": "operational_classification_ready",
+  "total_registered_opportunities": 100,
+  "truth_rule": "A provider is not production active until credentials are stored outside GitHub, health check passes, task receipt exists, and SEAL gate is satisfied.",
+  "swirms": [
+    {
+      "id": "identity_swirm",
+      "function": "identity, authentication, consent, roles, # bindings, DID/VC routes",
+      "labels": ["identity", "auth", "#", "did", "vc", "oauth", "sso", "access"],
+      "priority_providers": ["Supabase Auth", "Clerk", "Keycloak", "Authentik", "Zitadel", "W3C DID", "W3C Verifiable Credentials", "SpruceID", "OpenAttestation", "ENS", "HNS"],
+      "activation_stage": "foundation",
+      "seal_minimum": 3
+    },
+    {
+      "id": "intelligence_swirm",
+      "function": "reasoning, model routing, multimodal understanding, structured outputs",
+      "labels": ["ai", "llm", "model-router", "reasoning", "multimodal", "structured-output"],
+      "priority_providers": ["OpenAI", "Gemini", "Anthropic", "OpenRouter", "Groq", "Ollama", "Hugging Face"],
+      "activation_stage": "foundation",
+      "seal_minimum": 2
+    },
+    {
+      "id": "agent_swirm",
+      "function": "agents, tools, command execution, swarm delegation",
+      "labels": ["agents", "tools", "mcp", "workers", "orchestration", "delegation"],
+      "priority_providers": ["LangGraph", "CrewAI", "AutoGen", "OpenAI Agents SDK", "Semantic Kernel", "MCP Gateway"],
+      "activation_stage": "foundation",
+      "seal_minimum": 2
+    },
+    {
+      "id": "memory_swirm",
+      "function": "Continuum memory, recall, context continuity, user/agent memory",
+      "labels": ["memory", "continuum", "recall", "context", "graph-memory"],
+      "priority_providers": ["Memorae", "Supermemory", "Zep", "Graphiti", "Letta", "Qdrant", "pgvector"],
+      "activation_stage": "foundation",
+      "seal_minimum": 3
+    },
+    {
+      "id": "knowledge_swirm",
+      "function": "RAG, search, graph, ATLAS, documentation, retrieval",
+      "labels": ["rag", "search", "root", "index", "atlas", "graph", "documents"],
+      "priority_providers": ["LlamaIndex", "Haystack", "GraphRAG", "Neo4j", "Typesense", "OpenSearch", "Meilisearch"],
+      "activation_stage": "foundation",
+      "seal_minimum": 2
+    },
+    {
+      "id": "automation_swirm",
+      "function": "workflows, webhooks, jobs, routing, schedules, PULSE",
+      "labels": ["workflow", "automation", "webhook", "jobs", "pulse", "n8n"],
+      "priority_providers": ["n8n", "GitHub Actions", "Temporal", "Activepieces", "Pipedream", "Node-RED", "Windmill"],
+      "activation_stage": "foundation",
+      "seal_minimum": 2
+    },
+    {
+      "id": "communication_swirm",
+      "function": "email, SMS, WhatsApp, voice, video, notifications, HAPI communication",
+      "labels": ["email", "sms", "whatsapp", "voice", "video", "notifications", "hapi"],
+      "priority_providers": ["Resend", "Brevo", "Twilio", "WhatsApp Cloud API", "Telegram", "Matrix", "LiveKit", "Jitsi", "CALL-E"],
+      "activation_stage": "interface",
+      "seal_minimum": 3
+    },
+    {
+      "id": "data_swirm",
+      "function": "databases, storage, analytics, event logs, operational records",
+      "labels": ["database", "storage", "analytics", "vault", "audit", "records"],
+      "priority_providers": ["Supabase", "PostgreSQL", "Redis", "MinIO", "ClickHouse", "PostHog", "Metabase"],
+      "activation_stage": "foundation",
+      "seal_minimum": 2
+    },
+    {
+      "id": "value_swirm",
+      "function": "payments, ledger, settlement, tokenization, reconciliation, I/O",
+      "labels": ["payments", "ledger", "settlement", "token", "mint", "io", "reconciliation"],
+      "priority_providers": ["Paystack", "Monnify", "Flutterwave", "Stripe", "Safe", "Thirdweb", "Polygon", "Base", "Hyperledger FireFly"],
+      "activation_stage": "controlled_expansion",
+      "seal_minimum": 3
+    },
+    {
+      "id": "proof_swirm",
+      "function": "proof, attestation, audit receipts, signatures, verification records",
+      "labels": ["proof", "attestation", "seal", "audit", "receipt", "signature"],
+      "priority_providers": ["EAS", "Sign Protocol", "OpenAttestation", "GitHub Artifact Attestations", "IPFS", "Pinata", "OpenZeppelin"],
+      "activation_stage": "foundation",
+      "seal_minimum": 3
+    },
+    {
+      "id": "infrastructure_swirm",
+      "function": "hosting, deployment, security, monitoring, CI/CD, scaling",
+      "labels": ["hosting", "deployment", "edge", "monitoring", "security", "ci-cd"],
+      "priority_providers": ["GitHub", "Vercel", "Cloudflare", "Docker", "Coolify", "Sentry", "OpenTelemetry", "Grafana", "Infisical"],
+      "activation_stage": "foundation",
+      "seal_minimum": 2
+    },
+    {
+      "id": "builder_swirm",
+      "function": "no-code, low-code, dashboards, product building, admin apps",
+      "labels": ["builder", "no-code", "low-code", "dashboard", "mvp", "admin"],
+      "priority_providers": ["Lovable", "Base44", "Appsmith", "Budibase", "ToolJet", "Directus", "Strapi", "FlutterFlow", "Adalo"],
+      "activation_stage": "interface",
+      "seal_minimum": 2
+    },
+    {
+      "id": "hardware_reality_swirm",
+      "function": "IoT, field devices, sensors, forms, edge reality capture",
+      "labels": ["iot", "devices", "sensors", "field", "mqtt", "odk", "reality"],
+      "priority_providers": ["MQTT", "Mosquitto", "Home Assistant", "Node-RED", "Raspberry Pi", "Arduino", "ESP32", "ODK", "KoboToolbox"],
+      "activation_stage": "controlled_expansion",
+      "seal_minimum": 3
+    }
+  ],
+  "activation_policy": {
+    "stage_1_foundation": ["infrastructure_swirm", "data_swirm", "identity_swirm", "intelligence_swirm", "automation_swirm", "proof_swirm"],
+    "stage_2_product_interface": ["builder_swirm", "communication_swirm", "memory_swirm", "knowledge_swirm", "agent_swirm"],
+    "stage_3_controlled_expansion": ["value_swirm", "hardware_reality_swirm"],
+    "human_approval_required_for_seal_3_plus": true,
+    "ai_approval_allowed": false
+  }
+}
