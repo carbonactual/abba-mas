@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://carbonactual.com/schemas/io-activation.schema.json",
+  "title": "Carbon Actual Product I/O Activation Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version","product","subjectTypes","capabilities","authority","proof"],
+  "properties": {
+    "version": {"type":"string"},
+    "product": {"type":"string"},
+    "subjectTypes": {"type":"array","items":{"type":"string"},"minItems":1},
+    "capabilities": {
+      "type":"object",
+      "properties": {
+        "wallets":{"type":"array","items":{"type":"string"}},
+        "communication":{"type":"array","items":{"type":"string"}},
+        "management":{"type":"array","items":{"type":"string"}},
+        "trading":{"type":"array","items":{"type":"string"}},
+        "payments":{"type":"array","items":{"type":"string"}},
+        "escrow":{"type":"array","items":{"type":"string"}},
+        "logistics":{"type":"array","items":{"type":"string"}},
+        "data":{"type":"array","items":{"type":"string"}}
+      },
+      "additionalProperties": false
+    },
+    "authority": {
+      "type":"object",
+      "required":["defaultSealLevel","humanFinalAuthority","agentActions"],
+      "properties": {
+        "defaultSealLevel":{"type":"integer","minimum":0},
+        "humanFinalAuthority":{"type":"boolean"},
+        "agentActions":{"type":"array","items":{"enum":["observe","read","recommend","prepare","request","negotiate","reserve","approve","execute","settle","publish","delegate","administer","emergency-suspend"]}},
+        "approvalThresholds":{"type":"object","additionalProperties":true}
+      }
+    },
+    "risk": {"type":"object","properties":{"defaultClass":{"type":"string"},"jurisdictions":{"type":"array","items":{"type":"string"}},"restrictedObjects":{"type":"array","items":{"type":"string"}}},"additionalProperties":true},
+    "proof": {"type":"object","required":["required","actualizationRequired"],"properties":{"required":{"type":"boolean"},"actualizationRequired":{"type":"boolean"},"conditions":{"type":"array","items":{"type":"string"}}}},
+    "providers": {"type":"object","additionalProperties":{"type":"array","items":{"type":"string"}}}
+  }
+}
