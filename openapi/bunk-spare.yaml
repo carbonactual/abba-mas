@@ -1,0 +1,125 @@
+openapi: 3.1.0
+info:
+  title: Carbon Actual BUNK and SPARE API
+  version: 0.1.0
+servers:
+  - url: /api
+paths:
+  /bunk/listings:
+    get:
+      summary: Search BUNK listings
+      parameters:
+        - in: query
+          name: q
+          schema: { type: string }
+        - in: query
+          name: status
+          schema: { type: string }
+      responses:
+        '200': { description: Search results }
+    post:
+      summary: Create BUNK listing
+      responses:
+        '201': { description: Listing created }
+  /bunk/properties/{subjectId}:
+    get:
+      summary: Get property detail and proof state
+      parameters:
+        - in: path
+          name: subjectId
+          required: true
+          schema: { type: string, format: uuid }
+      responses:
+        '200': { description: Property detail }
+  /bunk/properties/{subjectId}/evidence:
+    post:
+      summary: Submit property evidence
+      parameters:
+        - in: path
+          name: subjectId
+          required: true
+          schema: { type: string, format: uuid }
+      responses:
+        '202': { description: Evidence accepted for review }
+  /bunk/properties/{subjectId}/offers:
+    post:
+      summary: Submit offer, bid, barter or reservation
+      parameters:
+        - in: path
+          name: subjectId
+          required: true
+          schema: { type: string, format: uuid }
+      responses:
+        '201': { description: Offer created }
+  /bunk/portfolio:
+    get:
+      summary: Get authenticated HAPI BUNK portfolio
+      responses:
+        '200': { description: Portfolio }
+  /spare/identify:
+    post:
+      summary: Identify product or component from image, text, barcode, serial or model
+      responses:
+        '200': { description: Identification candidates with confidence and evidence }
+  /spare/products/{subjectId}:
+    get:
+      summary: Get product identity, ownership, manuals and service history
+      parameters:
+        - in: path
+          name: subjectId
+          required: true
+          schema: { type: string, format: uuid }
+      responses:
+        '200': { description: Product detail }
+  /spare/products/{subjectId}/matches:
+    get:
+      summary: Get exact, compatible, used, repair and upgrade routes
+      parameters:
+        - in: path
+          name: subjectId
+          required: true
+          schema: { type: string, format: uuid }
+      responses:
+        '200': { description: Match results }
+  /spare/components/{subjectId}/compatibility:
+    get:
+      summary: Get compatibility records and constraints
+      parameters:
+        - in: path
+          name: subjectId
+          required: true
+          schema: { type: string, format: uuid }
+      responses:
+        '200': { description: Compatibility evidence }
+  /spare/requests:
+    post:
+      summary: Create reverse sourcing request when no match exists
+      responses:
+        '201': { description: Request created }
+  /spare/portfolio:
+    get:
+      summary: Get authenticated HAPI SPARE ownership portfolio
+      responses:
+        '200': { description: Portfolio }
+  /shared/saved-demands:
+    get:
+      summary: Get saved searches and requests
+      responses:
+        '200': { description: Saved demands }
+    post:
+      summary: Save a BUNK or SPARE demand
+      responses:
+        '201': { description: Saved demand created }
+  /shared/activity:
+    get:
+      summary: Get offers, messages, evidence reviews, service events and alerts
+      responses:
+        '200': { description: Activity feed }
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+security:
+  - bearerAuth: []
