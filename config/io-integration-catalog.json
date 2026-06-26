@@ -1,1 +1,22 @@
-{}
+{
+  "version": "0.1.0",
+  "rule": "catalogued does not mean activated",
+  "groups": {
+    "payments": ["monnify", "paystack", "flutterwave", "bankone-export", "mobile-money", "airtime-data", "bill-payment"],
+    "chains": ["ethereum", "base", "polygon", "arbitrum", "optimism", "bnb-chain", "solana", "bitcoin", "lightning", "ton"],
+    "wallets": ["walletconnect", "metamask", "phantom", "safe"],
+    "agent_networks": ["moltbook", "rentahuman", "meatlayer", "bittensor", "olas", "virtuals", "fetch-ai", "agentverse", "singularitynet"],
+    "builders": ["openclaw", "clawhub", "base44", "lovable", "adalo"],
+    "protocols": ["x402", "a2a", "mcp", "ap2", "api", "webhooks", "event-streams"],
+    "ai": ["openrouter", "direct-model-providers", "self-hosted-models", "cloud-providers"],
+    "open_source": ["supabase", "postgresql", "n8n", "qdrant", "minio", "typesense", "matrix", "livekit", "nostr", "posthog", "coolify", "langgraph", "crewai", "autogen"],
+    "ecosystem": ["direct-bank", "marketplace", "institute-gpt", "spare", "bunk", "property", "food", "transport", "fleet", "energy", "agriculture", "management", "trading", "communication", "hapi", "proof", "seal", "vault", "atlas", "omni", "continuum"]
+  },
+  "defaults": {
+    "activationState": "DISABLED",
+    "humanApprovalRequired": true,
+    "adapterRequired": true,
+    "manifestRequired": true,
+    "auditRequired": true
+  }
+}
