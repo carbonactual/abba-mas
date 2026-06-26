@@ -1,1 +1,58 @@
-{}
+{
+  "version": "0.1.0",
+  "activationState": "RESEARCH_ONLY",
+  "productionEligible": false,
+  "domains": {
+    "future_finance": [
+      "agent-commerce",
+      "machine-to-machine",
+      "programmable-money",
+      "tokenized-deposits",
+      "cbdc-interoperability",
+      "micropayments",
+      "streaming-payments",
+      "compute-credits",
+      "energy-credits",
+      "data-credits",
+      "capability-royalties",
+      "parametric-protection",
+      "climate-and-nature-value",
+      "depin-finance",
+      "robotics-and-fleet",
+      "orbital-and-cislunar",
+      "delay-tolerant-settlement",
+      "post-quantum-migration",
+      "outcome-finance"
+    ],
+    "alien_finance": [
+      "non-human-exchange",
+      "synthetic-civilization",
+      "off-world-community",
+      "first-contact-simulation",
+      "unknown-value-system",
+      "relativistic-settlement",
+      "no-common-law-exchange"
+    ]
+  },
+  "mandatoryTruthStates": [
+    "SIMULATED",
+    "FICTIONAL",
+    "UNVERIFIED",
+    "CONDITIONAL",
+    "JURISDICTION_RESTRICTED",
+    "RESEARCH_ONLY"
+  ],
+  "gates": {
+    "sealLevel": 5,
+    "humanApprovalRequired": true,
+    "simulationRequired": true,
+    "reversibilityRequired": true,
+    "evidenceRequired": true,
+    "assumptionsRequired": true,
+    "unknownsRequired": true,
+    "riskReviewRequired": true,
+    "autonomousNegotiation": false,
+    "realAssetSale": false,
+    "productionSettlement": false
+  }
+}
