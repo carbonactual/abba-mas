@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "products": [
     {
       "id": "abba-mas",
@@ -16,6 +16,18 @@
       "role": "ecosystem-and-public-actual-layer",
       "defaultSealLevel": 2,
       "status": "active"
+    },
+    {
+      "id": "io",
+      "name": "I/O",
+      "repository": "carbonactual/abba-mas",
+      "role": "financial-and-value-operating-layer",
+      "foundationDomain": "io",
+      "canonicalPosition": "Carbon indexes value. Actual identifies Becoming. I/O activates the financial structure. PULSE records movement. PROOF confirms reality. Actual records what it became.",
+      "defaultSealLevel": 4,
+      "participation": "optional-scoped",
+      "productionFinance": "disabled",
+      "status": "foundation"
     },
     {
       "id": "capital",
@@ -47,7 +59,8 @@
       "id": "direct-bank-app",
       "name": "Direct Bank App",
       "repository": "carbonactual/direct-bank-app",
-      "role": "manual-bank-customer-interface",
+      "role": "first-operational-container-for-io",
+      "foundationDomain": "io.direct-bank",
       "defaultSealLevel": 4,
       "status": "development"
     },
