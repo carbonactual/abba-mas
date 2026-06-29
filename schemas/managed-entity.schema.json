@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://carbonactual.com/schemas/managed-entity.schema.json",
+  "title": "Carbon Actual Managed Entity",
+  "type": "object",
+  "required": ["id", "hash_id", "entity_class", "name", "domains", "temporal_state", "seal"],
+  "properties": {
+    "id": {"type": "string"},
+    "hash_id": {"type": "string", "pattern": "^#"},
+    "entity_class": {"enum": ["human", "ai", "organisation", "physical", "digital", "financial", "legal", "operational", "environmental", "future"]},
+    "entity_type": {"type": "string"},
+    "name": {"type": "string"},
+    "domains": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "root": {"type": "object", "additionalProperties": true},
+    "vector": {
+      "type": "object",
+      "properties": {
+        "direction": {"type": "string"},
+        "desired_future_state": {"type": "string"},
+        "purpose": {"type": "string"},
+        "beneficiaries": {"type": "array"},
+        "value_path": {"type": "array"},
+        "milestones": {"type": "array"},
+        "constraints": {"type": "array"},
+        "risks": {"type": "array"},
+        "required_capabilities": {"type": "array"},
+        "proof_conditions": {"type": "array"},
+        "current_momentum": {"type": "number"},
+        "next_unlock": {}
+      },
+      "additionalProperties": true
+    },
+    "temporal_state": {
+      "type": "object",
+      "required": ["past", "present", "future"],
+      "properties": {
+        "past": {"type": "object"},
+        "present": {"type": "object"},
+        "future": {"type": "object"}
+      }
+    },
+    "relationships": {"type": "array", "items": {"type": "object"}},
+    "authorities": {"type": "array"},
+    "assets": {"type": "array"},
+    "liabilities": {"type": "array"},
+    "obligations": {"type": "array"},
+    "processes": {"type": "array"},
+    "risks": {"type": "array"},
+    "opportunities": {"type": "array"},
+    "pulse_refs": {"type": "array", "items": {"type": "string"}},
+    "proof_refs": {"type": "array", "items": {"type": "string"}},
+    "actual_refs": {"type": "array", "items": {"type": "string"}},
+    "value_state": {"type": "object"},
+    "seal": {
+      "type": "object",
+      "required": ["consent_scope", "access_policies", "approval_rules"],
+      "properties": {
+        "consent_scope": {"type": "array"},
+        "access_policies": {"type": "array"},
+        "approval_rules": {"type": "array"}
+      }
+    },
+    "next_action": {},
+    "next_unlock": {}
+  },
+  "additionalProperties": true
+}

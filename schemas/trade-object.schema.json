@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://carbonactual.com/schemas/trade-object.schema.json",
+  "title": "Carbon Actual Trade Object",
+  "type": "object",
+  "required": ["id", "hash_id", "trade_class", "domain", "owner_ref", "market_mechanism", "temporal_class", "seal", "proof_requirements"],
+  "properties": {
+    "id": {"type": "string"},
+    "hash_id": {"type": "string", "pattern": "^#"},
+    "trade_class": {"enum": ["financial", "currency", "security", "commodity", "energy", "environmental", "product", "asset", "property", "infrastructure", "service", "labour", "capability", "ai", "digital", "data", "creative", "right", "claim", "liability", "obligation", "capacity", "future_value", "frontier"]},
+    "domain": {"type": "string"},
+    "owner_ref": {"type": "string"},
+    "issuer_ref": {"type": "string"},
+    "description": {"type": "string"},
+    "quantity": {},
+    "quality_condition": {"type": "object"},
+    "provenance": {"type": "object"},
+    "valuation": {
+      "type": "object",
+      "properties": {
+        "method": {"type": "string"},
+        "amount": {"type": "number"},
+        "unit": {"type": "string"},
+        "currency": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "market_mechanism": {"enum": ["fixed_price", "negotiated", "rfq", "auction", "reverse_auction", "sealed_bid", "tender", "barter", "multilateral_exchange", "order_book", "dealer", "brokered", "amm", "spot", "forward", "future", "option", "swap", "perpetual", "rental", "lease", "subscription", "pay_per_use", "lending", "borrowing", "staking", "pooling", "syndication", "licensing", "royalty", "revenue_share", "escrow", "grant", "donation", "allocation", "salvage", "liquidation", "recovery"]},
+    "temporal_class": {"enum": ["past", "present", "future"]},
+    "jurisdiction": {"type": "array", "items": {"type": "string"}},
+    "transferability": {"type": "object"},
+    "restrictions": {"type": "array"},
+    "delivery_performance_terms": {"type": "object"},
+    "risk_disclosures": {"type": "array"},
+    "insurance_requirements": {"type": "array"},
+    "compliance_requirements": {"type": "array"},
+    "settlement": {"type": "object"},
+    "escrow": {"type": "object"},
+    "taxes_fees_value_routing": {"type": "object"},
+    "dispute_terms": {"type": "object"},
+    "proof_requirements": {"type": "array"},
+    "pulse_refs": {"type": "array", "items": {"type": "string"}},
+    "proof_refs": {"type": "array", "items": {"type": "string"}},
+    "actual_ref": {"type": "string"},
+    "seal": {
+      "type": "object",
+      "required": ["authority", "consent_scope", "approval_rules"],
+      "properties": {
+        "authority": {"type": "array"},
+        "consent_scope": {"type": "array"},
+        "approval_rules": {"type": "array"}
+      }
+    }
+  },
+  "additionalProperties": true
+}

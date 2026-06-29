@@ -1,0 +1,42 @@
+{
+  "version": "1.2.0",
+  "doctrine": {
+    "industry_to_domain": true,
+    "domain_to_product_family": true,
+    "entity_centred_products": true,
+    "shared_layer_inheritance": true,
+    "management_integrates_every_entity": true,
+    "actual_management_is_parent": true,
+    "specific_managements_are_branches": true,
+    "trading_is_universal_layer": true,
+    "capital_is_parent_trading_product": true,
+    "industry_products_expose_authorised_trade_objects": true,
+    "hapi_continuous_identity": true,
+    "seal_permission_specific": true,
+    "temporal_scope": ["past", "present", "future"]
+  },
+  "shared_layers": ["hash_identity", "root", "vector", "index", "continuum", "vault", "seal", "io", "communication", "actual_management", "marketplace", "capital", "trading", "pulse", "proof", "actual", "reputation", "audit", "value_routing", "forecasting", "foresight"],
+  "management_architecture": {
+    "parent": "actual_management",
+    "branch_types": ["functional", "industry", "institutional", "entity", "asset", "hapi", "ai", "environmental", "frontier"],
+    "inheritance_required": ["identity", "root", "vector", "seal", "entity_relationship_graph", "workflow", "records", "communications", "assets_liabilities_obligations", "finance_value_routing", "marketplace", "capital_trading", "pulse", "proof", "actual", "analytics", "forecasting", "integration_gateway"],
+    "functional_branches": ["executive_governance", "finance_treasury", "it_data_cybersecurity", "ai_agent", "hr_workforce", "customer_relationship", "operations_process", "project_programme_portfolio", "product_service_innovation", "procurement_supply_chain_logistics", "asset_property_facility_maintenance", "legal_contract_risk_compliance_audit", "knowledge_records_archive_continuity", "security_emergency_resilience", "past_recovery_restitution", "forecast_foresight_future_readiness"]
+  },
+  "trading_architecture": {
+    "parent_product": "capital",
+    "shared_services": ["market_discovery", "valuation", "listing", "matching", "negotiation", "bidding", "auction", "barter", "contracting", "risk_checks", "escrow", "clearing", "custody", "delivery", "inspection", "settlement", "proof", "reputation", "aftercare"],
+    "trade_classes": ["financial", "currency", "security", "commodity", "energy", "environmental", "product", "asset", "property", "infrastructure", "service", "labour", "capability", "ai", "digital", "data", "creative", "right", "claim", "liability", "obligation", "capacity", "future_value", "frontier"],
+    "market_mechanisms": ["fixed_price", "negotiated", "rfq", "auction", "reverse_auction", "sealed_bid", "tender", "barter", "multilateral_exchange", "order_book", "dealer", "brokered", "amm", "spot", "forward", "future", "option", "swap", "perpetual", "rental", "lease", "subscription", "pay_per_use", "lending", "borrowing", "staking", "pooling", "syndication", "licensing", "royalty", "revenue_share", "escrow", "grant", "donation", "allocation", "salvage", "liquidation", "recovery"],
+    "branches": ["market_intelligence", "brokerage_matching", "auctions_bidding_tenders", "barter_exchange", "retail_wholesale_marketplace", "fx_commodities_securities", "digital_assets_tokenisation_defi", "carbon_climate_natural_capital", "energy_utilities", "agriculture_food_animals_biological", "metals_minerals_recyclables", "property_infrastructure_capacity", "products_spare_circular", "services_labour_ai_knowledge", "rights_claims_liabilities_contracts", "futures_derivatives_hedging", "escrow_clearing_settlement_custody", "capital_formation_investment_project_finance", "future_frontier_space_ocean_planetary"],
+    "required_controls": ["identity_authority", "ownership_provenance", "seal_consent", "kyc_kyb_when_required", "aml_sanctions_when_required", "market_abuse_monitoring", "risk_disclosure", "suitability_when_required", "custody_segregation", "consumer_protection", "dispute_resolution", "prohibited_market_screening", "jurisdiction_adapter", "proof_and_audit"]
+  },
+  "domain_families": [
+    "agriculture_food_biological", "mining_minerals_resources", "energy_utilities", "manufacturing_industrial", "construction_engineering_infrastructure", "real_estate_property_facilities", "transport_mobility_logistics", "aviation_aerospace_space", "maritime_ocean_water", "retail_wholesale_commerce", "finance_banking_capital", "insurance_protection", "health_care_life_sciences", "education_skills_knowledge", "legal_justice_rights", "government_civic_public_administration", "security_defence_emergency", "hospitality_tourism_experiences", "media_entertainment_creative", "telecommunications_communication", "technology_software_digital_infrastructure", "professional_business_services", "human_resources_employment_labour", "sports_fitness_recreation", "nonprofit_development_faith_humanitarian", "environment_climate_circular", "research_science_laboratories", "personal_household_family_community", "associations_cooperatives_membership", "frontier_ocean_polar_underground_space_planetary"
+  ],
+  "entity_classes": ["human", "ai", "organisation", "physical", "digital", "financial", "legal", "operational", "environmental", "future"],
+  "standard_product_family": ["industry_os", "management_branch", "marketplace", "capital_trading", "finance_capital", "insurance_protection", "compliance_legal_audit", "learning_certification_workforce", "data_search_intelligence", "asset_maintenance_spare", "communication_relationships", "forecast_foresight_digital_twin", "hapi_personal_office"],
+  "branch_contract": ["parent", "domain", "subsector", "managed_entities", "relationships", "human_roles", "ai_roles", "workflows", "rules_standards_controls", "assets_liabilities_obligations", "records", "proof_conditions", "actual_outcomes", "dashboards_reports_sla", "marketplace_finance_insurance_trading", "past_requirements", "present_requirements", "future_requirements", "integrations"],
+  "trade_adapter_contract": ["domain", "trade_object_types", "ownership_rules", "valuation_methods", "market_mechanisms", "transfer_restrictions", "risk_and_compliance", "delivery_or_performance", "escrow_and_settlement", "proof_requirements", "taxes_fees_value_routing", "dispute_resolution", "past_present_future_scope", "integration_routes"],
+  "management_cycle": ["discover", "root", "index", "assess", "vector", "plan", "assign", "operate", "pulse", "verify", "actualise", "learn", "optimise"],
+  "trade_lifecycle": ["discover", "qualify", "verify_identity_authority", "define_trade_object", "verify_ownership_restrictions", "value", "list_or_request", "match", "negotiate_or_bid", "risk_compliance", "contract", "fund_or_secure", "escrow_or_clear", "deliver_or_perform", "inspect_verify", "settle", "pulse", "proof", "actual", "reputation_aftercare"]
+}
