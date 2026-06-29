@@ -1,0 +1,387 @@
+# Instincts generated from https://github.com/carbonactual/abba-mas
+# Generated: 2026-06-24T18:58:55.433Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: abba-mas-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/carbonactual/abba-mas
+---
+
+# Abba Mas Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: docs, config, schema
+
+## Evidence
+
+- 8 commits analyzed
+- Detected conventional commit pattern
+- Examples: docs: add universal ecosystem architecture index, config: add machine-readable ecosystem domain registry
+
+---
+id: abba-mas-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/carbonactual/abba-mas
+---
+
+# Abba Mas Commit Length
+
+## Action
+
+Keep commit messages concise (~47 characters)
+
+## Evidence
+
+- Average commit message length: 47 chars
+- Based on 8 commits
+
+---
+id: abba-mas-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/carbonactual/abba-mas
+---
+
+# Abba Mas Naming Files
+
+## Action
+
+Use kebab-case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: kebab-case
+
+---
+id: abba-mas-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/carbonactual/abba-mas
+---
+
+# Abba Mas Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: abba-mas-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/carbonactual/abba-mas
+---
+
+# Abba Mas Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: abba-mas-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/carbonactual/abba-mas
+---
+
+# Abba Mas Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: abba-mas-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/carbonactual/abba-mas
+---
+
+# Abba Mas Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~23x per month
+- Files: 
+
+---
+id: abba-mas-workflow-add-ecosystem-architecture-doc
+trigger: "when doing add ecosystem architecture doc"
+confidence: 0.75
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/carbonactual/abba-mas
+---
+
+# Abba Mas Workflow Add Ecosystem Architecture Doc
+
+## Action
+
+Follow the add-ecosystem-architecture-doc workflow:
+1. Create a new markdown file in docs/ecosystem/
+2. Write documentation for the new architecture/component
+3. Commit the new file with a 'docs:' prefix in the message
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~5x per month
+- Files: docs/ecosystem/*.md
+
+---
+id: abba-mas-instinct-file-naming
+trigger: "When creating a new file"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: carbonactual/abba-mas
+---
+
+# Abba Mas Instinct File Naming
+
+## Action
+
+Name the file using kebab-case (e.g., my-new-file.ts)
+
+## Evidence
+
+- Pattern in namingConventions.files
+- Consistent with docs/ecosystem/README.md
+
+---
+id: abba-mas-instinct-function-naming
+trigger: "When defining a new function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: carbonactual/abba-mas
+---
+
+# Abba Mas Instinct Function Naming
+
+## Action
+
+Name the function using camelCase (e.g., getEntityData)
+
+## Evidence
+
+- Pattern in namingConventions.functions
+
+---
+id: abba-mas-instinct-class-naming
+trigger: "When defining a new class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: carbonactual/abba-mas
+---
+
+# Abba Mas Instinct Class Naming
+
+## Action
+
+Name the class using PascalCase (e.g., EntityManager)
+
+## Evidence
+
+- Pattern in namingConventions.classes
+
+---
+id: abba-mas-instinct-constant-naming
+trigger: "When defining a new constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: carbonactual/abba-mas
+---
+
+# Abba Mas Instinct Constant Naming
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE (e.g., MAX_ENTITY_COUNT)
+
+## Evidence
+
+- Pattern in namingConventions.constants
+
+---
+id: abba-mas-instinct-import-style
+trigger: "When importing modules"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: carbonactual/abba-mas
+---
+
+# Abba Mas Instinct Import Style
+
+## Action
+
+Use relative import paths (e.g., import { X } from '../utils')
+
+## Evidence
+
+- Pattern in importStyle
+
+---
+id: abba-mas-instinct-export-style
+trigger: "When exporting modules or functions"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: carbonactual/abba-mas
+---
+
+# Abba Mas Instinct Export Style
+
+## Action
+
+Use named exports (e.g., export { MyFunction })
+
+## Evidence
+
+- Pattern in exportStyle
+
+---
+id: abba-mas-instinct-commit-format
+trigger: "When making a commit"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: carbonactual/abba-mas
+---
+
+# Abba Mas Instinct Commit Format
+
+## Action
+
+Use a conventional commit message with a prefix (e.g., docs:, config:, schema:)
+
+## Evidence
+
+- Seen in commit 'docs: add universal ecosystem architecture index'
+- Pattern in commits.prefixes
+
+---
+id: abba-mas-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: carbonactual/abba-mas
+---
+
+# Abba Mas Instinct Commit Length
+
+## Action
+
+Keep the commit message concise (around 47 characters on average)
+
+## Evidence
+
+- Pattern in commits.averageLength
+
+---
+id: abba-mas-instinct-feature-dev-test
+trigger: "When implementing a new feature"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: carbonactual/abba-mas
+---
+
+# Abba Mas Instinct Feature Dev Test
+
+## Action
+
+Add tests for the feature after implementation
+
+## Evidence
+
+- feature-development workflow commitSequence: 'Add tests for feature' after 'Add feature implementation'
+
+---
+id: abba-mas-instinct-feature-dev-docs
+trigger: "When implementing a new feature"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: carbonactual/abba-mas
+---
+
+# Abba Mas Instinct Feature Dev Docs
+
+## Action
+
+Update documentation after implementation and testing
+
+## Evidence
+
+- feature-development workflow commitSequence: 'Update documentation' after 'Add tests for feature'
+
+---
+id: abba-mas-instinct-add-ecosystem-architecture-doc
+trigger: "When someone wants to document a new aspect or component of the ecosystem architecture"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: carbonactual/abba-mas
+---
+
+# Abba Mas Instinct Add Ecosystem Architecture Doc
+
+## Action
+
+Create a new markdown file in docs/ecosystem/, write the documentation, and commit with a 'docs:' prefix
+
+## Evidence
+
+- add-ecosystem-architecture-doc workflow steps and commits
+- Pattern in files docs/ecosystem/*.md
+
