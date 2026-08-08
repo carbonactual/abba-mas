@@ -1,0 +1,21 @@
+{
+  "ecosystem": "carbon-actual",
+  "repository": "carbonactual/abba-mas",
+  "canonicalRole": "command_policy_execution_gateway",
+  "layer": "core",
+  "owner": "abba-mas",
+  "capabilities": [
+    "command.ingest",
+    "command.validate",
+    "command.classify",
+    "policy.evaluate",
+    "seal.gate",
+    "worker.route",
+    "execution.proof",
+    "result.verify"
+  ],
+  "dependencies": ["carbonactual/abba", "carbonactual/omni"],
+  "delegatesTo": ["carbonactual/omni"],
+  "mustNotOwn": ["master_intelligence", "product_domain_logic", "canonical_knowledge", "economic_ledger"],
+  "contracts": ["command", "policy", "routing", "seal", "proof", "execution"]
+}
