@@ -56,7 +56,7 @@ Field is the condition and environment where formation, routing, risk, value, pr
 
 Field works with #.
 
-Field decides whether a thing is ready, safe, valid, capable, or positioned for movement.
+Field also carries contextual place and environmental conditions where they materially affect the operation.
 
 ## Terminal foundation
 
@@ -127,6 +127,20 @@ A failed or non-useful result is still an accountable minted object. It may rema
 
 The absence of Index promotion does not erase the value consumed, the PULSE produced, the proof of the attempt, or the provenance of the object.
 
+## Experience and natural habitat inheritance
+
+All foundation experiences inherit the OMNII Ecosystem Experience & Natural Habitat Design Doctrine.
+
+When place, habitat, species, geography, agriculture, infrastructure, transport, property, culture, events, resources, or environmental conditions matter, the experience should preserve those relationships and use spatial/contextual visualization where it improves understanding.
+
+The visual language may use original ecological, natural-history, field-guide, landscape, and cartographic motifs, including an Audubon-inspired relationship among species, habitat, geography, observation, stewardship, and participation, while respecting proprietary rights and branding.
+
+Foundation interfaces should use meaningful motion, transitions, animation, progressive disclosure, spatial continuity, layered depth, and responsive feedback where these communicate actual system state. Framer Motion or equivalent free/open implementation paths are preferred where appropriate.
+
+Motion must never fabricate activity. Reduced-motion support, semantic accessibility, touch/keyboard usability, readable typography, contrast, performance, progressive loading, and truthful loading/failure/recovery are required.
+
+The experience quality floor is living-system interaction and world-class institutional infrastructure, not generic/template-first control surfaces.
+
 ## Actual foundation
 
 Actual is the value reveal and qualified output layer.
@@ -158,7 +172,7 @@ Terminal sorts, reconciles, and curates.
 Only an explicit tokenization decision promotes an eligible object to Index.
 Objects that are not tokenized may remain at Terminal or proceed through reconciliation/ASH without being falsely treated as Index value.
 Value is read.
-Field is checked.
+Field is checked, including relevant place/habitat context.
 Action route is created.
 PULSE moves.
 Actual reveals recognized value through the correct layer.
@@ -168,10 +182,11 @@ Actual reveals recognized value through the correct layer.
 The ecosystem is built on common foundations.
 ABBA assigns AI functions to those foundations.
 I/O moves everywhere.
-Field checks readiness.
+Field checks readiness and contextual conditions.
 Terminal receives and sorts minted objects.
 Minting does not equal tokenization.
 Index contains explicitly tokenized recognized value.
 Root holds real identity and lineage.
 Actual reveals value from the correct layer.
 Becoming Feed taps directly from ABBA.
+All foundation experiences inherit the living-system, natural-habitat, meaningful-motion, accessibility, and performance doctrine.
